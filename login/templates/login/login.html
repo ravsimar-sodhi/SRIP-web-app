@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% if is_authenticated %}
+	<h1> hi </h1>
+	{% endif %}
+  <a href="{% url 'social:begin' 'github'%}">Login with GitHub</a><br>
+</body>
+</html>
