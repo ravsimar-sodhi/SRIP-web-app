@@ -1,56 +1,13 @@
-{% load bootstrap4 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-{% load static %}
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <!-- Navbar content -->
-    <a class="navbar-brand" href="#">SRIP</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0 mr-auto">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <ul class="navbar-nav mr-right">
-        {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link" href=#>{{ user.username }}</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-          </li>
-          {% else %}
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'social:begin' 'github'%}">Login</a>
-          </li>
-        {% endif %}
-      </ul>
-    </div>
-  </nav>
-  <div>
-    <img src='{% static "SRIP.png" %}' style= "max-width: 100%">
-  </div>
+{% extends 'main/base.html' %}
+{% block content %}
  <h2>Homepage</h2>
   <p>Hello {{ user.username }}!</p>
     <div id="results" class="container">
-      <div class="row">
-        <div class="col-6">
+      {% for item in data.items %}
+      {% if forloop.counter0|divisibleby:2 %}
+        <div class="row">
+      {% endif %}
+        <div class="col-6 card-group">
           <div class="card">
             <div class="card-header">
               Header
@@ -58,10 +15,16 @@
             <div class="card-body">
               <a target='_blank' href=item.html_url>
                 <div class='title'>
-                  <h3> item.full_name</h3>
+                  <h3> {{item.full_name}}</h3>
                 </div>
               </a>
-              <div> item.description </div>
+              <div>
+                {% if item.description == "" %}
+                "Description not provided."
+                {% else %}
+                {{item.description}}
+              </div>
+              {% endif %}
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
@@ -71,76 +34,10 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <div class="card-body">
-              <a target='_blank' href=item.html_url>
-                <div class='title'>
-                  <h3> item.full_name</h3>
-                </div>
-              </a>
-              <div> item.description </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-                  <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
-                </div>
-              </div>
-            </div>
+        {% if not forloop.counter0|divisibleby:2 %}
           </div>
-        </div>
+          <br>
+        {% endif %}
+        {% endfor %}
       </div>
-      <br>
-  <div class="row">
-    <div class="col-6">
-      <div class="card">
-        <div class="card-header">
-          Header
-        </div>
-        <div class="card-body">
-          <a target='_blank' href=item.html_url>
-            <div class='title'>
-              <h3> item.full_name</h3>
-            </div>
-          </a>
-          <div> item.description </div>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-              <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="card">
-        <div class="card-header">
-          Featured
-        </div>
-        <div class="card-body">
-          <a target='_blank' href=item.html_url>
-            <div class='title'>
-              <h3> item.full_name</h3>
-            </div>
-          </a>
-          <div> item.description </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-              <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      <!-- <div class="row"> -->
-<!--  -->
-      <!-- </div> -->
-    </div>
-    </div>
-</body>
-</html>
+{% endblock %}
