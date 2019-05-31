@@ -141,5 +141,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
-LOGIN_REDIRECT_URL = '/log'
+LOGIN_REDIRECT_URL = '/is_registered'
 LOGOUT_REDIRECT_URL = '/'
