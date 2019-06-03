@@ -7,8 +7,7 @@
     {% endfor %}
 </ul>
 {% endif %}
- <h2>Homepage</h2>
-  <p>Hello {{ user.username }}!</p>
+<br>
     <div id="results" class="container">
       {% for item in data.items %}
       {% if forloop.counter0|divisibleby:2 %}
@@ -17,12 +16,14 @@
         <div class="col-6 card-group">
           <div class="card">
             <div class="card-header">
-              Header
+              <a target='_blank' href={{item.html_url}}>
+                {{item.full_name}}
+              </a>
             </div>
             <div class="card-body">
-              <a target='_blank' href=item.html_url>
+              <a target='_blank' href={{item.html_url}}>
                 <div class='title'>
-                  <h3> {{item.full_name}}</h3>
+                  <h3> {{item.name}} </h3>
                 </div>
               </a>
               <div>
