@@ -1,6 +1,22 @@
 
-<form enctype="multipart/form-data" action="{% url 'registration:register' %}" method="POST">
+{% extends 'main/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+	<center>
+	<form enctype="multipart/form-data" class="form-signin" style="background-color: lightgrey; padding: 20px; border-radius: 10px; width:60%;" action="{% url 'registration:register' %}" method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit">
-</form>
+    {% bootstrap_form form %}
+    {% buttons %}
+    	<input type="submit" value="Submit">
+    {% endbuttons %}
+	</form>
+	    <footer class="page-footer">
+        <div class="container-fluid">
+            <p>
+                <center>Copyright 2019 ©<b> SRIP</b>. All rights reserved.</center>
+            </p>
+        </div>
+    </footer>
+
+</center>
+{% endblock %}
