@@ -7,3 +7,8 @@ class StudentAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Student, StudentAdmin)
+
+# class UserStudentAdmin(admin.ModelAdmin):
+    # pass
+
+# admin.site.register(UserStudent, UserStudentAdmin)

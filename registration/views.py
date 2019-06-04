@@ -25,12 +25,8 @@ def register(request):
     return render(request, 'registration/register.html', {'form': form})
 
 def create_user(strategy, details, backend, user=None, *args, **kwargs):
-    """ Replaces the social.pipeline.user.create_user function for valid email check
-    """
-
     if user:
         return {'is_new': False}
-
     flag = 0
     for x in Student.objects.filter(status = "APPROVED"):
         if details.get('username') == x.handle:
