@@ -5,3 +5,6 @@ from django import forms
 class LoggedIssueForm(forms.Form):
     commit_id = forms.CharField(max_length=40,min_length=40)
     url = forms.URLField(label='Issue URL')
+
+class ReportForm(forms.Form):
+    report = forms.URLField(label='Wiki Page URL')

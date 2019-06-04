@@ -1,12 +1,15 @@
-from django.shortcuts import render
 import requests
+from django.shortcuts import render
 from .models import LoggedIssue
-from .forms import LoggedIssueForm
-from django.http import HttpResponseRedirect
+from .forms import LoggedIssueForm, ReportForm
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from registration.models import Student
 
 # Create your views here.
 def home(request):
+    if request.user.is_authenticated:
+        info = Student.objects.get(handle=request.user)
+        return render(request, 'main/home.html', {'info': info})
     return render(request, 'main/home.html')
 
 def gitlab_search(keyword):
@@ -44,15 +47,89 @@ def logissue(request):
             cleaned_data = form.cleaned_data
             commit_id_form = cleaned_data.get('commit_id')
             url_form = cleaned_data.get('url')
-            mentor_name = Student.objects.get(handle=request.user.username).mentor
-            handle_form = Student.objects.get(handle=request.user.username).handle
+            stud = Student.objects.get(handle=request.user.username)
+            mentor_name = stud.mentor
+            handle_form = stud.handle
             obj = LoggedIssue(user=current_user, commit_id=commit_id_form, url=url_form, mentor=mentor_name, handle=handle_form)
             try:
                 obj.save()
             except:
                 return HttpResponse('Already Existing Commit! Please resubmit with proper commit id')
+            return HttpResponseRedirect('/')
         else:
-            print('here')
+            print('form invalid')
+            return HttpResponse('Invalid Submission')
     else:
         form = LoggedIssueForm()
     return render(request, 'main/logissue.html', {'form': form})
+
+def submitreport(request):
+    if request.method == 'POST':
+        form = ReportForm(request.POST)
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+            report_url = cleaned_data.get('report')
+            obj = Student.objects.get(handle = request.user.username)
+            obj.report = report_form
+            obj.save()
+            return HttpResponseRedirect('/')
+        else:
+            print('form invalid')
+            return HttpResponse('Invalid Submission')
+    else:
+        form = ReportForm()
+        return render(request, 'main/report.html', {'form':form})
+
+def man_hour_equivalent(x):
+    mul_fac = 3
+    j = 0.45
+    power = mul_fac * j
+    return ((x ** power)*160)/27
+
+def calculate(request):
+
+    pts_info = LoggedIssue.objects.filter(handle = request.user.username, is_added = True)
+    len_com = len(pts_info)
+
+    for i in range(len_com):
+        html_ip = pts_info[i].html_ip
+        css_ip = pts.info[i].css_ip
+        js_ip = pts.info[i].js_ip
+        py_ip = pts.info[i].py_ip
+        pts_info[i].issue_points = html_ip + css_ip + js_ip + py_ip
+        pts_info[i].save()
+
+    total = 0
+    html_ip = 0
+    js_ip = 0
+    css_ip = 0
+    py_ip = 0
+    try:
+        total = pts_info[-1].issue_points
+        html_ip = pts_info[-1].html_ip
+        js_ip = pts_info[-1].js_ip
+        css_ip = pts_info[-1].css_ip
+        py_ip = pts_info[-1].py_ip
+    except:
+        pass
+
+    user_info = Student.objects.get(handle = (request.user.username))
+    user_info.function_points = total
+    mh = man_hour_equivalent(html_ip)
+    mh += man_hour_equivalent(css_ip)
+    mh += man_hour_equivalent(js_ip)
+    mh += man_hour_equivalent(py_ip)
+
+    user_info.effort = mh
+    user_info.save()
+
+def displaypoints(request):
+    calculate(request)
+    info = Student.objects.get(handle = request.user.username)
+    issue_info = LoggedIssue.objects.filter(user = request.user)
+
+    # for i in range(len(issue_info)):
+    if issue_info.exists():
+        return render(request, 'main/performance.html', {'info': info, 'issue_info': issue_info})
+    else:
+        return HttpResponse("No Commit Logged Yet")

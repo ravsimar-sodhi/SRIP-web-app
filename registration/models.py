@@ -47,12 +47,12 @@ class StudentForm(ModelForm):
     class Meta:
         model = Student
         exclude = ['status',
-        # 'user',
-        # 'function_points',
-        # 'effort',
-        # 'report',
-        # 'mentor',
-        # 'batch'
+        'user',
+        'function_points',
+        'effort',
+        'report',
+        'mentor',
+        'batch'
         ]
         labels = {
             'name': _('Name of Student'),

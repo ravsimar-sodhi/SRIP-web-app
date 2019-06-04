@@ -14,7 +14,7 @@ class LoggedIssue(models.Model):
     html_ip = models.FloatField(default=0)
     css_ip = models.FloatField(default=0)
     js_ip = models.FloatField(default=0)
-    python_ip = models.FloatField(default=0)
+    py_ip = models.FloatField(default=0)
 
     issue_points = models.FloatField(default=0)
 

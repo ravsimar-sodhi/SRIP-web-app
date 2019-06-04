@@ -4,7 +4,7 @@ from .models import Student
 # Register your models here.
 
 class StudentAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['handle', 'name', 'status', 'mentor','function_points', 'effort', 'report']
 
 admin.site.register(Student, StudentAdmin)
 
