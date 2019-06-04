@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'main.apps.MainConfig',
     'social_django',
-    'bootstrap4'
+    'bootstrap3',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

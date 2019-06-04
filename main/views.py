@@ -1,5 +1,9 @@
 from django.shortcuts import render
 import requests
+from .models import LoggedIssue
+from .forms import LoggedIssueForm
+from django.http import HttpResponseRedirect
+from registration.models import Student
 
 # Create your views here.
 def home(request):
@@ -29,3 +33,26 @@ def search(request):
     res = {}
     res['items'] = data
     return render(request, 'main/home.html', {'data': res})
+
+def logissue(request):
+    if request.method == 'POST':
+        # request.POST['user'] = request.user
+        # request.POST['mentor'] = 'Mentor'
+        form = LoggedIssueForm(request.POST)
+        if form.is_valid():
+            current_user = request.user
+            cleaned_data = form.cleaned_data
+            commit_id_form = cleaned_data.get('commit_id')
+            url_form = cleaned_data.get('url')
+            mentor_name = Student.objects.get(handle=request.user.username).mentor
+            handle_form = Student.objects.get(handle=request.user.username).handle
+            obj = LoggedIssue(user=current_user, commit_id=commit_id_form, url=url_form, mentor=mentor_name, handle=handle_form)
+            try:
+                obj.save()
+            except:
+                return HttpResponse('Already Existing Commit! Please resubmit with proper commit id')
+        else:
+            print('here')
+    else:
+        form = LoggedIssueForm()
+    return render(request, 'main/logissue.html', {'form': form})

@@ -21,6 +21,12 @@ class Student(models.Model):
 
     status = models.CharField(max_length = 8, choices = REGISTRATION_CHOICES, default = "PENDING")
 
+    function_points = models.FloatField(default=0)
+    effort = models.FloatField(default=0)
+    report = models.URLField(default="https://github.com/aditya3498/SRIP2019-Batch1/wiki")
+    mentor = models.CharField(max_length=100,blank=True,null=True)
+    batch = models.CharField(max_length=100,default="SRIP19-BATCH1")
+
     def __str__(self):
         return self.name
 
