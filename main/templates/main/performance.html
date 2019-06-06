@@ -2,14 +2,12 @@
 {% load bootstrap4 %}
 {% block content %}
 <center>
-    <div class="container-fluid" style="background-color:lightseagreen; padding: 10px;">
-    <h3 style="color:whitesmoke">Your function point is {{ info.function_points }} out of 100</h3>
-    <h3 style="color:whitesmoke">Your equivalent effort in hours is {{ info.effort }} out of 240 </h3>
-    <h4 style="color:whitesmoke">Weekly Report Link : <a style="color: lime" href={{ info.report }}> {{ info.report }} </a>
-    </h4>
-    <h4 style="color:whitesmoke">Mentor : <p style="color: lime; display:inline;"> {{ info.mentor }} </p>
-    </h4>
-    <h4 style="color:whitesmoke">Github Handle : <p style="color: lime ; display:inline;"> {{ info.handle }}</p>
+    <div class="container-fluid" style="background-color:darkslategray; padding: 10px;">
+    <h3 style="color:ghostwhite">Your function point is {{ info.function_points }} out of 100</h3>
+    <h3 style="color:ghostwhite">Your equivalent effort in hours is {{ info.effort }} out of 240 </h3>
+    <h4 style="color:ghostwhite">Weekly Report Link : <a style="color: lime" href={{ info.report }}> {{ info.report }} </a></h4>
+    <h4 style="color:ghostwhite">Mentor : <p style="color: lime; display:inline;"> {{ info.mentor }} </p></h4>
+    <h4 style="color:ghostwhite">Github Handle : <p style="color: lime ; display:inline;"> {{ info.handle }}</p>
     </h4>
     </div>
     <div class="table-responsive">

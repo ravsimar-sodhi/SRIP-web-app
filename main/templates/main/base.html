@@ -1,4 +1,3 @@
-{% load bootstrap3 %}
 {% load bootstrap4 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
@@ -11,22 +10,32 @@
     <title></title>
 </head>
 
-<body>
+<body style="background-color:ghostwhite">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <!-- Navbar content -->
-        <a class="navbar-brand" href="#">SRIP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="{% url 'main:home' %}">SRIP</a>
+        {% if user.is_authenticated %}
+        <ul class='navbar-nav'>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0 mr-auto" action="{% url 'main:search' %}" method="get">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main:displaypoints' %}">Performance</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main:logissue' %}">Log Issue</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main:submitreport' %}">Report</a>
+            </li>
+
+        </ul>
+        {% endif %}
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" -->
+            <!-- aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+            <!-- <span class="navbar-toggler-icon"></span> -->
+        <!-- </button> -->
+
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+            <form class="form-inline my-2 my-lg-0 ml-auto mr-auto" action="{% url 'main:search' %}" method="get">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchword">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -40,11 +49,14 @@
                 </li>
                 {% else %}
                 <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'registration:register' %}">Register</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="{% url 'social:begin' 'github'%}">Login</a>
                 </li>
                 {% endif %}
             </ul>
-        </div>
+        <!-- </div> -->
     </nav>
     <div>
         <img src='{% static "SRIP.png" %}' style="max-width: 100%">

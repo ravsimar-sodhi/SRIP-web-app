@@ -70,7 +70,7 @@ def submitreport(request):
             cleaned_data = form.cleaned_data
             report_url = cleaned_data.get('report')
             obj = Student.objects.get(handle = request.user.username)
-            obj.report = report_form
+            obj.report = report_url
             obj.save()
             return HttpResponseRedirect('/')
         else:
