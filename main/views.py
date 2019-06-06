@@ -4,6 +4,7 @@ from .models import LoggedIssue
 from .forms import LoggedIssueForm, ReportForm
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from registration.models import Student
+from gitlab import Gitlab
 
 # Create your views here.
 def home(request):
@@ -13,7 +14,7 @@ def home(request):
     return render(request, 'main/home.html')
 
 def gitlab_search(keyword):
-    gl = gitlab.Gitlab('https://gitlab.com', private_token = 'bqfyAiHKF_zT1EFxT_Mz')
+    gl = Gitlab('https://gitlab.com', private_token = 'bqfyAiHKF_zT1EFxT_Mz')
     gl.auth()
     data = gl.search('projects', keyword)
     for x in data:
