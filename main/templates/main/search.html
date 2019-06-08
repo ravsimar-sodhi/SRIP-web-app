@@ -10,14 +10,19 @@
         <div class="col-6 card-group">
             <div class="card bg-light">
                 <div class="card-header bg-danger">
-                    <a target='_blank' href={{item.html_url}} style="color: #fff">
-                            {{item.full_name}}
-                        </a>
+                    <div class="row">
+
+                        <a class="col-9 text-light" target='_blank' href={{item.html_url}} style="color: #fff">
+                                {{item.full_name}}
+                            </a>
+                        <!-- <div class="col-2 text-light">Forks:{{item.forks}}</div> -->
+                        <div class="col-3 text-light">Issues:{{item.open_issues_count}}</div>
+                    </div>
                     </div>
                     <div class="card-body bg-dark">
                             <a target='_blank' href={{item.html_url}}>
-                                <div class='title'>
-                                    <h3 style="color: rgba(255,255,255,0.7);"> {{item.name}} </h3>
+                                <div class='title text-light'>
+                                    <h3> {{item.name}} </h3>
                                 </div>
                             </a>
                             <div style="color: rgba(255,255,255,0.7);">
@@ -27,14 +32,15 @@
                         {{item.description}}
                     </div>
                     {% endif %}
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong> Language: </strong>
-                                {{item.language}} </div>
-                                <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong>Updated: </strong>
-                                    {{item.updated_at}} </div>
-                                </div>
+                </div>
+                <div class="card-footer bg-dark">
+                    <div class="row">
+                        <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong> Language: </strong>
+                            {{item.language}} </div>
+                            <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong>Updated: </strong>
+                                {{item.updated_at}}
                             </div>
+                    </div>
                 </div>
             </div>
         </div>
