@@ -9,7 +9,7 @@
 {% endif %}
 <br>
 
-<div id='recomm' class ="container-fluid" style=" height:300px; width:95%; overflow-x: scroll">
+<!-- <div id='recomm' class ="container-fluid" style=" height:300px; width:95%; overflow-x: scroll">
   <div class="row flex-row flex-nowrap" style="height: 95%">
     <div class="col-4 card-group align-items-stretch d-flex">
       <div class="card">
@@ -71,7 +71,7 @@
     </div>
     <div class="col-4 card-group align-items-stretch d-flex">
       <div class="card">
-        <div class="card-header">
+        <div class="card-header" >
           <a target='_blank' href={{item.html_url}}>
             {{item.full_name}}
           </a>
@@ -129,26 +129,26 @@
     </div>
   </div>
 </div>
-    <div id="results" class="container">
+ -->    <div id="results" class="container">
       {% for item in data.items %}
       {% if forloop.counter0|divisibleby:2 %}
         <div class="row">
       {% endif %}
         <div class="col-6 card-group">
           <div class="card">
-            <div class="card-header">
-              <a target='_blank' href={{item.html_url}}>
+            <div class="card-header" style="background-color: #e25443">
+              <a target='_blank' href={{item.html_url}} style="color: #fff">
                 {{item.full_name}}
               </a>
             </div>
-            <div class="card-body">
+            <div class="card-body" style="background-color: #21314a">
               <a target='_blank' href={{item.html_url}}>
                 <div class='title'>
-                  <h3> {{item.name}} </h3>
+                  <h3 style="color: rgba(255,255,255,0.7);"> {{item.name}} </h3>
                 </div>
               </a>
-              <div>
-                {% if item.description == "" %}
+              <div style="color: rgba(255,255,255,0.7);">
+                {% if item.description == "None" %}
                 "Description not provided."
                 {% else %}
                 {{item.description}}
@@ -156,8 +156,8 @@
               {% endif %}
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-                  <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
+                  <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong> Language: </strong> {{item.language}} </div>
+                  <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong>Updated: </strong> {{item.updated_at}} </div>
                 </div>
               </div>
             </div>
@@ -169,8 +169,4 @@
         {% endif %}
         {% endfor %}
       </div>
-<!--     <script>
-      alert('{{ message }}');
-    </script>
- -->
 {% endblock %}
