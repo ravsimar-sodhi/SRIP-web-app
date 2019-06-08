@@ -1,40 +1,85 @@
 {% extends 'main/base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-<center>
-    <div class="container-fluid" style="background-color:darkslategray; padding: 10px;">
-    <h3 style="color:ghostwhite">Your function point is {{ info.function_points }} out of 100</h3>
-    <h3 style="color:ghostwhite">Your equivalent effort in hours is {{ info.effort }} out of 240 </h3>
-    <h4 style="color:ghostwhite">Weekly Report Link : <a style="color: lime" href={{ info.report }}> {{ info.report }} </a></h4>
-    <h4 style="color:ghostwhite">Mentor : <p style="color: lime; display:inline;"> {{ info.mentor }} </p></h4>
-    <h4 style="color:ghostwhite">Github Handle : <p style="color: lime ; display:inline;"> {{ info.handle }}</p>
-    </h4>
+<div class="container-fluid" style="padding: 20px;">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-4">
+            <h4>Function Points:</h4>
+        </div>
+        <div class="col-8">
+            <h4>{{ info.function_points }}</h4>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Equivalent Man Hours:</h4>
+        </div>
+        <div class="col-8">
+            <h4>{{ info.effort }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Function Points:</h4>
+        </div>
+        <div class="col-8">
+            <h4>{{ info.function_points }}</h4>
+        </div>
+    </div>
+</div>
+<div class="col-6">
+    <div class="row">
+        <div class="col-4">
+            <h4>Weekly Report:</h4>
+        </div>
+        <div class="col-8">
+            <h4><a href='{{ info.report }}'>{{ info.report }}</a></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Mentor:</h4>
+        </div>
+        <div class="col-8">
+            <h4>{{ info.mentor }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h4>Github Handle:</h4>
+        </div>
+        <div class="col-8">
+            <h4>{{ info.handle }}</h4>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+    <h1 style="text-align: center">Logged Commits</h1>
     <div class="table-responsive">
-        <table class="table table-hover">
-            <tr class="info">
-                <th>Commit Id</th>
-                <th>Url</th>
-                <th>Points</th>
+        <table class="table table-hover table-bordered" style="border-radius: 10px">
+            <tr class="info bg-info">
+                <th>Commit ID</th>
                 <th>Time of Submission</th>
+                <th>Points</th>
                 <th>Evaluated</th>
                 <th>Remarks</th>
             </tr>
             {% for i in issue_info %}
-            <tr>
-                <td> {{ i.commit_id }} </td>
-                <td> {{ i.url }} </td>
-                <td> {{ i.issue_points }} </td>
-                <td> {{ i.toc }}</td>
-                {% if i.is_added %}
-                <td>Yes</td>
-                {% else %}
-                <td>No</td>
-                {% endif %}
-                <td> {{ i.remark }}</td>
+            <tr class="bg-light">
+                <td class="col-md-2"> {{ i.commit_id }} </td>
+                <td class='col-md-2'> {{ i.toc }}</td>
+                <td class='col-md-1'> {{ i.issue_points }} </td>
+                <td class='col-md-1'>
+                    {% if i.is_added %}Yes{% else %}No{% endif %}
+                </td>
+                <td class="col-md-6"> {{ i.remark }}</td>
             </tr>
             {% endfor %}
         </table>
     </div>
-</center>
-{% endblock %}
+</div>
+    {% endblock %}

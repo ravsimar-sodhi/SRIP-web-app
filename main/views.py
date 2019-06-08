@@ -36,7 +36,7 @@ def search(request):
     data = github_search(keyword, "virtual-labs")
     res = {}
     res['items'] = data
-    return render(request, 'main/home.html', {'data': res})
+    return render(request, 'main/search.html', {'data': res})
 
 def logissue(request):
     if request.method == 'POST':
