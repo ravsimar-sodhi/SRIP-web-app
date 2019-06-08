@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'social_django',
     'bootstrap3',
     'bootstrap4',
+    # 'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ TEMPLATES = [
         },
     },
 ]
-
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
     # 'social_core.backends.google.GoogleOAuth2',

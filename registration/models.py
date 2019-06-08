@@ -1,5 +1,6 @@
 from django.db import models
 from django.forms import ModelForm
+from django import forms
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
 
@@ -65,8 +66,42 @@ class StudentForm(ModelForm):
             'handle':_("Github Handle"),
             'resume':_("Resume"),
         }
-        # labels = {
-        #     'name': _('Writer'),
+        # widgets = {
+        #     'name':forms.TextInput(
+		# 		attrs={
+		# 			'class': 'form-control'
+		# 			}
+		# 		),
+        #     'email':forms.TextInput(
+		# 		attrs={
+		# 			'class': 'form-control'
+		# 			}
+		# 		),
+        #     'rollno':forms.TextInput(
+		# 		attrs={
+		# 			'class': 'form-control'
+		# 			}
+		# 		),
+        #     'clg_name':forms.TextInput(
+		# 		attrs={
+		# 			'class': 'form-control'
+		# 			}
+		# 		),
+        #     'branch_year':forms.TextInput(
+		# 		attrs={
+		# 			'class': 'form-control'
+		# 			}
+		# 		),
+        #     'area_interest':forms.Textarea(
+		# 		attrs={
+		# 			'class': 'form-control'
+		# 			}
+		# 		),
+        #     'handle':forms.TextInput(
+		# 		attrs={
+		# 			'class': 'form-control'
+		# 			}
+		# 		),
         # }
         # help_texts = {
         #     'name': _('Some useful help text.'),
