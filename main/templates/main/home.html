@@ -8,128 +8,69 @@
 </ul>
 {% endif %}
 <br>
+<div class='container-fluid shadow rounded bg-light' style="padding:20px;">
+  <h1>About SRIP</h1>
+  <p>SRIP stands for Student Research Internship Program</p>
+</div>
+<br>
+<br>
+<br>
+<br>
 
-<!-- <div id='recomm' class ="container-fluid" style=" height:300px; width:95%; overflow-x: scroll">
-  <div class="row flex-row flex-nowrap" style="height: 95%">
-    <div class="col-4 card-group align-items-stretch d-flex">
-      <div class="card">
-        <div class="card-header">
-          <a target='_blank' href={{item.html_url}}>
-            {{item.full_name}}
-          </a>
+<div class='container-fluid'>
+  <h2> Recommended Repositories</h2>
+  <div id='recomm' class ="shadow rounded bg-light container-fluid" style="padding: 20px;">
+    {% for item in data.items %}
+    {% if forloop.counter == 1 %}
+      <div class="row">
+    {% endif %}
+    {% if forloop.counter == 4 %}
+      <div class="row">
+    {% endif %}
+      <div class="col-4 card-group">
+        <div class="card bg-light shadow">
+        <div class="card-header bg-info">
+          <div class="row">
+            <a class="col-9 text-light" target='_blank' href={{item.html_url}}>
+              {{item.full_name}}
+            </a>
+            <!-- <div class="col-2 text-dark">Forks:{{item.forks}}</div> -->
+            <div class="col-3 text-light text-right">Issues: {{item.open_issues_count}}</div>
+          </div>
         </div>
-        <div class="card-body">
+        <div class="card-body bg-light">
           <a target='_blank' href={{item.html_url}}>
-            <div class='title'>
+            <div class='title text-dark'>
               <h3> {{item.name}} </h3>
             </div>
           </a>
-          <div>
-            {% if item.description == "" %}
+          <div class="text-dark">
+            {% if item.description == "None" %}
             "Description not provided."
             {% else %}
             {{item.description}}
           </div>
           {% endif %}
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-              <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
+        </div>
+        <div class="card-footer bg-light">
+          <div class="row">
+            <div class="col-6 text-dark"><strong> Language: </strong>
+              {{item.language}} </div>
+              <div class="col-6 text-dark text-right"><strong>Updated: </strong>
+                {{item.updated_at}}
+              </div>
             </div>
           </div>
         </div>
+        </div>
+        {% if forloop.counter == 3 %}
       </div>
-    </div>
-    <div class="col-4 card-group align-items-stretch d-flex">
-      <div class="card">
-        <div class="card-header">
-          <a target='_blank' href={{item.html_url}}>
-            {{item.full_name}}
-          </a>
-        </div>
-        <div class="card-body">
-          <a target='_blank' href={{item.html_url}}>
-            <div class='title'>
-              <h3> {{item.name}} </h3>
-            </div>
-          </a>
-          <div>
-            {% if item.description == "" %}
-            "Description not provided."
-            {% else %}
-            {{item.description}}
-          </div>
-          {% endif %}
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-              <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-4 card-group align-items-stretch d-flex">
-      <div class="card">
-        <div class="card-header" >
-          <a target='_blank' href={{item.html_url}}>
-            {{item.full_name}}
-          </a>
-        </div>
-        <div class="card-body">
-          <a target='_blank' href={{item.html_url}}>
-            <div class='title'>
-              <h3> {{item.name}} </h3>
-            </div>
-          </a>
-          <div>
-            {% if item.description == "" %}
-            "Description not provided."
-            {% else %}
-            {{item.description}}
-          </div>
-          {% endif %}
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-              <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-4 card-group align-items-stretch d-flex">
-      <div class="card">
-        <div class="card-header">
-          <a target='_blank' href={{item.html_url}}>
-            {{item.full_name}}
-          </a>
-        </div>
-        <div class="card-body">
-          <a target='_blank' href={{item.html_url}}>
-            <div class='title'>
-              <h3> {{item.name}} </h3>
-            </div>
-          </a>
-          <div>
-            {% if item.description == "" %}
-            "Description not provided."
-            {% else %}
-            {{item.description}}
-          </div>
-          {% endif %}
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-6"><strong> Language: </strong> {{item.language}} </div>
-              <div class="col-6"><strong>Updated: </strong> {{item.updated_at}} </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <br>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>
- -->
  <div style="background-color: black">    
   <div id="results" class="container">
       {% for item in data.items %}
@@ -173,3 +114,6 @@
       </div>
     </div>
 {% endblock %}
+
+  {% endblock %}
+</div>

@@ -8,10 +8,20 @@ from gitlab import Gitlab
 
 # Create your views here.
 def home(request):
+    orgs = ['virtual-labs', 'mozilla','google']
+    res = {}
+    data = github_search('', orgs, sort='forks')
+    res['items'] = data[:6]
+    dic = {'data':res}
     if request.user.is_authenticated:
         info = Student.objects.get(handle=request.user)
-        return render(request, 'main/home.html', {'info': info})
-    return render(request, 'main/home.html')
+        dic['info'] = info
+        return render(request, 'main/home.html',dic )
+    return render(request, 'main/home.html', dic)
+
+# def show_logos(users):
+    # for user in orgs:
+
 
 def gitlab_search(keyword):
     gl = Gitlab('https://gitlab.com', private_token = 'bqfyAiHKF_zT1EFxT_Mz')
@@ -24,8 +34,12 @@ def gitlab_search(keyword):
         x['html_url'] = x['http_url_to_repo']
     return data
 
-def github_search(keyword, username):
-    url = "https://api.github.com/search/repositories?q=" + keyword +"+user:" + username
+def github_search(keyword, orgs, sort=None):
+    url = "https://api.github.com/search/repositories?q=" + keyword
+    for username in orgs:
+        url += "+user:" + username
+    if sort is not None:
+        url += "&sort:" + sort +"&order=desc"
     r = requests.get(url = url)
     data = r.json()
     return data['items']
@@ -33,15 +47,19 @@ def github_search(keyword, username):
 def search(request):
     keyword = request.GET['searchword']
     # data = gitlab_search(keyword)
-    data = github_search(keyword, "virtual-labs")
+    orgs = ['virtual-labs', 'mozilla','google']
+    data = github_search(keyword, orgs)
     res = {}
     res['items'] = data
     return render(request, 'main/search.html', {'data': res})
 
+# def update_profile(request):
+    # if request.method == 'POST':
+
 def logissue(request):
+    # if not (request.user.is_authenticated):
+        # return render(request, 'main/home.html')
     if request.method == 'POST':
-        # request.POST['user'] = request.user
-        # request.POST['mentor'] = 'Mentor'
         form = LoggedIssueForm(request.POST)
         if form.is_valid():
             current_user = request.user
@@ -65,6 +83,8 @@ def logissue(request):
     return render(request, 'main/logissue.html', {'form': form})
 
 def submitreport(request):
+    # if not (request.user.is_authenticated):
+        # return render(request, 'main/home.html')
     if request.method == 'POST':
         form = ReportForm(request.POST)
         if form.is_valid():
