@@ -11,6 +11,9 @@
 <div class='container-fluid shadow rounded bg-light' style="padding:20px;">
   <h1>About SRIP</h1>
   <p>SRIP stands for Student Research Internship Program</p>
+  {% if regstatus %}
+  <p> Your registration status is {{ regstatus }}</p>
+  {% endif %}
 </div>
 <br>
 <br>

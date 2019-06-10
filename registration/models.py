@@ -58,3 +58,14 @@ class ProfileForm(ModelForm):
     class Meta:
         model = Student
         exclude = ['status', 'function_points', 'user','effort', 'report', 'mentor', 'batch', 'handle']
+        labels = {
+            'name': _('Name of Student'),
+            'st_id': _("Student ID"),
+            'email':_("Email ID"),
+            'rollno':_("Roll No."),
+            'clg_name':_("College Name"),
+            'branch_year':_("Branch & Year"),
+            'area_interest':_("Area of Interest"),
+            'handle':_("Github Handle"),
+            'resume':_("Resume"),
+        }
