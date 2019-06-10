@@ -31,19 +31,6 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
-# class UserStudent(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     handle = models.CharField(max_length = 120)
-#     function_points = models.FloatField(default=0)
-#     effort = models.FloatField(default=0)
-#     report = models.URLField(default="https://github.com/aditya3498/SRIP2019-Batch1/wiki")
-#     mentor = models.CharField(max_length=100,blank=True,null=True)
-#     batch = models.CharField(max_length=100,default="SRIP19-BATCH1")
-#     status = models.CharField(max_length = 8, choices = REGISTRATION_CHOICES, default = "PENDING")
-
-#     def __str__(self):
-#         return self.handle
-
 class StudentForm(ModelForm):
     class Meta:
         model = Student
@@ -66,48 +53,8 @@ class StudentForm(ModelForm):
             'handle':_("Github Handle"),
             'resume':_("Resume"),
         }
-        # widgets = {
-        #     'name':forms.TextInput(
-		# 		attrs={
-		# 			'class': 'form-control'
-		# 			}
-		# 		),
-        #     'email':forms.TextInput(
-		# 		attrs={
-		# 			'class': 'form-control'
-		# 			}
-		# 		),
-        #     'rollno':forms.TextInput(
-		# 		attrs={
-		# 			'class': 'form-control'
-		# 			}
-		# 		),
-        #     'clg_name':forms.TextInput(
-		# 		attrs={
-		# 			'class': 'form-control'
-		# 			}
-		# 		),
-        #     'branch_year':forms.TextInput(
-		# 		attrs={
-		# 			'class': 'form-control'
-		# 			}
-		# 		),
-        #     'area_interest':forms.Textarea(
-		# 		attrs={
-		# 			'class': 'form-control'
-		# 			}
-		# 		),
-        #     'handle':forms.TextInput(
-		# 		attrs={
-		# 			'class': 'form-control'
-		# 			}
-		# 		),
-        # }
-        # help_texts = {
-        #     'name': _('Some useful help text.'),
-        # }
-        # error_messages = {
-        #     'name': {
-        #         'max_length': _("This writer's name is too long."),
-        #     },
-        # }
+
+class ProfileForm(ModelForm):
+    class Meta:
+        model = Student
+        exclude = ['status', 'function_points', 'user','effort', 'report', 'mentor', 'batch', 'handle']

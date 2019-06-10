@@ -129,13 +129,15 @@
     </div>
   </div>
 </div>
- -->    <div id="results" class="container">
+ -->
+ <div style="background-color: black">    
+  <div id="results" class="container">
       {% for item in data.items %}
       {% if forloop.counter0|divisibleby:2 %}
         <div class="row">
       {% endif %}
         <div class="col-6 card-group">
-          <div class="card">
+          <div class="card bg-dark">
             <div class="card-header" style="background-color: #e25443">
               <a target='_blank' href={{item.html_url}} style="color: #fff">
                 {{item.full_name}}
@@ -169,4 +171,5 @@
         {% endif %}
         {% endfor %}
       </div>
+    </div>
 {% endblock %}
