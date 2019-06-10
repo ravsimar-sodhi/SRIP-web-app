@@ -19,6 +19,10 @@ def home(request):
         return render(request, 'main/home.html',dic )
     return render(request, 'main/home.html', dic)
 
+# def show_logos(users):
+    # for user in orgs:
+
+
 def gitlab_search(keyword):
     gl = Gitlab('https://gitlab.com', private_token = 'bqfyAiHKF_zT1EFxT_Mz')
     gl.auth()
