@@ -71,49 +71,4 @@
     </div>
   </div>
 </div>
- <div style="background-color: black">    
-  <div id="results" class="container">
-      {% for item in data.items %}
-      {% if forloop.counter0|divisibleby:2 %}
-        <div class="row">
-      {% endif %}
-        <div class="col-6 card-group">
-          <div class="card bg-dark">
-            <div class="card-header" style="background-color: #e25443">
-              <a target='_blank' href={{item.html_url}} style="color: #fff">
-                {{item.full_name}}
-              </a>
-            </div>
-            <div class="card-body" style="background-color: #21314a">
-              <a target='_blank' href={{item.html_url}}>
-                <div class='title'>
-                  <h3 style="color: rgba(255,255,255,0.7);"> {{item.name}} </h3>
-                </div>
-              </a>
-              <div style="color: rgba(255,255,255,0.7);">
-                {% if item.description == "None" %}
-                "Description not provided."
-                {% else %}
-                {{item.description}}
-              </div>
-              {% endif %}
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong> Language: </strong> {{item.language}} </div>
-                  <div class="col-6" style="color: rgba(255,255,255,0.7);"><strong>Updated: </strong> {{item.updated_at}} </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% if not forloop.counter0|divisibleby:2 %}
-          </div>
-          <br>
-        {% endif %}
-        {% endfor %}
-      </div>
-    </div>
 {% endblock %}
-
-  {% endblock %}
-</div>
