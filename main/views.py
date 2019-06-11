@@ -105,6 +105,8 @@ def man_hour_equivalent(x):
     mul_fac = 3
     j = 0.45
     power = mul_fac * j
+    res = ((x**power)*160)/27
+    print(res)
     return ((x ** power)*160)/27
 
 def calculate(request):
@@ -114,9 +116,9 @@ def calculate(request):
 
     for i in range(len_com):
         html_ip = pts_info[i].html_ip
-        css_ip = pts.info[i].css_ip
-        js_ip = pts.info[i].js_ip
-        py_ip = pts.info[i].py_ip
+        css_ip = pts_info[i].css_ip
+        js_ip = pts_info[i].js_ip
+        py_ip = pts_info[i].py_ip
         pts_info[i].issue_points = html_ip + css_ip + js_ip + py_ip
         pts_info[i].save()
 
@@ -126,11 +128,12 @@ def calculate(request):
     css_ip = 0
     py_ip = 0
     try:
-        total = pts_info[-1].issue_points
-        html_ip = pts_info[-1].html_ip
-        js_ip = pts_info[-1].js_ip
-        css_ip = pts_info[-1].css_ip
-        py_ip = pts_info[-1].py_ip
+        ind = len(pts_info) -1
+        total = pts_info[ind].issue_points
+        html_ip = pts_info[ind].html_ip
+        js_ip = pts_info[ind].js_ip
+        css_ip = pts_info[ind].css_ip
+        py_ip = pts_info[ind].py_ip
     except:
         pass
 
@@ -140,7 +143,6 @@ def calculate(request):
     mh += man_hour_equivalent(css_ip)
     mh += man_hour_equivalent(js_ip)
     mh += man_hour_equivalent(py_ip)
-
     user_info.effort = mh
     user_info.save()
 
