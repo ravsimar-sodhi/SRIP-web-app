@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect, render_to_response
 from django.http import HttpResponseRedirect
-from .models import StudentForm, Student, ProfileForm, MentorForm, Mentor
-# from .forms import MentorRegistrationForm
+from .models import StudentForm, Student, StudentProfileForm, Mentor, MentorForm, MentorProfileForm
 
-def register(request):
+def register_student(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -16,8 +15,6 @@ def register(request):
             # ...
             # redirect to a new URL:
             return HttpResponseRedirect('/')
-        else:
-            print('here')
 
     # if a GET (or any other method) we'll create a blank form
     else:
@@ -26,34 +23,30 @@ def register(request):
     return render(request, 'registration/register.html', {'form': form})
 
 def register_mentor(request):
-    print('pls')
     if request.method == 'POST':
         form = MentorForm(request.POST)
         if form.is_valid():
             print('form valid')
             form.save()
-            return HttpResponseRedirect('../')
+            return HttpResponseRedirect('/')
         else:
             print('form invalid')
     else:
         print('x')
         form = MentorForm()
-    return render(request, 'registration/register_mentor.html', {'form': form})
+    return render(request, 'registration/register.html', {'form': form})
 
 def create_user(strategy, details, backend, user=None, *args, **kwargs):
     if user:
         return {'is_new': False}
     flag = 0
-
     try:
-        print('x')
         instance = Student.objects.get(handle=details.get('username'))
     except Student.DoesNotExist:
         try:
-            print('h')
             instance = Mentor.objects.get(handle = details.get('username'))
         except Mentor.DoesNotExist:
-            return redirect('/register')
+            return redirect('/')
 
     if instance.status == "REJECTED":
         return render_to_response('main/home.html', {'regstatus': 'Rejected'})
@@ -71,18 +64,18 @@ def create_user(strategy, details, backend, user=None, *args, **kwargs):
         return {'is_new': True, 'user': strategy.create_user(**fields)}
 
 
-def profile(request):
-    instance = Student.objects.filter(handle=request.user).first()
-    form = ProfileForm(instance=instance)
+def profile_student(request):
+    instance = Student.objects.get(handle=request.user)
+    form = StudentProfileForm(instance=instance)
     if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES)
+        form = StudentProfileForm(request.POST, request.FILES)
         if 'resume' not in request.FILES:
             request.FILES['resume'] = instance.resume
         if 'st_id' not in request.FILES:
             request.FILES['st_id'] = instance.st_id
 
         if form.is_valid():
-            student = Student.objects.filter(handle=request.user).first()
+            student = instance
             student.name = form.cleaned_data['name']
             student.email = form.cleaned_data['email']
             student.rollno = form.cleaned_data['rollno']
@@ -95,5 +88,20 @@ def profile(request):
             return HttpResponseRedirect('/')
 
     else:
-        form = ProfileForm(instance=instance)
+        form = StudentProfileForm(instance=instance)
+    return render(request, 'registration/profile.html', {'form':form})
+
+def profile_mentor(request):
+    instance = Mentor.objects.get(handle=request.user)
+    form = MentorProfileForm(instance=instance)
+    if request.method == 'POST':
+        form = MentorProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            mentor = instance
+            mentor.name = form.cleaned_data['name']
+            mentor.email = form.cleaned_data['email']
+            mentor.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = MentorProfileForm(instance=instance)
     return render(request, 'registration/profile.html', {'form':form})

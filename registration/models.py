@@ -106,10 +106,10 @@ class MentorForm(ModelForm):
         if handle and c_handle and handle != c_handle:
                 raise forms.ValidationError("Handles do not match")
 
-class ProfileForm(ModelForm):
+class StudentProfileForm(ModelForm):
     class Meta:
         model = Student
-        exclude = ['status', 'function_points', 'user','effort', 'report', 'mentor', 'batch', 'handle']
+        exclude = ['status', 'function_points', 'user','effort', 'report', 'mentor', 'batch', 'handle','role']
         labels = {
             'name': _('Name of Student'),
             'st_id': _("Student ID"),
@@ -121,4 +121,13 @@ class ProfileForm(ModelForm):
             'area_interest':_("Area of Interest"),
             'handle':_("Github Handle"),
             'resume':_("Resume"),
+        }
+
+class MentorProfileForm(ModelForm):
+    class Meta:
+        model = Mentor
+        exclude = ['handle', 'role' ,'status']
+        labels = {
+            'name': _('Name of Student'),
+            'email':_("Email ID"),
         }

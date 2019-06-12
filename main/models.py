@@ -27,23 +27,3 @@ class LoggedIssue(models.Model):
 
     def __str__(self):
         return self.commit_id
-
-# class LoggedIssueForm(ModelForm):
-#     class Meta:
-#         model = LoggedIssue
-#         exclude = ['user',
-#         'html_ip',
-#         'css_ip',
-#         'js_ip',
-#         'python_ip',
-#         'issue_points',
-#         'mentor',
-#         'handle',
-#         'toc',
-#         'is_added',
-#         'remark',
-#         ]
-#         labels = {
-#             'commit_id':_("Commit ID"),
-#             'url':_("URL"),
-#         }
