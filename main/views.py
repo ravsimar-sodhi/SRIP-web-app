@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import LoggedIssue
 from .forms import LoggedIssueForm, ReportForm
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from registration.models import Student
+from registration.models import Student,Mentor
 from gitlab import Gitlab
 
 # Create your views here.
@@ -14,7 +14,11 @@ def home(request):
     res['items'] = data[:6]
     dic = {'data':res}
     if request.user.is_authenticated:
-        info = Student.objects.get(handle=request.user)
+        try:
+            info = Student.objects.get(handle=request.user)
+        except Student.DoesNotExist:
+            print(request.user)
+            info = Mentor.objects.get(handle=request.user)
         dic['info'] = info
         return render(request, 'main/home.html',dic )
     return render(request, 'main/home.html', dic)

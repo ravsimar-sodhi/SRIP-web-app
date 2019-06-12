@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, render_to_response
 from django.http import HttpResponseRedirect
-from .models import StudentForm, Student, ProfileForm
+from .models import StudentForm, Student, ProfileForm, MentorForm, Mentor
+# from .forms import MentorRegistrationForm
 
 def register(request):
     # if this is a POST request we need to process the form data
@@ -15,8 +16,8 @@ def register(request):
             # ...
             # redirect to a new URL:
             return HttpResponseRedirect('/')
-        # else:
-        #     print('here')
+        else:
+            print('here')
 
     # if a GET (or any other method) we'll create a blank form
     else:
@@ -24,27 +25,49 @@ def register(request):
 
     return render(request, 'registration/register.html', {'form': form})
 
+def register_mentor(request):
+    print('pls')
+    if request.method == 'POST':
+        form = MentorForm(request.POST)
+        if form.is_valid():
+            print('form valid')
+            form.save()
+            return HttpResponseRedirect('../')
+        else:
+            print('form invalid')
+    else:
+        print('x')
+        form = MentorForm()
+    return render(request, 'registration/register_mentor.html', {'form': form})
+
 def create_user(strategy, details, backend, user=None, *args, **kwargs):
     if user:
         return {'is_new': False}
     flag = 0
+
     try:
-        instance = Student.objects.filter(handle=details.get('username')).first()
-    except:
-        return redirect('/register')
+        print('x')
+        instance = Student.objects.get(handle=details.get('username'))
+    except Student.DoesNotExist:
+        try:
+            print('h')
+            instance = Mentor.objects.get(handle = details.get('username'))
+        except Mentor.DoesNotExist:
+            return redirect('/register')
 
     if instance.status == "REJECTED":
         return render_to_response('main/home.html', {'regstatus': 'Rejected'})
     elif instance.status == "PENDING":
         return render_to_response('main/home.html', {'regstatus': 'Pending'})
     else:
-        USER_FIELDS = ['username','email']
+        USER_FIELDS = ['username','email',]
         fields = dict(
                 (name, kwargs.get(name, details.get(name))
                  )
                       for name in USER_FIELDS)
         if not fields:
             return
+        fields['role'] = instance.role
         return {'is_new': True, 'user': strategy.create_user(**fields)}
 
 

@@ -1,11 +1,13 @@
 from django.db import models
 from datetime import datetime
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+# from registration.models import User
+from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 class LoggedIssue(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     # username = models.CharField(max_length=50)
     commit_id = models.CharField(max_length=40,unique=True)
     url = models.URLField(default="https://www.google.com/")

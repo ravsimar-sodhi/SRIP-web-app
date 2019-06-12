@@ -94,10 +94,13 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 
 DATABASES = {
     'default': {
+        # Mongo
+        # 'ENGINE': 'djongo',
+        # 'NAME':'test-db',
+        # 'HOST': '127.0.0.1:27017'
         # Development on SQLite3!!
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db-srip.sqlite3'),
-        # 'HOST': '127.0.0.1:27017'
     }
 }
 
@@ -106,7 +109,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
-# AUTH_USER_MODEL = 'registration.UserStudent'
+AUTH_USER_MODEL = 'registration.User'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
