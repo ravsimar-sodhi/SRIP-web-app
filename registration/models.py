@@ -69,20 +69,14 @@ class StudentForm(ModelForm):
     confirm_handle = forms.CharField(max_length=120)
     class Meta:
         model = Student
-        exclude = ['status',
-        'user',
-        'function_points',
-        'effort',
-        'report',
-        'mentor',
-        ]
-        fields = ('name', 'email', 'rollno','clg_name','branch_year','area_interest','handle','confirm_handle', 'st_id', 'resume')
+        fields = ('name', 'email', 'rollno','clg_name','branch', 'year','area_interest','handle','confirm_handle','batch', 'st_id', 'resume')
         labels = {
             'name': _('Name of Student'),
             'email':_("Email ID"),
             'rollno':_("Roll No."),
             'clg_name':_("College Name"),
-            'branch_year':_("Branch & Year"),
+            'branch':_("Branch"),
+            'year':_("Year"),
             'area_interest':_("Area of Interest"),
             'handle':_("Github Handle"),
             'confirm_handle':_("Confirm Handle"),
@@ -122,7 +116,8 @@ class ProfileForm(ModelForm):
             'email':_("Email ID"),
             'rollno':_("Roll No."),
             'clg_name':_("College Name"),
-            'branch_year':_("Branch & Year"),
+            'branch':_("Branch"),
+            'year':_("Year"),
             'area_interest':_("Area of Interest"),
             'handle':_("Github Handle"),
             'resume':_("Resume"),
