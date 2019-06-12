@@ -15,7 +15,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
+<script>
+    var message_ele = document.getElementById("message");
+    setTimeout(function () {
+        message_ele.style.display = "none";
+    }, 3000);
+// Timeout is 3 sec, you can change it
+</script>
 <body class="bg-light">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark text-light">
         <!-- Navbar content -->
@@ -74,6 +80,16 @@
             </ul>
             </div>
     </nav>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
     <div>
         <img src='{% static "SRIP.png" %}' style="max-width: 100%">
     </div>
