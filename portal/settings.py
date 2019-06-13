@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'social_django',
     'bootstrap3',
     'bootstrap4',
+    'captcha'
     # 'crispy_forms',
 ]
 

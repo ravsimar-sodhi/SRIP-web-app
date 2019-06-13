@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User, AbstractUser
+from captcha.fields import CaptchaField
 
 REGISTRATION_CHOICES = [('PENDING', 'Pending'), ('APPROVED', 'Approved'),('REJECTED', 'Rejected')]
 def user_directory_path(instance, filename):
@@ -67,6 +68,7 @@ class Mentor(models.Model):
 class StudentForm(ModelForm):
     # handle = forms.CharField(max_length=120)
     confirm_handle = forms.CharField(max_length=120)
+    captcha = CaptchaField()
     class Meta:
         model = Student
         fields = ('name', 'email', 'rollno','clg_name','branch', 'year','area_interest','handle','confirm_handle','batch', 'st_id', 'resume')
@@ -93,6 +95,7 @@ class StudentForm(ModelForm):
 
 class MentorForm(ModelForm):
     confirm_handle = forms.CharField(max_length=120, label = 'Confirm Handle')
+    captcha = CaptchaField()
 
     class Meta:
         model = Mentor
