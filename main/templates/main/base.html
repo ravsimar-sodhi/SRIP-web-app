@@ -44,6 +44,12 @@
                 <a class="nav-link" href="{% url 'main:submitreport' %}">Report</a>
             </li>
         </ul>
+        {% else %}
+        <ul class='navbar-nav'>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'mentor:evaluation' %}">Evaluate</a>
+            </li>
+        </ul>
         {% endif %}
 
             <form class="form-inline my-2 my-lg-0 ml-auto mr-auto" action="{% url 'main:search' %}" method="get">
@@ -56,7 +62,7 @@
                     {% if user.role == 1 %}
                     <a class="nav-link" href="{% url 'registration:profile_student' %}" request="POST">{{ user.username }}</a>
                     {% else %}
-                    <a class="nav-link" href="{% url 'registration:profile_mentor' %}" request="POST">{{ user.username }}</a>
+                    <a class="nav-link" href="{% url 'mentor:profile_mentor' %}" request="POST">{{ user.username }}</a>
                     {% endif %}
                 </li>
                 <li class="nav-item active">
@@ -70,7 +76,7 @@
                     </a>
                     <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item text-light" href="{% url 'registration:register_student' %}">As Student</a>
-                        <a class="dropdown-item text-light" href="{% url 'registration:register_mentor' %}">As Mentor</a>
+                        <a class="dropdown-item text-light" href="{% url 'mentor:register_mentor' %}">As Mentor</a>
                     </div>
                 </li>
                 <li class="nav-item active">

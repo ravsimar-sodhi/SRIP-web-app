@@ -1,5 +1,4 @@
 from django.db import models
-from django.forms import ModelForm
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User, AbstractUser
@@ -56,16 +55,9 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
-class Mentor(models.Model):
-    name = models.CharField(max_length = 120)
-    email = models.EmailField()
-    handle = models.CharField(max_length = 120)
-    status = models.CharField(max_length=8, choices = REGISTRATION_CHOICES, default = "PENDING")
-    role = models.PositiveSmallIntegerField(default = 2)
-    def __str__(self):
-        return self.handle
 
-class StudentForm(ModelForm):
+
+class StudentForm(forms.ModelForm):
     # handle = forms.CharField(max_length=120)
     confirm_handle = forms.CharField(max_length=120)
     captcha = CaptchaField()
@@ -93,23 +85,9 @@ class StudentForm(ModelForm):
             if handle and c_handle and handle != c_handle:
                     raise forms.ValidationError("Handles do not match")
 
-class MentorForm(ModelForm):
-    confirm_handle = forms.CharField(max_length=120, label = 'Confirm Handle')
-    captcha = CaptchaField()
 
-    class Meta:
-        model = Mentor
-        fields = ('name', 'email','handle')
 
-    def clean(self):
-        cleaned_data = super(MentorForm, self).clean()
-        handle = cleaned_data.get('handle')
-        c_handle = cleaned_data.get('confirm_handle')
-
-        if handle and c_handle and handle != c_handle:
-                raise forms.ValidationError("Handles do not match")
-
-class StudentProfileForm(ModelForm):
+class StudentProfileForm(forms.ModelForm):
     class Meta:
         model = Student
         exclude = ['status', 'function_points', 'user','effort', 'report', 'mentor', 'batch', 'handle','role']
@@ -124,13 +102,4 @@ class StudentProfileForm(ModelForm):
             'area_interest':_("Area of Interest"),
             'handle':_("Github Handle"),
             'resume':_("Resume"),
-        }
-
-class MentorProfileForm(ModelForm):
-    class Meta:
-        model = Mentor
-        exclude = ['handle', 'role' ,'status']
-        labels = {
-            'name': _('Name of Student'),
-            'email':_("Email ID"),
         }

@@ -20,6 +20,7 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('registration.urls')),
+    path('mentor/', include('mentor.urls')),
     path('', include('login.urls')),
     path('', include('main.urls')),
     url(r'^captcha/', include('captcha.urls')),

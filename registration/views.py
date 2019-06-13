@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, render_to_response
 from django.http import HttpResponseRedirect
-from .models import StudentForm, Student, StudentProfileForm, Mentor, MentorForm, MentorProfileForm
+from .models import StudentForm, Student, StudentProfileForm
+from mentor.models import Mentor
 
 def register_student(request):
     # if this is a POST request we need to process the form data
@@ -22,19 +23,6 @@ def register_student(request):
 
     return render(request, 'registration/register.html', {'form': form})
 
-def register_mentor(request):
-    if request.method == 'POST':
-        form = MentorForm(request.POST)
-        if form.is_valid():
-            print('form valid')
-            form.save()
-            return HttpResponseRedirect('/')
-        else:
-            print('form invalid')
-    else:
-        print('x')
-        form = MentorForm()
-    return render(request, 'registration/register.html', {'form': form})
 
 def create_user(strategy, details, backend, user=None, *args, **kwargs):
     if user:
@@ -89,19 +77,4 @@ def profile_student(request):
 
     else:
         form = StudentProfileForm(instance=instance)
-    return render(request, 'registration/profile.html', {'form':form})
-
-def profile_mentor(request):
-    instance = Mentor.objects.get(handle=request.user)
-    form = MentorProfileForm(instance=instance)
-    if request.method == 'POST':
-        form = MentorProfileForm(request.POST, request.FILES)
-        if form.is_valid():
-            mentor = instance
-            mentor.name = form.cleaned_data['name']
-            mentor.email = form.cleaned_data['email']
-            mentor.save()
-            return HttpResponseRedirect('/')
-    else:
-        form = MentorProfileForm(instance=instance)
     return render(request, 'registration/profile.html', {'form':form})

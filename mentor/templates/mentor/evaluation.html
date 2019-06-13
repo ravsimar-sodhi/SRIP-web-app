@@ -1,0 +1,175 @@
+{% extends 'main/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<!-- <div class="container-fluid shadow rounded" style="padding: 20px;">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-4">
+                    <h4>Function Points:</h4>
+                </div>
+                <div class="col-8">
+                    <h4>{{ info.function_points }}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h4>Equivalent Man Hours:</h4>
+                </div>
+                <div class="col-8">
+                    <h4>{{ info.effort }}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h4>Function Points:</h4>
+                </div>
+                <div class="col-8">
+                    <h4>{{ info.function_points }}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-4">
+                    <h4>Weekly Report:</h4>
+                </div>
+                <div class="col-8">
+                    <h4><a href='{{ info.report }}'>{{ info.report }}</a></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h4>Mentor:</h4>
+                </div>
+                <div class="col-8">
+                    <h4>{{ info.mentor }}</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h4>Github Handle:</h4>
+                </div>
+                <div class="col-8">
+                    <h4>{{ info.handle }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- <div class="container-fluid shadow rounded" style="padding: 20px">
+    <h1 style="text-align: center">Logged Commits</h1>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered rounded" style="border-radius: 10px">
+            <tr class="info bg-info">
+                <th>Commit ID</th>
+                <th>Time of Submission</th>
+                <th>Points</th>
+                <th>Status</th>
+                <th>Remarks</th>
+            </tr>
+            {% for i in issue_info %}
+            <tr class="bg-light">
+                <td class="col-md-2"> {{ i.commit_id }} </td>
+                <td class='col-md-2'> {{ i.toc }} </td>
+                <td class='col-md-1'> {{ i.issue_points }} </td>
+                <td class='col-md-1'> {{ i.status }} </td>
+                <td class="col-md-6"> {{ i.remark }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div> -->
+<div class="container-fluid shadow rounded" style="padding: 20px;">
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="col-2"> i.commit_id</td>
+                        <td class='col-2'> i.toc</td>
+                        <td class='col-1'> i.issue_points</td>
+                        <td class='col-1'> i.status</td>
+                        <td class="col-5"> i.remark</td>
+                        <td class='col-1'>
+                            <button class="btn btn-primary btn-md" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">Review
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <form class="form form-inline">
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #2
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="false" aria-controls="collapseThree">
+                        Collapsible Group Item #3
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                    moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                    Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                    shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                    proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                    aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover rounded" style="border-radius: 10px">
+            <tr class="info bg-dark text-light p-2">
+                <th>Commit ID</th>
+                <th>Time of Submission</th>
+                <th>Points</th>
+                <th>Status</th>
+                <th>Remarks</th>
+                <th>Evaluate</th>
+
+            </tr>
+            <tr class="p-2">
+                <td class="col-2"> {{ i.commit_id }} </td>
+                <td class='col-2'> {{ i.toc }} </td>
+                <td class='col-1'> {{ i.issue_points }} </td>
+                <td class='col-1'> {{ i.status }} </td>
+                <td class="col-5"> {{ i.remark }} </td>
+                <td class='col-1'><button type="submit" class="btn-primary btn-md btn">Submit</button> </td>
+            </tr>
+            <tr>
+                <td class="col-2">  i.commit_id }} </td>
+                <td class='col-2'>  i.toc }} </td>
+                <td class='col-1'>  i.issue_points }} </td>
+                <td class='col-1'>  i.status }} </td>
+                <td class="col-5">  i.remark }} </td>
+                <td class='col-1'><button type="submit" class="btn-primary btn btn-md">Submit</button> </td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

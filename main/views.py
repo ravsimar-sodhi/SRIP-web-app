@@ -5,9 +5,12 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from .models import LoggedIssue
 from .forms import LoggedIssueForm, ReportForm
-from registration.models import Student,Mentor
+from registration.models import Student
+from mentor.models import Mentor
 
 def home(request):
+    if request.user.is_authenticated and request.user.role == 2:
+        return HttpResponseRedirect('/mentor')
     orgs = ['virtual-labs', 'mozilla','google']
     res = {}
     data = github_search('', orgs, sort='forks')
