@@ -66,12 +66,11 @@ def logissue(request):
             url_form = cleaned_data.get('url')
             stud = Student.objects.get(handle=request.user.username)
             mentor_name = stud.mentor
-            handle_form = stud.handle
-            obj = LoggedIssue(user=current_user, commit_id=commit_id_form, url=url_form, mentor=mentor_name, handle=handle_form)
+            obj = LoggedIssue(user=current_user, commit_id=commit_id_form, url=url_form, mentor=mentor_name)
             try:
                 obj.save()
                 messages.add_message(request, messages.SUCCESS, "Commit Logged Successfully!")
-                return render(request, 'main/performance.html')
+                return redirect('/portal/performance')
             except:
                 messages.add_message(request, messages.ERROR, "Already existing commit! Please resubmit with a unique commit ID", extra_tags = 'danger')
         else:
@@ -93,7 +92,7 @@ def submitreport(request):
             obj.report = report_url
             obj.save()
             messages.add_message(request, messages.SUCCESS, "Report Link submitted Successfully!")
-            return render(request, 'main/performance.html')
+            return redirect(request, 'main/performance.html')
         else:
             messages.add_message(request, messages.ERROR, "Invalid form submission", extra_tags = 'danger')
     else:
@@ -110,7 +109,7 @@ def man_hour_equivalent(x):
 
 def calculate(request):
 
-    pts_info = LoggedIssue.objects.filter(handle = request.user.username, is_added = True)
+    pts_info = LoggedIssue.objects.filter(user = request.user, status = "APPROVED")
     len_com = len(pts_info)
 
     for i in range(len_com):

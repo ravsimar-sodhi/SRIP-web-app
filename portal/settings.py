@@ -42,14 +42,10 @@ INSTALLED_APPS = [
     'registration.apps.RegistrationConfig',
     'social_django',
     'bootstrap4',
-<<<<<<< HEAD
-    'captcha'
-    # 'crispy_forms',
-=======
+    'captcha',
     'login.apps.LoginConfig',
     'main.apps.MainConfig',
     'mentor.apps.MentorConfig',
->>>>>>> 010154176984909a978e66ac03cd1a98e5d2a99a
 ]
 
 MIDDLEWARE = [

@@ -71,12 +71,10 @@
             {% for i in issue_info %}
             <tr class="bg-light">
                 <td class="col-md-2"> {{ i.commit_id }} </td>
-                <td class='col-md-2'> {{ i.toc }}</td>
+                <td class='col-md-2'> {{ i.toc }} </td>
                 <td class='col-md-1'> {{ i.issue_points }} </td>
-                <td class='col-md-1'>
-                    {% if i.is_added %}Yes{% else %}No{% endif %}
-                </td>
-                <td class="col-md-6"> {{ i.remark }}</td>
+                <td class='col-md-1'> {{ i.status }} </td>
+                <td class="col-md-6"> {{ i.remark }} </td>
             </tr>
             {% endfor %}
         </table>
