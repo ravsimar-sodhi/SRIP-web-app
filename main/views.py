@@ -1,12 +1,12 @@
 import requests
-from django.shortcuts import render
+from gitlab import Gitlab
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from .models import LoggedIssue
 from .forms import LoggedIssueForm, ReportForm
-from django.http import HttpResponse, HttpResponseRedirect, Http404
 from registration.models import Student,Mentor
-from gitlab import Gitlab
 
-# Create your views here.
 def home(request):
     orgs = ['virtual-labs', 'mozilla','google']
     res = {}
@@ -20,12 +20,7 @@ def home(request):
             print(request.user)
             info = Mentor.objects.get(handle=request.user)
         dic['info'] = info
-        return render(request, 'main/home.html',dic )
     return render(request, 'main/home.html', dic)
-
-# def show_logos(users):
-    # for user in orgs:
-
 
 def gitlab_search(keyword):
     gl = Gitlab('https://gitlab.com', private_token = 'bqfyAiHKF_zT1EFxT_Mz')
@@ -57,12 +52,11 @@ def search(request):
     res['items'] = data
     return render(request, 'main/search.html', {'data': res})
 
-# def update_profile(request):
-    # if request.method == 'POST':
 
 def logissue(request):
-    # if not (request.user.is_authenticated):
-        # return render(request, 'main/home.html')
+    if (not (request.user.is_authenticated)) or (request.user.role != 1):
+        messages.add_message(request, messages.ERROR, "You must be logged in as student in for this action", extra_tags = 'danger')
+        return render(request, 'main/home.html')
     if request.method == 'POST':
         form = LoggedIssueForm(request.POST)
         if form.is_valid():
@@ -76,19 +70,20 @@ def logissue(request):
             obj = LoggedIssue(user=current_user, commit_id=commit_id_form, url=url_form, mentor=mentor_name, handle=handle_form)
             try:
                 obj.save()
+                messages.add_message(request, messages.SUCCESS, "Commit Logged Successfully!")
+                return render(request, 'main/performance.html')
             except:
-                return HttpResponse('Already Existing Commit! Please resubmit with proper commit id')
-            return HttpResponseRedirect('/')
+                messages.add_message(request, messages.ERROR, "Already existing commit! Please resubmit with a unique commit ID", extra_tags = 'danger')
         else:
-            print('form invalid')
-            return HttpResponse('Invalid Submission')
+            messages.add_message(request, messages.ERROR, "Invalid form submission", extra_tags = 'danger')
     else:
         form = LoggedIssueForm()
     return render(request, 'main/logissue.html', {'form': form})
 
 def submitreport(request):
-    # if not (request.user.is_authenticated):
-        # return render(request, 'main/home.html')
+    if (not (request.user.is_authenticated)) or (request.user.role != 1):
+        messages.add_message(request, messages.ERROR, "You must be logged in as student in for this action", extra_tags = 'danger')
+        return render(request, 'main/home.html')
     if request.method == 'POST':
         form = ReportForm(request.POST)
         if form.is_valid():
@@ -97,10 +92,10 @@ def submitreport(request):
             obj = Student.objects.get(handle = request.user.username)
             obj.report = report_url
             obj.save()
-            return HttpResponseRedirect('/')
+            messages.add_message(request, messages.SUCCESS, "Report Link submitted Successfully!")
+            return render(request, 'main/performance.html')
         else:
-            print('form invalid')
-            return HttpResponse('Invalid Submission')
+            messages.add_message(request, messages.ERROR, "Invalid form submission", extra_tags = 'danger')
     else:
         form = ReportForm()
         return render(request, 'main/report.html', {'form':form})
@@ -151,6 +146,9 @@ def calculate(request):
     user_info.save()
 
 def displaypoints(request):
+    if (not (request.user.is_authenticated)) or (request.user.role != 1):
+        messages.add_message(request, messages.ERROR, "You must be logged in as student in for this action", extra_tags = 'danger')
+        return render(request, 'main/home.html')
     calculate(request)
     info = Student.objects.get(handle = request.user.username)
     issue_info = LoggedIssue.objects.filter(user = request.user)
@@ -159,4 +157,5 @@ def displaypoints(request):
     if issue_info.exists():
         return render(request, 'main/performance.html', {'info': info, 'issue_info': issue_info})
     else:
-        return HttpResponse("No Commit Logged Yet")
+        messages.add_message(request, messages.ERROR, "No Commit Logged yet", extra_tags = 'danger')
+        return render(request, 'main/home.html', {'info': info})

@@ -1,12 +1,5 @@
 {% extends 'main/base.html' %}
 {% block content %}
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
 <br>
 <div class='container-fluid shadow-lg rounded bg-light' style="padding:20px; width:95%;">
   <h1>About SRIP</h1>
