@@ -4,12 +4,13 @@ from datetime import datetime
 # from registration.models import User
 from django.conf import settings
 from django.utils.translation import gettext_lazy as _
+# from mentor.models import Mentor
 
 # Create your models here.
 STATUS = [
-('PENDING', 'Pending'), 
+('PENDING', 'Pending'),
+('REJECTED', 'Rejected'),
 ('APPROVED', 'Approved'),
-('REJECTED', 'Rejected')
 ]
 
 class LoggedIssue(models.Model):
@@ -21,10 +22,16 @@ class LoggedIssue(models.Model):
     js_ip = models.FloatField(default=0)
     py_ip = models.FloatField(default=0)
     issue_points = models.FloatField(default=0)
-    mentor = models.CharField(max_length=100,blank=True,null=True)
+    # mentor = models.CharField(max_length=100,blank=True,null=True)
     toc = models.DateTimeField(default=datetime.now)        ## time of creation
     status = models.CharField(max_length=8, choices = STATUS, default="PENDING")
     remark = models.CharField(default="-",max_length=1000,unique=False)
 
+    project = models.CharField(max_length=100, blank=True, null=True)
+    evaluated_by = models.CharField(max_length=100, blank=True, null=True)
+    time_eval = models.DateTimeField(default=datetime.now)
+            ## time of creation
     def __str__(self):
         return self.commit_id
+
+

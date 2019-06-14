@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.db.models import Q
 from .models import  Mentor, MentorForm, MentorProfileForm
 from main.models import LoggedIssue
 # Create your views here.
@@ -42,6 +43,7 @@ def profile_mentor(request):
 
 def commit_evaluation(request):
     if request.user.is_authenticated and request.user.role == 2:
+        # Get list of projects and query logged issues according 
         issue_info = LoggedIssue.objects.filter(mentor=request.user)
     else:
         messages.add_message(request, messages.ERROR, "You must be logged in as a Mentor in for this action", extra_tags = 'danger')
