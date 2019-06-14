@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import LoggedIssue
+from .models import LoggedCommit
 
-class LoggedIssueAdmin(admin.ModelAdmin):
+class LoggedCommitAdmin(admin.ModelAdmin):
     pass
     # list_filter = ('status', 'mentor')
     # list_display = ['user', 'commit_id', 'mentor','url', 'toc', 'remark','status']
 
-admin.site.register(LoggedIssue, LoggedIssueAdmin)
+admin.site.register(LoggedCommit, LoggedCommitAdmin)

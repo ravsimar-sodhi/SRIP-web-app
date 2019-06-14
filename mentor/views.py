@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import  Mentor, MentorForm, MentorProfileForm
-from main.models import LoggedIssue
+from main.models import LoggedCommit
 # Create your views here.
 def home(request):
     dic = {}
@@ -43,8 +43,13 @@ def profile_mentor(request):
 
 def commit_evaluation(request):
     if request.user.is_authenticated and request.user.role == 2:
-        # Get list of projects and query logged issues according 
-        issue_info = LoggedIssue.objects.filter(mentor=request.user)
+        # Get list of projects and query logged issues according to those projects
+        mentor = Mentor.objects.get(handle=request.user)
+        projects = mentor.project_set.all()
+        print(projects)
+        commits = LoggedCommit.objects.filter(project__in=projects)
+        print(commits)
+        # issue_info = LoggedCommit.objects.filter()
     else:
         messages.add_message(request, messages.ERROR, "You must be logged in as a Mentor in for this action", extra_tags = 'danger')
 

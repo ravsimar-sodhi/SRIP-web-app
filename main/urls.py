@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('oauth/', include('social_django.urls', namespace = 'social')),
     path('search', views.search, name = 'search'),
-    path('portal/logissue', views.logissue, name='logissue'),
+    path('portal/logcommit', views.logcommit, name='logcommit'),
     path('portal/report', views.submitreport, name='submitreport'),
     path('portal/performance/', views.displaypoints, name = 'displaypoints')
 ]

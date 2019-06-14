@@ -3,10 +3,11 @@ from gitlab import Gitlab
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from .models import LoggedIssue
-from .forms import LoggedIssueForm, ReportForm
+from .models import LoggedCommit
+from .forms import LoggedCommitForm, ReportForm
 from registration.models import Student
 from mentor.models import Mentor
+from project.models import Project
 
 def home(request):
     if request.user.is_authenticated and request.user.role == 2:
@@ -56,20 +57,21 @@ def search(request):
     return render(request, 'main/search.html', {'data': res})
 
 
-def logissue(request):
+def logcommit(request):
     if (not (request.user.is_authenticated)) or (request.user.role != 1):
         messages.add_message(request, messages.ERROR, "You must be logged in as student in for this action", extra_tags = 'danger')
         return render(request, 'main/home.html')
     if request.method == 'POST':
-        form = LoggedIssueForm(request.POST)
+        form = LoggedCommitForm(request.POST)
         if form.is_valid():
             current_user = request.user
             cleaned_data = form.cleaned_data
             commit_id_form = cleaned_data.get('commit_id')
             url_form = cleaned_data.get('url')
             stud = Student.objects.get(handle=request.user.username)
-            mentor_name = stud.mentor
-            obj = LoggedIssue(user=current_user, commit_id=commit_id_form, url=url_form, mentor=mentor_name)
+            # mentor_name = stud.mentor
+            project = Project.objects.get(project_id= cleaned_data.get('project_id'))
+            obj = LoggedCommit(user=current_user, commit_id=commit_id_form, url=url_form, project= project)
             try:
                 obj.save()
                 messages.add_message(request, messages.SUCCESS, "Commit Logged Successfully!")
@@ -79,8 +81,8 @@ def logissue(request):
         else:
             messages.add_message(request, messages.ERROR, "Invalid form submission", extra_tags = 'danger')
     else:
-        form = LoggedIssueForm()
-    return render(request, 'main/logissue.html', {'form': form})
+        form = LoggedCommitForm()
+    return render(request, 'main/logcommit.html', {'form': form})
 
 def submitreport(request):
     if (not (request.user.is_authenticated)) or (request.user.role != 1):
@@ -112,7 +114,7 @@ def man_hour_equivalent(x):
 
 def calculate(request):
 
-    pts_info = LoggedIssue.objects.filter(user = request.user, status = "APPROVED")
+    pts_info = LoggedCommit.objects.filter(user = request.user, status = "APPROVED")
     len_com = len(pts_info)
 
     for i in range(len_com):
@@ -153,7 +155,7 @@ def displaypoints(request):
         return render(request, 'main/home.html')
     calculate(request)
     info = Student.objects.get(handle = request.user.username)
-    issue_info = LoggedIssue.objects.filter(user = request.user)
+    issue_info = LoggedCommit.objects.filter(user = request.user)
 
     # for i in range(len(issue_info)):
     if issue_info.exists():
