@@ -13,7 +13,7 @@ STATUS = [
 ('APPROVED', 'Approved'),
 ]
 
-class LoggedIssue(models.Model):
+class LoggedCommit(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, related_name='student')
     commit_id = models.CharField(max_length=40,unique=True)
     url = models.URLField(default="https://www.google.com/")
