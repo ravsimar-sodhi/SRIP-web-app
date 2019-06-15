@@ -43,7 +43,6 @@ def profile_mentor(request):
 
 def commit_evaluation(request):
     if request.user.is_authenticated and request.user.role == 2:
-        # Get list of projects and query logged issues according to those projects
         mentor = Mentor.objects.get(handle=request.user)
         projects = mentor.project_set.all()
         print(projects)

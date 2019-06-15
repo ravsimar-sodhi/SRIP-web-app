@@ -32,8 +32,11 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        {% if user.role == 1 %}
         <ul class='navbar-nav'>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'project:list_projects' %}">Projects</a>
+            </li>
+        {% if user.role == 1 %}
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'main:displaypoints' %}">Performance</a>
             </li>
@@ -43,19 +46,15 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'main:submitreport' %}">Report</a>
             </li>
-        </ul>
         {% else %}
-        <ul class='navbar-nav'>
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'mentor:evaluation' %}">Evaluate</a>
             </li>
+            {% endif %}
         </ul>
-        {% endif %}
+        <div class="ml-auto mr-auto">
+        </div>
 
-            <form class="form-inline my-2 my-lg-0 ml-auto mr-auto" action="{% url 'main:search' %}" method="get">
-                <input class="form-control mr-sm-2 bg-light" type="search" placeholder="Search" aria-label="Search" name="searchword">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
             <ul class="navbar-nav mr-right">
                 {% if user.is_authenticated %}
                 <li class="nav-item active">

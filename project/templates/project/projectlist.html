@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="container-fluid shadow rounded" style="padding: 20px">
+    <h1 style="text-align: center">Projects</h1>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered rounded" style="border-radius: 10px">
+            <tr class="info bg-info">
+                <th>Commit ID</th>
+                <th>Time of Submission</th>
+                <th>Points</th>
+                <th>Status</th>
+                <th>Remarks</th>
+                <th>Remarks</th>
+
+            </tr>
+            {% for i in projects %}
+            <tr class="bg-light">
+                <td class="col-md-2"> {{ i.project_id }} </td>
+                <td class='col-md-2'> {{ i.name }} </td>
+                <td class='col-md-1'> {{ i.url }} </td>
+                <td class='col-md-1'> {{ i.level }} </td>
+                <td class="col-md-6"> {% for m in i.mentors %} {{ m }} {% endfor %} </td>
+                <td class="col-md-6"> {% for m in i.students %} {{ m }} {% endfor %} </td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
