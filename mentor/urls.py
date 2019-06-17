@@ -7,6 +7,5 @@ urlpatterns = [
     path('register', views.register_mentor, name='register_mentor'),
     path('profile', views.profile_mentor, name='profile_mentor'),
     path('evaluate', views.commit_evaluation, name='evaluation'),
-
-
+    path('evaluate/<commit_id>', views.review_commit, name='review_commit'),
 ]

@@ -3,8 +3,9 @@
 {% block content %}
 <div style="padding:20px">
     <div class="container">
-        <h2> Registration Form</h2>
-        <form enctype="multipart/form-data" class="form-horizontal" style="background-color:ghostwhite; padding: 20px; border-radius: 10px; width:60%;" action="" method="POST">
+        <h2> Commit Evaluation Form</h2>
+        <form enctype="multipart/form-data" class="form-horizontal"
+            style="background-color:ghostwhite; padding: 20px; border-radius: 10px; width:60%;" action="" method="POST">
             {% csrf_token %}
             {% bootstrap_form form %}
             {% buttons %}

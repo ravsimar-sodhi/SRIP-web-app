@@ -1,9 +1,14 @@
+
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
-from .models import  Mentor, MentorForm, MentorProfileForm
+from datetime import datetime
 from main.models import LoggedCommit
+from .models import  Mentor, MentorForm, MentorProfileForm
+from .forms import CommitEvaluationForm
+from registration.models import User
+
 # Create your views here.
 def home(request):
     dic = {}
@@ -52,4 +57,49 @@ def commit_evaluation(request):
     else:
         messages.add_message(request, messages.ERROR, "You must be logged in as a Mentor in for this action", extra_tags = 'danger')
 
-    return render(request, 'mentor/evaluation.html',{'issue_info': issue_info})
+    return render(request, 'mentor/evaluation.html',{'commit_info': commits})
+
+def review_commit(request, commit_id):
+    if (not (request.user.is_authenticated)) or (request.user.role != 2):
+        messages.add_message(request, messages.ERROR, "You must be logged in as a Mentor in for this action", extra_tags = 'danger')
+        return render(request, 'main/evaluation.html')
+    else:
+        mentor = Mentor.objects.get(handle=request.user)
+        projects = mentor.project_set.all()
+        try:
+            commit = LoggedCommit.objects.get(project__in=projects, commit_id = commit_id)
+        except LoggedCommit.DoesNotExist:
+            messages.add_message(request, messages.ERROR, "No such commit exists under your projects", extra_tags = 'danger')
+            return render(request, 'main/evaluation.html')
+        if request.method == "POST":
+            form = CommitEvaluationForm(request.POST)
+            if form.is_valid():
+                cleaned_data = form.cleaned_data
+                commit.html_ip = cleaned_data.get('html_fp')
+                commit.css_ip = cleaned_data.get('css_fp')
+                commit.js_ip = cleaned_data.get('js_fp')
+                commit.py_ip = cleaned_data.get('py_fp')
+                commit.status = cleaned_data.get('status')
+                commit.remark = cleaned_data.get('remark')
+                commit.evaluated_by = User.objects.get(username=request.user)
+                commit.time_eval = datetime.now()
+                try:
+                    commit.save()
+                    messages.add_message(request, messages.SUCCESS, "Commit Evaluated Successfully!")
+                    return redirect('mentor/evaluate')
+                except:
+                    messages.add_message(request, messages.ERROR, "Commit not evaluated", extra_tags = 'danger')
+            else:
+                messages.add_message(request, messages.ERROR, "Invalid form submission", extra_tags = 'danger')
+        else:
+            form = CommitEvaluationForm(initial={'user': commit.user,
+            'project':commit.project,
+            'commit_id': commit.commit_id,
+            'url':commit.url,
+            'html_fp':commit.html_ip,
+            'css_fp':commit.css_ip,
+            'js_fp':commit.js_ip,
+            'py_fp':commit.py_ip,
+            'status': commit.status,
+            'remark': commit.remark})
+    return render(request, 'mentor/evaluation_form.html', {'form': form})
