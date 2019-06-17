@@ -154,6 +154,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+CONTENT_TYPES = ['pdf']
+MAX_UPLOAD_SIZE = 2621440
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

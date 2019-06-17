@@ -2,7 +2,10 @@ from django.db import models
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User, AbstractUser
+from django.template.defaultfilters import filesizeformat
+from django.conf import settings
 from captcha.fields import CaptchaField
+from django.forms import ValidationError
 
 REGISTRATION_CHOICES = [('PENDING', 'Pending'), ('APPROVED', 'Approved'),('REJECTED', 'Rejected')]
 def user_directory_path(instance, filename):
@@ -25,6 +28,17 @@ AREA_OF_INTEREST = [
     ("WebDev", "Web Development"),
 ]
 
+
+def validate_file_extension(value):
+    print(value.file.size)
+    # print(value.file._size)
+    if value.file.content_type != 'application/pdf':
+        raise ValidationError(_('Invalid File Type .'))
+
+    if value.file.size > MAX_UPLOAD_SIZE:
+        raise ValidationError(_('File Too Large.'))
+
+
 class User(AbstractUser):
     USER_TYPE_CHOICES = ((1, 'Student'),(2, 'Mentor'))
     role = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES, default = 1)
@@ -43,8 +57,8 @@ class Student(models.Model):
     handle = models.CharField(max_length = 120)
     batch = models.CharField(max_length=100, choices = BATCHES, default="Batch1")
 
-    resume = models.FileField(upload_to = user_directory_path)
-    st_id = models.FileField(upload_to = user_directory_path)
+    resume = models.FileField(upload_to = user_directory_path, validators=[validate_file_extension])
+    st_id = models.FileField(upload_to = user_directory_path, validators=[validate_file_extension])
     status = models.CharField(max_length = 8, choices = REGISTRATION_CHOICES, default = "PENDING")
     function_points = models.FloatField(default=0)
     effort = models.FloatField(default=0)
@@ -58,7 +72,6 @@ class Student(models.Model):
 
 
 class StudentForm(forms.ModelForm):
-    # handle = forms.CharField(max_length=120)
     confirm_handle = forms.CharField(max_length=120)
     captcha = CaptchaField()
     class Meta:

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, render_to_response
 from django.http import HttpResponseRedirect
 from .models import StudentForm, Student, StudentProfileForm
+from django.contrib import messages
 from mentor.models import Mentor
 
 def register_student(request):
@@ -24,7 +25,7 @@ def register_student(request):
     return render(request, 'registration/register.html', {'form': form})
 
 
-def create_user(strategy, details, backend, user=None, *args, **kwargs):
+def create_user(request, strategy, details, backend, user=None, *args, **kwargs):
     if user:
         return {'is_new': False}
     flag = 0
@@ -34,6 +35,7 @@ def create_user(strategy, details, backend, user=None, *args, **kwargs):
         try:
             instance = Mentor.objects.get(handle = details.get('username'))
         except Mentor.DoesNotExist:
+            messages.info(request, "You are not registered with SRIP.")
             return redirect('/')
 
     if instance.status == "REJECTED":

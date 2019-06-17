@@ -12,7 +12,6 @@ def is_registered(request):
 		except Student.DoesNotExist:
 			print("Does not exist")
 			messages.info(request, "You are not registered with SRIP.")
-
 	return redirect('/')
 
 def save_profile(backend, details, response, *args, **kwargs):
