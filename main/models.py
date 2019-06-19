@@ -11,7 +11,7 @@ STATUS = [
 ('PENDING', 'Pending'),
 ('REJECTED', 'Rejected'),
 ('APPROVED', 'Approved'),
-]
+]   
 
 class LoggedCommit(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, related_name='student')

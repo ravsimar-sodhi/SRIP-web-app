@@ -47,10 +47,12 @@
                 <a class="nav-link" href="{% url 'main:submitreport' %}">Report</a>
             </li>
         {% else %}
+            {% if user.role == 2 %}
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'mentor:evaluation' %}">Evaluate</a>
             </li>
             {% endif %}
+        {% endif %}
         </ul>
         <div class="ml-auto mr-auto">
         </div>
