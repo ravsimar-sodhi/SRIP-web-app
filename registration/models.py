@@ -35,7 +35,7 @@ def validate_file_extension(value):
     if value.file.content_type != 'application/pdf':
         raise ValidationError(_('Invalid File Type .'))
 
-    if value.file.size > MAX_UPLOAD_SIZE:
+    if value.file.size > settings.MAX_UPLOAD_SIZE:
         raise ValidationError(_('File Too Large.'))
 
 

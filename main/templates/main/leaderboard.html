@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% block content %}
+	{% for student in students %}
+	<table class = "table">
+	<tr>
+		<td>
+			{{ student.handle }}
+		</td>
+		<td>
+			{{ student.effort }}
+		</td>			
+	</tr>
+	</table>
+	{% endfor %}
+{% endblock %}

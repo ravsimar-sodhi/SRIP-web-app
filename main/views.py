@@ -57,6 +57,13 @@ def search(request):
     return render(request, 'main/search.html', {'data': res})
 
 
+def leaderboard(request):
+    students = Student.objects.all()
+    for student in students:
+        print(student.handle)
+    return render(request, 'main/leaderboard.html', {'students':students})
+
+
 def logcommit(request):
     if (not (request.user.is_authenticated)) or (request.user.role != 1):
         messages.add_message(request, messages.ERROR, "You must be logged in as student in for this action", extra_tags = 'danger')

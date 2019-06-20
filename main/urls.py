@@ -8,5 +8,6 @@ urlpatterns = [
     path('search', views.search, name = 'search'),
     path('portal/logcommit', views.logcommit, name='logcommit'),
     path('portal/report', views.submitreport, name='submitreport'),
-    path('portal/performance/', views.displaypoints, name = 'displaypoints')
+    path('portal/performance/', views.displaypoints, name = 'displaypoints'),
+    path('portal/leaderboard/', views.leaderboard, name = 'leaderboard')
 ]
