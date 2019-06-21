@@ -27,7 +27,6 @@ def register_mentor(request):
         else:
             print('form invalid')
     else:
-        print('x')
         form = MentorForm()
     return render(request, 'registration/register.html', {'form': form})
 

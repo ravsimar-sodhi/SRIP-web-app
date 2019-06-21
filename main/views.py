@@ -8,6 +8,7 @@ from .forms import LoggedCommitForm, ReportForm
 from registration.models import Student
 from mentor.models import Mentor
 from project.models import Project
+from django.core.mail import EmailMessage
 
 def home(request):
     if request.user.is_authenticated and request.user.role == 2:
@@ -81,6 +82,11 @@ def logcommit(request):
             obj = LoggedCommit(user=current_user, commit_id=commit_id_form, url=url_form, project= project)
             try:
                 obj.save()
+                email = EmailMessage('Commit Logged Successfully.',
+               'Hello {0},\n\tYour commit has been submitted successfully.\n\tYou will be notified once it is evaluated.'.format(stud.handle),
+               to=[stud.email],)
+                email.send()
+                messages.add_message(request, messages.SUCCESS, "Commit Logged Successfully!")
                 messages.add_message(request, messages.SUCCESS, "Commit Logged Successfully!")
                 return redirect('/portal/performance')
             except:

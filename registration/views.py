@@ -3,6 +3,8 @@ from django.http import HttpResponseRedirect
 from .models import StudentForm, Student, StudentProfileForm
 from django.contrib import messages
 from mentor.models import Mentor
+from django.core.mail import EmailMessage
+
 
 def register_student(request):
     # if this is a POST request we need to process the form data
@@ -13,6 +15,10 @@ def register_student(request):
 
         if form.is_valid():
             form.save()
+            email = EmailMessage('SRIP Registration Successful.',
+           'Hello {0},\n\t You have been registered successfully.\n\tYou will be able to login once admin approves your registration.'.format(form.cleaned_data['handle']),
+           to=[form.cleaned_data['email']],)
+            email.send()
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:

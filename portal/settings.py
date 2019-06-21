@@ -167,3 +167,11 @@ STATICFILES_DIRS = [
 ]
 LOGIN_REDIRECT_URL = '/is_registered'
 LOGOUT_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'vgb2609@gmail.com'
+EMAIL_HOST_PASSWORD = 'zwmamihcifgijthl'
+EMAIL_PORT = 587
+EMAIL_USE_LOCALTIME = True
