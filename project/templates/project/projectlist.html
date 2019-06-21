@@ -9,14 +9,17 @@
                     <div class="card bg-light shadow">
                         <div class="card-header bg-info">
                             <div class="row">
-                                <a class="col-8 text-light" target='_blank' href={{item.url}}>
+                                <a class="col-8 text-light" target='_blank' href={{item.html_url}}>
                                     {{item.name}}
                                 </a>
-                                <span class="col-4 text-light text-right"> Issues: {{item.open_issues_count}}</span>
+                                <span class="col-2 text-light text-right"> Issues: {{item.open_issues}}</span>
+                                <span class="col-2 text-light text-right"> Forks: {{item.forks_count}}</span>
+
+
                             </div>
                         </div>
                         <div class="card-body bg-light">
-                            <a target='_blank' href="{{ item.url }}">
+                            <a target='_blank' href="{{ item.html_url }}">
                                 <div class="title">
                                     <h3>
                                         {{ item.name }}
@@ -25,7 +28,7 @@
                             </a>
                             <div>
                                 <div>
-                                    Description should be here.
+                                    {{ item.description }}
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
@@ -52,6 +55,7 @@
                         </div>
                         <div class="card-footer bg-light">
                             <small>Level: {{item.level}}</small>
+                            <small>Language: {{item.language}}</small>
                         </div>
                     </div>
                 </div>
