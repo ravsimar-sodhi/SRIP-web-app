@@ -59,10 +59,8 @@ def search(request):
 
 
 def leaderboard(request):
-    students = Student.objects.all()
-    for student in students:
-        print(student.handle)
-    return render(request, 'main/leaderboard.html', {'students':students})
+    students = Student.objects.all().order_by('-effort')
+    return render(request, 'main/leaderboard.html', {'students': students})
 
 
 def logcommit(request):
