@@ -8,7 +8,7 @@ from datetime import datetime
 from main.models import LoggedCommit
 from .models import  Mentor, MentorForm, MentorProfileForm
 from .forms import CommitEvaluationForm
-from registration.models import User
+from registration.models import User, Student
 
 # Create your views here.
 def home(request):
