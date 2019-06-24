@@ -59,7 +59,14 @@ def search(request):
 
 
 def leaderboard(request):
-    students = Student.objects.all().order_by('-effort')
+    order_by = None
+    try:
+        order_by = request.GET['o']
+    except:
+        pass
+    students = Student.objects.all()
+    if order_by is not None:
+        students = students.order_by(order_by)
     return render(request, 'main/leaderboard.html', {'students': students})
 
 
