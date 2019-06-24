@@ -10,6 +10,7 @@ admin.site.register(User, UserAdmin)
 
 class StudentAdmin(admin.ModelAdmin):
     list_display = ['handle', 'name', 'status', 'mentor','function_points', 'effort', 'report']
+    readonly_fields = ["resume", "st_id",]
 
     def save_model(self, request, obj, form, change):
         if change == True:
