@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
+from django.core.mail import EmailMessage
 from datetime import datetime
 from main.models import LoggedCommit
 from .models import  Mentor, MentorForm, MentorProfileForm
@@ -21,11 +22,16 @@ def register_mentor(request):
     if request.method == 'POST':
         form = MentorForm(request.POST)
         if form.is_valid():
-            print('form valid')
+            email = EmailMessage('SRIP Registration Successful.',
+            'Hello {0},\n\t You have been registered successfully.\n\tYou will be able to login once admin approves your registration.'.format(form.cleaned_data['handle']),
+            to=[form.cleaned_data['email']],)
+            email.send()
+
+            # print('form valid')
             form.save()
             return HttpResponseRedirect('/')
-        else:
-            print('form invalid')
+        # else:
+            # print('form invalid')
     else:
         form = MentorForm()
     return render(request, 'registration/register.html', {'form': form})
@@ -84,6 +90,13 @@ def review_commit(request, commit_id):
                 commit.time_eval = datetime.now()
                 try:
                     commit.save()
+                    student = Student.objects.get(handle=commit.user)
+                    emailID = student.email
+                    email = EmailMessage('Commit reviewed successfully.',
+                    'Hello {0},\n\tThe status of the commit {1} is {2}.'.format(commit.user, commit.commit_id, commit.status),
+                    to=[emailID],)
+                    email.send()
+
                     messages.add_message(request, messages.SUCCESS, "Commit Evaluated Successfully!")
                     return redirect('mentor/evaluate')
                 except:
