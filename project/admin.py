@@ -9,7 +9,7 @@ import requests
 # Register your models here.
 class ProjectAdmin(GuardedModelAdmin):
     user_can_access_owned_objects_only = True
-    user_owned_objects_field = 'coordinators'
+    user_owned_objects_field = 'coordinator'
 
     def queryset(self, request):
         qs = super(GuardedModelAdmin, self).queryset(request)
