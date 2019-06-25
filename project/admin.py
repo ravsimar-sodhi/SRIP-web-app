@@ -1,4 +1,5 @@
 from django.contrib import admin
+from guardian.admin import GuardedModelAdmin
 from django.conf.urls import url
 from django.shortcuts import render
 from .models import Project
@@ -6,7 +7,17 @@ from .forms import ProjectBulkAddForm
 import requests
 
 # Register your models here.
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(GuardedModelAdmin):
+    user_can_access_owned_objects_only = True
+    user_owned_objects_field = 'coordinators'
+
+    def queryset(self, request):
+        qs = super(GuardedModelAdmin, self).queryset(request)
+        if self.user_can_access_owned_objects_only and \
+            not request.user.is_superuser:
+            filters = {self.user_owned_objects_field: request.user}
+            qs = qs.filter(**filters)
+        return qs
 
     def add_project(self, name, owner, level):
         obj = Project(name = name, owner = owner, level = level)

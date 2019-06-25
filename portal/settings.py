@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registration.apps.RegistrationConfig',
     'social_django',
     'bootstrap4',
     'captcha',
+    'guardian',
+    'registration.apps.RegistrationConfig',
     'login.apps.LoginConfig',
     'main.apps.MainConfig',
     'mentor.apps.MentorConfig',
@@ -82,7 +83,7 @@ TEMPLATES = [
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
-    # 'social_core.backends.google.GoogleOAuth2',
+    'guardian.backends.ObjectPermissionBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
