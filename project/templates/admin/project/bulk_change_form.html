@@ -1,5 +1,9 @@
 {% extends 'admin/base.html' %}
 {% load bootstrap4 %}
+{% load static %}
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">
+{% endblock %}
 {% block content %}
 <div style="padding:20px">
     <div class="container">
@@ -16,7 +20,7 @@
             <div>
                 <fieldset class="module aligned {{ form.classes }}">
                 {% for field in form.visible_fields %}
-                <div class="form-row{% if form.fields|length_is:'1' and line.errors %} errors{% endif %}{% if not form.has_visible_field %} hidden{% endif %}{% for field in form %}{% if field.name %} field-{{ field.name }}{% endif %}{% endfor %}">
+                <div class="form-row{% if form.fields|length_is:'1' and line.errors %} errors{% endif %}{% for field in form %}{% if field.name %} field-{{ field.name }}{% endif %}{% endfor %}">
             <div{% if not form.fields|length_is:'1' %}
                 class="fieldBox{% if field.name %} field-{{ field.name }}{% endif %}{% if not field.is_readonly and field.errors %} errors{% endif %}{% if field.field.is_hidden %} hidden{% endif %}"
                 {% elif field.is_checkbox %} class="checkbox-row" {% endif %}>

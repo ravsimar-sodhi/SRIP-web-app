@@ -40,8 +40,7 @@ class ProjectAdmin(GuardedModelAdmin):
         urls = super().get_urls()
         custom_urls = [
             url(
-                r'^bulkadd$',
-                self.admin_site.admin_view(self.add_projects_bulk), name='bulk_add',
+                r'^bulkadd$', self.admin_site.admin_view(self.add_projects_bulk), name='bulk_add',
             ),
         ]
         return custom_urls + urls
