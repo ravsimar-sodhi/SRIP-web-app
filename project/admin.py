@@ -11,14 +11,6 @@ class ProjectAdmin(GuardedModelAdmin):
     user_can_access_owned_objects_only = True
     user_owned_objects_field = 'coordinator'
 
-    # def queryset(self, request):
-    #     qs = super(GuardedModelAdmin, self).queryset(request)
-    #     if self.user_can_access_owned_objects_only and \
-    #         not request.user.is_superuser:
-    #         filters = {self.user_owned_objects_field: request.user}
-    #         qs = qs.filter(**filters)
-    #     return qs
-
     def add_project(self, name, owner, level):
         obj = Project(name = name, owner = owner, level = level)
         obj.save()
@@ -42,7 +34,7 @@ class ProjectAdmin(GuardedModelAdmin):
                     self.add_project(name, owner, level)
         else:
             form = ProjectBulkAddForm()
-        return render(request, 'admin/project/bulk_change_form.html',{'form': form})
+        return render(request, 'admin/project/bulk_change_form.html', context={'form': form})
 
     def get_urls(self):
         urls = super().get_urls()
