@@ -97,12 +97,12 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 DATABASES = {
     'default': {
         # Mongo
-        # 'ENGINE': 'djongo',
-        # 'NAME':'test-db',
-        # 'HOST': '127.0.0.1:27017'
+         'ENGINE': 'djongo',
+         'NAME':'test-db',
+         'HOST': '127.0.0.1:27017'
         # Development on SQLite3!!
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db-srip.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db-srip.sqlite3'),
     }
 }
 
