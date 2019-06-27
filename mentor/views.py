@@ -26,12 +26,8 @@ def register_mentor(request):
             'Hello {0},\n\t You have been registered successfully.\n\tYou will be able to login once admin approves your registration.'.format(form.cleaned_data['handle']),
             to=[form.cleaned_data['email']],)
             email.send()
-
-            # print('form valid')
             form.save()
             return HttpResponseRedirect('/')
-        # else:
-            # print('form invalid')
     else:
         form = MentorForm()
     return render(request, 'registration/register.html', {'form': form})

@@ -1,7 +1,5 @@
 from django import forms
 
-# class IssueForm(forms.Form):
-    # c
 class LoggedCommitForm(forms.Form):
     project_id = forms.CharField(max_length=120, label = 'Project ID')
     commit_id = forms.CharField(max_length=40,min_length=40, label="Commit ID")

@@ -83,7 +83,7 @@ def logcommit(request):
             url_form = cleaned_data.get('url')
             stud = Student.objects.get(handle=request.user.username)
             # mentor_name = stud.mentor
-            project = Project.objects.get(project_id= cleaned_data.get('project_id'))
+            project = Project.objects.get(id= cleaned_data.get('project_id'))
             obj = LoggedCommit(user=current_user, commit_id=commit_id_form, url=url_form, project= project)
             try:
                 obj.save()

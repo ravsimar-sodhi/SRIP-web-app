@@ -19,6 +19,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('oauth/', include('social_django.urls', namespace='social')),
     path('', include('registration.urls')),
     path('mentor/', include('mentor.urls')),
     path('', include('main.urls')),

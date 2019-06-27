@@ -30,7 +30,6 @@ def register_student(request):
 
     return render(request, 'registration/register.html', {'form': form})
 
-
 def create_user(request, strategy, details, backend, user=None, *args, **kwargs):
     if user:
         return {'is_new': False}
