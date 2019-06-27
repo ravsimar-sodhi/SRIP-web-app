@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'captcha',
     'guardian',
     'registration.apps.RegistrationConfig',
-    'login.apps.LoginConfig',
     'main.apps.MainConfig',
     'mentor.apps.MentorConfig',
     'project.apps.ProjectConfig',
