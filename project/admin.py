@@ -8,7 +8,7 @@ import requests
 
 # Register your models here.
 class ProjectAdmin(GuardedModelAdmin):
-    list_display = ['id', 'name', 'owner','level']
+    list_display = ['name', 'owner','level','id']
     user_can_access_owned_objects_only = True
     user_owned_objects_field = 'coordinator'
 

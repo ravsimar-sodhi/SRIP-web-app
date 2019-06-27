@@ -14,6 +14,5 @@ class Project(models.Model):
     mentors = models.ManyToManyField(Mentor, blank=True, null=True)
     students = models.ManyToManyField(Student, blank=True,null=True)
 
-
     def __str__(self):
         return self.name
