@@ -21,3 +21,8 @@ def list_projects(request):
         projects.append(tempd)
         print(tempd)
     return render(request, 'project/projectlist.html', {'projects': projects})
+
+def list_project_mentors(request, id):
+    project = Project.objects.get(id=id)
+    for mentor in project.mentors.all():
+        print(mentor)

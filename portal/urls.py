@@ -23,6 +23,6 @@ urlpatterns = [
     path('', include('registration.urls')),
     path('mentor/', include('mentor.urls')),
     path('', include('main.urls')),
-    path('', include('project.urls')),
+    path('projects/', include('project.urls')),
     url(r'^captcha/', include('captcha.urls')),
 ]

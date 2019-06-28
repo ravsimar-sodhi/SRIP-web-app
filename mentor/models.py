@@ -11,7 +11,6 @@ class Mentor(models.Model):
     email = models.EmailField()
     handle = models.CharField(max_length = 120)
     status = models.CharField(max_length=8, choices = REGISTRATION_CHOICES, default = "PENDING")
-    role = models.PositiveSmallIntegerField(default = 2)
     def __str__(self):
         return self.handle
 
@@ -34,7 +33,7 @@ class MentorForm(forms.ModelForm):
 class MentorProfileForm(forms.ModelForm):
     class Meta:
         model = Mentor
-        exclude = ['handle', 'role' ,'status']
+        exclude = ['handle','status']
         labels = {
             'name': _('Name of Student'),
             'email':_("Email ID"),
