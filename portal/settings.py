@@ -25,7 +25,7 @@ SECRET_KEY = '$8yzmtszqlddrimpsynkvk2oq%z^l429ls&v8eq&qp8td*d(e1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1:8080","localhost", "*"]
 
 SOCIAL_AUTH_GITHUB_KEY = '31b4711a93e84682f5f2'
 SOCIAL_AUTH_GITHUB_SECRET = '57068a9407396c65ad20311c08a11ebb50be0298'
@@ -33,17 +33,17 @@ SOCIAL_AUTH_GITHUB_SECRET = '57068a9407396c65ad20311c08a11ebb50be0298'
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'registration.apps.RegistrationConfig',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_django',
     'bootstrap4',
     'captcha',
+    'social_django',
     'guardian',
-    'registration.apps.RegistrationConfig',
     'main.apps.MainConfig',
     'mentor.apps.MentorConfig',
     'project.apps.ProjectConfig',
@@ -97,7 +97,7 @@ DATABASES = {
     'default': {
         # Mongo
          'ENGINE': 'djongo',
-         'NAME':'test-db',
+         'NAME':'srip-db',
          'HOST': '127.0.0.1:27017'
         # Development on SQLite3!!
         #'ENGINE': 'django.db.backends.sqlite3',
@@ -161,7 +161,6 @@ MAX_UPLOAD_SIZE = 2621440
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
 ]
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'

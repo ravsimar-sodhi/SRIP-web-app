@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.utils.html import format_html
 from django.urls import path, reverse
-from guardian.admin import GuardedModelAdmin
+from django.core.mail import EmailMessage
 from .models import Mentor
 from registration.models import User
 from main.models import LoggedCommit

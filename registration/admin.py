@@ -1,9 +1,9 @@
 from django.contrib import admin
-from guardian.admin import GuardedModelAdmin
+#from guardian.admin import GuardedModelAdmin
 from django.core.mail import EmailMessage
 from .models import Student, User
 # Register your models here.
-class UserAdmin(GuardedModelAdmin):
+class UserAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(User, UserAdmin)
