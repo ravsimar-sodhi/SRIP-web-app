@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.utils.html import format_html
 from django.urls import path, reverse
+from guardian.admin import GuardedModelAdmin
 from .models import Mentor
 from registration.models import User
 from main.models import LoggedCommit
@@ -9,6 +10,14 @@ from main.models import LoggedCommit
 # Register your models here.
 class MentorAdmin(admin.ModelAdmin):
     list_display = ['name', 'handle', 'id','mentor_actions']
+
+    def get_queryset(self, request):
+        qs = super(admin.ModelAdmin, self).get_queryset(request)
+        if not request.user.is_superuser:
+            mentor = Mentor.objects.get(handle=request.user)
+            projects = mentor.project_set.all()
+            qs = qs.filter(project__in=projects)
+        return qs
 
     def list_projects(self, request, id):
         mentor = Mentor.objects.get(id=id)

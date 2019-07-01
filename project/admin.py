@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.http import HttpResponseRedirect
 from guardian.admin import GuardedModelAdmin
 from django.urls import path, reverse
 from django.shortcuts import render
@@ -10,12 +11,12 @@ import requests
 
 # Register your models here.
 class ProjectAdmin(GuardedModelAdmin):
-    list_display = ['name', 'owner','level','id', 'project_actions']
+    list_display = ['name', 'owner','id', 'project_actions']
     user_can_access_owned_objects_only = True
     user_owned_objects_field = 'coordinator'
 
-    def add_project(self, name, owner, level):
-        obj = Project(name = name, owner = owner, level = level)
+    def add_project(self, name, owner, url, issues, forks, lang):
+        obj = Project(name = name, owner = owner, url = url, issues = issues, forks = forks, lang = lang)
         obj.save()
         return
 
@@ -24,7 +25,6 @@ class ProjectAdmin(GuardedModelAdmin):
             form = ProjectBulkAddForm(request.POST)
             if form.is_valid():
                 owner = form.cleaned_data['owner']
-                level = form.cleaned_data['level']
                 o_type = form.cleaned_data['o_type']
                 url = "https://api.github.com/" + o_type +"s/" + owner + "/repos"
                 print(url)
@@ -34,7 +34,12 @@ class ProjectAdmin(GuardedModelAdmin):
                 for item in json:
                     name = item['name']
                     owner = item['owner']['login']
-                    self.add_project(name, owner, level)
+                    url = item['html_url']
+                    issues = item['open_issues']
+                    forks = item['forks']
+                    lang = item['language']
+                    self.add_project(name, owner, url, issues, forks, lang)
+                return HttpResponseRedirect('/admin/project/project')
         else:
             form = ProjectBulkAddForm()
         return render(request, 'admin/project/bulk_change_form.html', context={'form': form})

@@ -8,9 +8,6 @@ from captcha.fields import CaptchaField
 from django.forms import ValidationError
 
 REGISTRATION_CHOICES = [('PENDING', 'Pending'), ('APPROVED', 'Approved'),('REJECTED', 'Rejected')]
-def user_directory_path(instance, filename):
-    return 'registrations/{0}'.format(filename)
-
 
 BATCHES = [
     ("Batch1", "Batch 1"),
@@ -28,6 +25,8 @@ AREA_OF_INTEREST = [
     ("WebDev", "Web Development"),
 ]
 
+def user_directory_path(instance, filename):
+    return 'registrations/{0}'.format(filename)
 
 def validate_file_extension(value):
     print(value.file.size)
