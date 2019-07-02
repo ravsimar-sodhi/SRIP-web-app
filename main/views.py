@@ -15,16 +15,10 @@ def home(request):
         return HttpResponseRedirect('/mentor')
     orgs = ['virtual-labs', 'mozilla','google']
     res = {}
-    data = github_search('', orgs, sort='forks')
-    res['items'] = data[:6]
-    dic = {'data':res}
-    if request.user.is_authenticated:
-        try:
-            info = Student.objects.get(handle=request.user)
-        except Student.DoesNotExist:
-            print(request.user)
-            info = Mentor.objects.get(handle=request.user)
-        dic['info'] = info
+    # data = github_search('', orgs, sort='forks')
+    # res['items'] = data[:6]
+    # dic = {'data':res}
+    dic = {}
     return render(request, 'main/home.html', dic)
 
 def gitlab_search(keyword):

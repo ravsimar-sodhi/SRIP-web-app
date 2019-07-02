@@ -11,6 +11,7 @@ class Project(models.Model):
     url = models.URLField(default='Not available')
     coordinator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, related_name='coordinator')
     mentors = models.ManyToManyField(Mentor, blank=True, null=True)
+    description = models.CharField(default="Unavailable", max_length=1024)
     issues = models.PositiveSmallIntegerField(default = 0)
     forks = models.PositiveSmallIntegerField(default = 0)
     lang = models.CharField(default = 'Unknown', max_length = 120)

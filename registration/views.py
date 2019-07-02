@@ -36,9 +36,11 @@ def create_user(request, strategy, details, backend, user=None, *args, **kwargs)
     flag = 0
     try:
         instance = Student.objects.get(handle=details.get('username'))
+        flag = 1
     except Student.DoesNotExist:
         try:
             instance = Mentor.objects.get(handle = details.get('username'))
+            flag = 2
         except Mentor.DoesNotExist:
             messages.info(request, "You are not registered with SRIP.")
             return redirect('/')
@@ -55,7 +57,7 @@ def create_user(request, strategy, details, backend, user=None, *args, **kwargs)
                       for name in USER_FIELDS)
         if not fields:
             return
-        fields['role'] = instance.role
+        fields['role'] = flag
         return {'is_new': True, 'user': strategy.create_user(**fields)}
 
 

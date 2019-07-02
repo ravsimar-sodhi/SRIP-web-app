@@ -63,7 +63,6 @@ class Student(models.Model):
     effort = models.FloatField(default=0)
     report = models.URLField(default="https://github.com/aditya3498/SRIP2019-Batch1/wiki")
 
-    role = models.PositiveSmallIntegerField(default = 1)
     def __str__(self):
         return self.name
 
