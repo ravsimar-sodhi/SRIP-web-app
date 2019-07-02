@@ -13,18 +13,12 @@ from django.core.mail import EmailMessage
 def home(request):
     if request.user.is_authenticated and request.user.role == 2:
         return HttpResponseRedirect('/mentor')
-    orgs = ['virtual-labs', 'mozilla','google']
+    #orgs = ['virtual-labs', 'mozilla','google']
     res = {}
-    data = github_search('', orgs, sort='forks')
-    res['items'] = data[:6]
-    dic = {'data':res}
-    if request.user.is_authenticated:
-        try:
-            info = Student.objects.get(handle=request.user)
-        except Student.DoesNotExist:
-            print(request.user)
-            info = Mentor.objects.get(handle=request.user)
-        dic['info'] = info
+    #data = github_search('', orgs, sort='forks')
+    #res['items'] = data[:6]
+    dic = {}
+    #dic = {'data':res}
     return render(request, 'main/home.html', dic)
 
 def gitlab_search(keyword):
@@ -48,11 +42,16 @@ def github_search(keyword, orgs, sort=None):
     data = r.json()
     return data['items']
 
+def project_search(keyword, sort=None):
+    results = Project.objects.filter(name__icontains=keyword)
+    return results
+
 def search(request):
     keyword = request.GET['searchword']
     # data = gitlab_search(keyword)
-    orgs = ['virtual-labs', 'mozilla','google']
-    data = github_search(keyword, orgs)
+    #orgs = ['virtual-labs', 'mozilla','google']
+    #data = github_search(keyword, orgs)
+    data = project_search(keyword, None)
     res = {}
     res['items'] = data
     return render(request, 'main/search.html', {'data': res})

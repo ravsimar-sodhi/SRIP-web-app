@@ -33,15 +33,15 @@
         <div class="card bg-light shadow">
         <div class="card-header bg-info">
           <div class="row">
-            <a class="col-9 text-light" target='_blank' href={{item.html_url}}>
-              {{item.full_name}}
+            <a class="col-9 text-light" target='_blank' href={{item.url}}>
+              {{item.name}}
             </a>
             <!-- <div class="col-2 text-dark">Forks:{{item.forks}}</div> -->
-            <div class="col-3 text-light text-right">Issues: {{item.open_issues_count}}</div>
+            <div class="col-3 text-light text-right">Issues: {{item.issues}}</div>
           </div>
         </div>
         <div class="card-body bg-light">
-          <a target='_blank' href={{item.html_url}}>
+          <a target='_blank' href={{item.url}}>
             <div class='title text-dark'>
               <h3> {{item.name}} </h3>
             </div>

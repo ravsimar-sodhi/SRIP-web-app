@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1:8080","localhost", "*"]
 
-SOCIAL_AUTH_GITHUB_KEY = '31b4711a93e84682f5f2'
-SOCIAL_AUTH_GITHUB_SECRET = '57068a9407396c65ad20311c08a11ebb50be0298'
+SOCIAL_AUTH_GITHUB_KEY = '66d04d916b42aed0800f'
+SOCIAL_AUTH_GITHUB_SECRET = 'cb487b78c263d3077d14a57e6de19232f810e7f3'
 
 # Application definition
 
@@ -162,7 +162,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '10.4.15.222/'
 LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

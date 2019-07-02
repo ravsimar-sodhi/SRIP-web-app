@@ -13,6 +13,7 @@ class Project(models.Model):
     mentors = models.ManyToManyField(Mentor, blank=True, null=True)
     issues = models.PositiveSmallIntegerField(default = 0)
     forks = models.PositiveSmallIntegerField(default = 0)
+    description = models.CharField(max_length=500, null=True,blank=True)
     lang = models.CharField(default = 'Unknown', max_length = 120)
     level1 = models.BooleanField(default=False)
     level2 = models.BooleanField(default=False)
