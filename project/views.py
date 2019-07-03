@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Project
+from registration.models import Student
 import requests
 # Create your views here.
 
@@ -11,14 +12,21 @@ def project_info(name, owner):
 
 def list_projects(request):
     projects = []
-    # if request.user.is_authenticated:
-    for project in Project.objects.all():
-        tempd = project_info(project.name, project.owner)
-        tempd['name'] = project.name
+    projectList = Project.objects.all()
+    if request.user.is_authenticated and request.user.role == 1:
+        level = Student.objects.get(handle=request.user.username).level
+        print(level)
+        if level == 1:
+            projectList = Project.objects.filter(level1=True)
+        elif level == 2:
+            projectList = Project.objects.filter(level2=True)
+        elif level == 3:
+            projectList = Project.objects.filter(level3=True)
+
+    for project in projectList:
+        tempd = project.__dict__
         tempd['mentors'] = [mentor for mentor in project.mentors.all() ]
-        tempd['students'] = [student for student in project.students.all() ]
         projects.append(tempd)
-        print(tempd)
     return render(request, 'project/projectlist.html', {'projects': projects})
 
 def list_project_mentors(request, id):
