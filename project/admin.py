@@ -6,11 +6,12 @@ from django.shortcuts import render
 from django.utils.html import format_html
 
 from .models import Project
+from main.models import LoggedCommit
 from .forms import ProjectBulkAddForm
 import requests
 
 # Register your models here.
-class ProjectAdmin(admin.ModelAdmin):
+class ProjectAdmin(GuardedModelAdmin):
     list_display = ['name', 'owner','id', 'project_actions']
     user_can_access_owned_objects_only = True
     user_owned_objects_field = 'coordinator'
@@ -49,11 +50,17 @@ class ProjectAdmin(admin.ModelAdmin):
         mentors = project.mentors.all()
         return render(request, 'admin/project/mentor_list.html', {'mentors':mentors})
 
+    def list_project_commits(self, request, id):
+        project = Project.objects.get(id=id)
+        commits = project.loggedcommit_set.all()
+        return render(request, 'admin/project/commit_list.html', {'commits':commits})
 
     def project_actions(self, obj):
         return format_html(
-            '<a class="button" href="{}">View Mentors</a>&nbsp;',
+            '<a class="button" href="{}">View Mentors</a>&nbsp;'
+            '<a class="button" href="{}">View Logged Commits</a>&nbsp;',
             reverse('admin:list_project_mentors', args=[obj.pk]),
+            reverse('admin:list_project_commits', args=[obj.pk]),
         )
     project_actions.short_description = 'Project Actions'
     project_actions.allow_tags = True
@@ -63,6 +70,7 @@ class ProjectAdmin(admin.ModelAdmin):
         custom_urls = [
             path('bulkadd', self.admin_site.admin_view(self.add_projects_bulk), name = 'bulk_add'),
             path('<int:id>/mentors', self.admin_site.admin_view(self.list_project_mentors), name = 'list_project_mentors'),
+            path('<int:id>/commits', self.admin_site.admin_view(self.list_project_commits), name = 'list_project_commits'),
         ]
         return custom_urls + urls
 

@@ -55,7 +55,7 @@ class Student(models.Model):
     area_interest = models.CharField(max_length = 120, default="Programming")
     handle = models.CharField(max_length = 120)
     batch = models.CharField(max_length=100, choices = BATCHES, default="Batch1")
-
+    level = models.PositiveSmallIntegerField(default=1)
     resume = models.FileField(upload_to = user_directory_path, validators=[validate_file_extension])
     st_id = models.FileField(upload_to = user_directory_path, validators=[validate_file_extension])
     status = models.CharField(max_length = 8, choices = REGISTRATION_CHOICES, default = "PENDING")
@@ -63,7 +63,6 @@ class Student(models.Model):
     effort = models.FloatField(default=0)
     report = models.URLField(default="https://github.com/aditya3498/SRIP2019-Batch1/wiki")
 
-    role = models.PositiveSmallIntegerField(default = 1)
     def __str__(self):
         return self.name
 
@@ -74,7 +73,7 @@ class StudentForm(forms.ModelForm):
     captcha = CaptchaField()
     class Meta:
         model = Student
-        fields = ('name', 'email', 'rollno','clg_name','branch', 'year','area_interest','handle','confirm_handle','batch', 'st_id', 'resume')
+        fields = ('name', 'email', 'rollno','clg_name','branch', 'year','area_interest','handle','confirm_handle','batch','level', 'st_id', 'resume')
         labels = {
             'name': _('Name of Student'),
             'email':_("Email ID"),
@@ -86,6 +85,7 @@ class StudentForm(forms.ModelForm):
             'handle':_("Github Handle"),
             'confirm_handle':_("Confirm Handle"),
             'st_id': _("Student ID"),
+            'level':_("Level"),
             'resume':_("Resume"),
         }
         def clean(self):
@@ -112,5 +112,6 @@ class StudentProfileForm(forms.ModelForm):
             'year':_("Year"),
             'area_interest':_("Area of Interest"),
             'handle':_("Github Handle"),
+            'level':_("Level"),
             'resume':_("Resume"),
         }

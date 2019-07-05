@@ -13,12 +13,7 @@ from django.core.mail import EmailMessage
 def home(request):
     if request.user.is_authenticated and request.user.role == 2:
         return HttpResponseRedirect('/mentor')
-    #orgs = ['virtual-labs', 'mozilla','google']
-    res = {}
-    #data = github_search('', orgs, sort='forks')
-    #res['items'] = data[:6]
     dic = {}
-    #dic = {'data':res}
     return render(request, 'main/home.html', dic)
 
 def gitlab_search(keyword):
