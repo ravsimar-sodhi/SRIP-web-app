@@ -23,10 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$8yzmtszqlddrimpsynkvk2oq%z^l429ls&v8eq&qp8td*d(e1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1:8080","localhost", "*"]
-
+USE_X_FORWARDED_HOST=True
+HTTP_HOST="10.4.15.222"
+HTTP_X_FORWARDED_HOST="10.4.15.222"
 SOCIAL_AUTH_GITHUB_KEY = '66d04d916b42aed0800f'
 SOCIAL_AUTH_GITHUB_SECRET = 'cb487b78c263d3077d14a57e6de19232f810e7f3'
 
@@ -162,7 +164,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-LOGIN_REDIRECT_URL = '10.4.15.222/'
+LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
