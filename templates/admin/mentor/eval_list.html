@@ -1,11 +1,33 @@
 {% extends "admin/base_site.html" %}
+{% load static %}
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/changelists.css" %}>
+{% endblock %}
 {% block content %}
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+    <th>User</th>
+    <th>Commit ID</th>
+    <th>URL</th>
+    <th>Issue Points</th>
+    <th>Time of Creation</th>
+    <th>Status</th>
+</tr>
+</thead>
+<tbody>
 {% for eval in evals %}
-    {{eval.user}}
-    {{eval.commit_id}}
-    {{eval.url}}
-    {{eval.issue_points}}
-    {{eval.toc}}
-    {{eval.status}}
+<tr>
+    <td> {{eval.user}}</td>
+    <td> {{eval.commit_id}}</td>
+    <td> {{eval.url}}</td>
+    <td> {{eval.issue_points}}</td>
+    <td> {{eval.toc}}</td>
+    <td> {{eval.status}}</td>
+</tr>
 {% endfor %}
+</tbody>
+</table>
+</div>
 {% endblock %}

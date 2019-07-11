@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$8yzmtszqlddrimpsynkvk2oq%z^l429ls&v8eq&qp8td*d(e1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1:8080","localhost", "*"]
 USE_X_FORWARDED_HOST=True

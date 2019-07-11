@@ -1,7 +1,33 @@
 {% extends "admin/base_site.html" %}
+{% load static %}
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/changelists.css" %}>
+{% endblock %}
 {% block content %}
-{% for commit in commits %}
-{{commit.id}}
-{{commit}}
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+    <th>User</th>
+    <th>Commit ID</th>
+    <th>URL</th>
+    <th>Issue Points</th>
+    <th>Time of Creation</th>
+    <th>Status</th>
+</tr>
+</thead>
+<tbody>
+{% for res in commits %}
+<tr>
+    <td> {{res.user}}</td>
+    <td> {{res.commit_id}}</td>
+    <td> {{res.url}}</td>
+    <td> {{res.issue_points}}</td>
+    <td> {{res.toc}}</td>
+    <td> {{res.status}}</td>
+</tr>
 {% endfor %}
+</tbody>
+</table>
+</div>
 {% endblock %}

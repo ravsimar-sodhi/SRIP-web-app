@@ -19,14 +19,14 @@ YEAR = [
     ("ThirdYear", "Third Year"),
     ("FourthYear", "Fourth Year"),
 ]
-AREA_OF_INTEREST = [
-    ("MachineLearning", "Machine Learning"),
-    ("Programming", "Programming"),
-    ("WebDev", "Web Development"),
+LEVELS = [
+    (1,"Level 1"),
+    (2,"Level 2"),
+    (3,"Level 3"),
+	
 ]
-
 def user_directory_path(instance, filename):
-    return 'registrations/{0}'.format(filename)
+    return 'registrations/user_{0}/{1}'.format(instance.handle, filename)
 
 def validate_file_extension(value):
     print(value.file.size)
@@ -52,10 +52,10 @@ class Student(models.Model):
     clg_name = models.CharField(max_length = 120)
     branch = models.CharField(max_length = 100)
     year = models.CharField(max_length=100, choices = YEAR, default="FirstYear")
-    area_interest = models.CharField(max_length = 120, default="Programming")
+    area_interest = models.CharField(max_length = 120)
     handle = models.CharField(max_length = 120)
     batch = models.CharField(max_length=100, choices = BATCHES, default="Batch1")
-    level = models.PositiveSmallIntegerField(default=1)
+    level = models.PositiveSmallIntegerField(default=1, choices = LEVELS)
     resume = models.FileField(upload_to = user_directory_path, validators=[validate_file_extension])
     st_id = models.FileField(upload_to = user_directory_path, validators=[validate_file_extension])
     status = models.CharField(max_length = 8, choices = REGISTRATION_CHOICES, default = "PENDING")
