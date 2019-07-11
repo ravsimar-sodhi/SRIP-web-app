@@ -14,6 +14,7 @@ Note: When deploying on a new container, make sure that daemon mongod is running
 ```
 sudo systemctl start mongod.service
 cd srip-portal
+source ./prodenv/bin/activate
 ./reset.sh
 ```
 
