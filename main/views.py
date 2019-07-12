@@ -53,7 +53,7 @@ def search(request):
 
 
 def leaderboard(request):
-    order_by = None
+    order_by = "-effort"
     try:
         order_by = request.GET['o']
     except:
