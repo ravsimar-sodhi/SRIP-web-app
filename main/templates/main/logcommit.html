@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div style="padding:20px">
+    <div class="container shadow rounded" style="padding: 20px">
+        <h2> Log Issue</h2>
+        <form class="form-horizontal"
+            style="background-color:ghostwhite; padding: 20px; border-radius: 10px;"
+            action="" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+            <!-- <input type="submit" value="Submit"> -->
+            <div class='text-center'>
+                <button type="submit" class="btn-primary btn-lg">Submit</button>
+            </div>
+            {% endbuttons %}
+        </form>
+    </div>
+</div>
+{% endblock %}

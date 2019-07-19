@@ -1,0 +1,41 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/changelists.css" %}>
+{% endblock %}
+{% block content %}
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Owner</th>
+    <th>URL</th>
+    <th>Issue</th>
+    <th>Forks</th>
+    <th>Language</th>
+    <th>Level1</th>
+    <th>Level2</th>
+    <th>Level3</th>
+</tr>
+</thead>
+<tbody>
+{% for proj in projects %}
+<tr>
+    <td> {{proj.id}}</td>
+    <td> {{proj.name}}</td>
+    <td> {{proj.owner}}</td>
+    <td> {{proj.url}}</td>
+    <td> {{proj.issues}}</td>
+    <td> {{proj.forks}}</td>
+    <td> {{proj.lang}}</td>
+    <td> {{proj.level1}}</td>
+    <td> {{proj.level2}}</td>
+    <td> {{proj.level3}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

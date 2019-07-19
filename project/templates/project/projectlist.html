@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="container-fluid shadow rounded" style="padding: 20px">
+    <h1 style="text-align: center">Projects</h1>
+        <div id="projects" class="container">
+            {% for item in projects %}
+            <div class="row">
+                <div class="col-12 p-2">
+                    <div class="card bg-light shadow">
+                        <div class="card-header bg-info">
+                            <div class="row">
+                                <a class="col-8 text-light" target='_blank' href={{item.url}}>
+                                    {{item.owner}}/{{item.name}}
+                                </a>
+                                <span class="col-2 text-light text-right"> Issues: {{item.issues}}</span>
+                                <span class="col-2 text-light text-right"> Forks: {{item.forks}}</span>
+
+
+                            </div>
+                        </div>
+                        <div class="card-body bg-light">
+                            <a target='_blank' href="{{ item.url }}">
+                                <div class="title">
+                                    <h3>
+                                        {{ item.name }}
+                                    </h3>
+                                </div>
+                            </a>
+                            <div>
+                                <div>
+                                    {{ item.description }}
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul>
+                                            {% for m in item.mentors %}
+                                            <li>
+                                                {{m}}
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-light">
+                            <small>
+                                Level:
+                            {% if item.level1 %}
+                            1
+                            {% endif %}
+                            {% if item.level2 %}
+                            2
+                            {% endif %}
+                            {% if item.level3 %}
+                            3
+                            {% endif %}
+                            </small>
+                            <small>Language: {{item.lang}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,4597 @@
+[2019-07-01 19:49:22 +0530] [22722] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f5f336f82f0>
+  on_reload: <function OnReload.on_reload at 0x7f5f336f8400>
+  when_ready: <function WhenReady.when_ready at 0x7f5f336f8510>
+  pre_fork: <function Prefork.pre_fork at 0x7f5f336f8620>
+  post_fork: <function Postfork.post_fork at 0x7f5f336f8730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f5f336f8840>
+  worker_int: <function WorkerInt.worker_int at 0x7f5f336f8950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f5f336f8a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f5f336f8b70>
+  pre_request: <function PreRequest.pre_request at 0x7f5f336f8c80>
+  post_request: <function PostRequest.post_request at 0x7f5f336f8d08>
+  child_exit: <function ChildExit.child_exit at 0x7f5f336f8e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f5f336f8f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f5f337150d0>
+  on_exit: <function OnExit.on_exit at 0x7f5f337151e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 19:49:22 +0530] [22722] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 19:49:22 +0530] [22722] [DEBUG] Arbiter booted
+[2019-07-01 19:49:22 +0530] [22722] [INFO] Listening at: http://0.0.0.0:9000 (22722)
+[2019-07-01 19:49:22 +0530] [22722] [INFO] Using worker: sync
+[2019-07-01 19:49:22 +0530] [22748] [INFO] Booting worker with pid: 22748
+[2019-07-01 19:49:22 +0530] [22752] [INFO] Booting worker with pid: 22752
+[2019-07-01 19:49:22 +0530] [22753] [INFO] Booting worker with pid: 22753
+[2019-07-01 19:49:22 +0530] [22722] [DEBUG] 3 workers
+[2019-07-01 19:50:01 +0530] [22752] [DEBUG] GET /
+[2019-07-01 19:50:57 +0530] [22752] [INFO] Worker exiting (pid: 22752)
+[2019-07-01 19:50:57 +0530] [22748] [INFO] Worker exiting (pid: 22748)
+[2019-07-01 19:50:57 +0530] [22753] [INFO] Worker exiting (pid: 22753)
+[2019-07-01 19:50:57 +0530] [22722] [INFO] Handling signal: term
+[2019-07-01 19:50:57 +0530] [22722] [INFO] Shutting down: Master
+[2019-07-01 19:50:57 +0530] [22850] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7feefeaed2f0>
+  on_reload: <function OnReload.on_reload at 0x7feefeaed400>
+  when_ready: <function WhenReady.when_ready at 0x7feefeaed510>
+  pre_fork: <function Prefork.pre_fork at 0x7feefeaed620>
+  post_fork: <function Postfork.post_fork at 0x7feefeaed730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7feefeaed840>
+  worker_int: <function WorkerInt.worker_int at 0x7feefeaed950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7feefeaeda60>
+  pre_exec: <function PreExec.pre_exec at 0x7feefeaedb70>
+  pre_request: <function PreRequest.pre_request at 0x7feefeaedc80>
+  post_request: <function PostRequest.post_request at 0x7feefeaedd08>
+  child_exit: <function ChildExit.child_exit at 0x7feefeaede18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7feefeaedf28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7feefeb0a0d0>
+  on_exit: <function OnExit.on_exit at 0x7feefeb0a1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 19:50:57 +0530] [22850] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 19:50:57 +0530] [22850] [DEBUG] Arbiter booted
+[2019-07-01 19:50:57 +0530] [22850] [INFO] Listening at: http://0.0.0.0:9000 (22850)
+[2019-07-01 19:50:57 +0530] [22850] [INFO] Using worker: sync
+[2019-07-01 19:50:57 +0530] [22864] [INFO] Booting worker with pid: 22864
+[2019-07-01 19:50:57 +0530] [22873] [INFO] Booting worker with pid: 22873
+[2019-07-01 19:50:57 +0530] [22878] [INFO] Booting worker with pid: 22878
+[2019-07-01 19:50:57 +0530] [22850] [DEBUG] 3 workers
+[2019-07-01 19:51:01 +0530] [22873] [DEBUG] GET /
+[2019-07-01 19:51:02 +0530] [22878] [DEBUG] GET /
+[2019-07-01 19:51:05 +0530] [22864] [DEBUG] GET /favicon.ico
+[2019-07-01 19:52:37 +0530] [22864] [DEBUG] GET /oauth/login/github/
+[2019-07-01 19:52:47 +0530] [22873] [DEBUG] GET /
+[2019-07-01 19:52:54 +0530] [22864] [DEBUG] GET /oauth/login/github/
+[2019-07-01 19:53:20 +0530] [22864] [DEBUG] GET /admin
+[2019-07-01 19:53:20 +0530] [22873] [DEBUG] GET /admin/
+[2019-07-01 19:53:20 +0530] [22873] [DEBUG] GET /admin/login/
+[2019-07-01 19:53:44 +0530] [22873] [DEBUG] GET /
+[2019-07-01 19:53:50 +0530] [22878] [DEBUG] GET /admin/
+[2019-07-01 19:53:50 +0530] [22878] [DEBUG] GET /admin/login/
+[2019-07-01 19:53:55 +0530] [22864] [DEBUG] POST /admin/login/
+[2019-07-01 19:54:45 +0530] [22878] [DEBUG] GET /admin/login/
+[2019-07-01 19:54:53 +0530] [22873] [DEBUG] POST /admin/login/
+[2019-07-01 19:54:53 +0530] [22864] [DEBUG] GET /admin/
+[2019-07-01 19:57:47 +0530] [22864] [INFO] Worker exiting (pid: 22864)
+[2019-07-01 19:57:47 +0530] [22873] [INFO] Worker exiting (pid: 22873)
+[2019-07-01 19:57:47 +0530] [22878] [INFO] Worker exiting (pid: 22878)
+[2019-07-01 19:57:47 +0530] [22850] [INFO] Handling signal: term
+[2019-07-01 19:57:47 +0530] [22850] [INFO] Shutting down: Master
+[2019-07-01 20:06:55 +0530] [23233] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f69e4f9c2f0>
+  on_reload: <function OnReload.on_reload at 0x7f69e4f9c400>
+  when_ready: <function WhenReady.when_ready at 0x7f69e4f9c510>
+  pre_fork: <function Prefork.pre_fork at 0x7f69e4f9c620>
+  post_fork: <function Postfork.post_fork at 0x7f69e4f9c730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f69e4f9c840>
+  worker_int: <function WorkerInt.worker_int at 0x7f69e4f9c950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f69e4f9ca60>
+  pre_exec: <function PreExec.pre_exec at 0x7f69e4f9cb70>
+  pre_request: <function PreRequest.pre_request at 0x7f69e4f9cc80>
+  post_request: <function PostRequest.post_request at 0x7f69e4f9cd08>
+  child_exit: <function ChildExit.child_exit at 0x7f69e4f9ce18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f69e4f9cf28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f69e4fb90d0>
+  on_exit: <function OnExit.on_exit at 0x7f69e4fb91e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 20:06:55 +0530] [23233] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 20:06:55 +0530] [23233] [DEBUG] Arbiter booted
+[2019-07-01 20:06:55 +0530] [23233] [INFO] Listening at: http://0.0.0.0:9000 (23233)
+[2019-07-01 20:06:55 +0530] [23233] [INFO] Using worker: sync
+[2019-07-01 20:06:55 +0530] [23248] [INFO] Booting worker with pid: 23248
+[2019-07-01 20:06:55 +0530] [23255] [INFO] Booting worker with pid: 23255
+[2019-07-01 20:06:55 +0530] [23257] [INFO] Booting worker with pid: 23257
+[2019-07-01 20:06:55 +0530] [23233] [DEBUG] 3 workers
+[2019-07-01 20:07:11 +0530] [23257] [DEBUG] GET /
+[2019-07-01 20:07:18 +0530] [23248] [DEBUG] GET /admin/
+[2019-07-01 20:07:18 +0530] [23255] [DEBUG] GET /admin/login/
+[2019-07-01 20:07:24 +0530] [23248] [DEBUG] POST /admin/login/
+[2019-07-01 20:08:36 +0530] [23257] [INFO] Worker exiting (pid: 23257)
+[2019-07-01 20:08:36 +0530] [23255] [INFO] Worker exiting (pid: 23255)
+[2019-07-01 20:08:36 +0530] [23248] [INFO] Worker exiting (pid: 23248)
+[2019-07-01 20:08:36 +0530] [23233] [INFO] Handling signal: term
+[2019-07-01 20:08:36 +0530] [23233] [INFO] Shutting down: Master
+[2019-07-01 20:34:48 +0530] [23885] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f764f3802f0>
+  on_reload: <function OnReload.on_reload at 0x7f764f380400>
+  when_ready: <function WhenReady.when_ready at 0x7f764f380510>
+  pre_fork: <function Prefork.pre_fork at 0x7f764f380620>
+  post_fork: <function Postfork.post_fork at 0x7f764f380730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f764f380840>
+  worker_int: <function WorkerInt.worker_int at 0x7f764f380950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f764f380a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f764f380b70>
+  pre_request: <function PreRequest.pre_request at 0x7f764f380c80>
+  post_request: <function PostRequest.post_request at 0x7f764f380d08>
+  child_exit: <function ChildExit.child_exit at 0x7f764f380e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f764f380f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f764f39d0d0>
+  on_exit: <function OnExit.on_exit at 0x7f764f39d1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 20:34:48 +0530] [23885] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 20:34:48 +0530] [23885] [DEBUG] Arbiter booted
+[2019-07-01 20:34:48 +0530] [23885] [INFO] Listening at: http://0.0.0.0:9000 (23885)
+[2019-07-01 20:34:48 +0530] [23885] [INFO] Using worker: sync
+[2019-07-01 20:34:48 +0530] [23897] [INFO] Booting worker with pid: 23897
+[2019-07-01 20:34:48 +0530] [23908] [INFO] Booting worker with pid: 23908
+[2019-07-01 20:34:48 +0530] [23910] [INFO] Booting worker with pid: 23910
+[2019-07-01 20:34:48 +0530] [23885] [DEBUG] 3 workers
+[2019-07-01 20:34:55 +0530] [23897] [DEBUG] GET /
+[2019-07-01 20:35:03 +0530] [23897] [DEBUG] GET /admin/
+[2019-07-01 20:35:03 +0530] [23910] [DEBUG] GET /admin/login/
+[2019-07-01 20:35:33 +0530] [23910] [DEBUG] POST /admin/login/
+[2019-07-01 20:35:33 +0530] [23910] [DEBUG] GET /admin/
+[2019-07-01 20:36:07 +0530] [23908] [DEBUG] GET /
+[2019-07-01 20:36:14 +0530] [23897] [DEBUG] GET /logout
+[2019-07-01 20:36:14 +0530] [23910] [DEBUG] GET /logout/
+[2019-07-01 20:36:14 +0530] [23908] [DEBUG] GET /
+[2019-07-01 20:36:33 +0530] [23910] [INFO] Worker exiting (pid: 23910)
+[2019-07-01 20:36:33 +0530] [23908] [INFO] Worker exiting (pid: 23908)
+[2019-07-01 20:36:33 +0530] [23897] [INFO] Worker exiting (pid: 23897)
+[2019-07-01 20:36:33 +0530] [23885] [INFO] Handling signal: term
+[2019-07-01 20:36:33 +0530] [23885] [INFO] Shutting down: Master
+[2019-07-01 20:36:34 +0530] [24009] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f59547452f0>
+  on_reload: <function OnReload.on_reload at 0x7f5954745400>
+  when_ready: <function WhenReady.when_ready at 0x7f5954745510>
+  pre_fork: <function Prefork.pre_fork at 0x7f5954745620>
+  post_fork: <function Postfork.post_fork at 0x7f5954745730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f5954745840>
+  worker_int: <function WorkerInt.worker_int at 0x7f5954745950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f5954745a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f5954745b70>
+  pre_request: <function PreRequest.pre_request at 0x7f5954745c80>
+  post_request: <function PostRequest.post_request at 0x7f5954745d08>
+  child_exit: <function ChildExit.child_exit at 0x7f5954745e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f5954745f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f59547620d0>
+  on_exit: <function OnExit.on_exit at 0x7f59547621e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 20:36:34 +0530] [24009] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 20:36:34 +0530] [24009] [DEBUG] Arbiter booted
+[2019-07-01 20:36:34 +0530] [24009] [INFO] Listening at: http://0.0.0.0:9000 (24009)
+[2019-07-01 20:36:34 +0530] [24009] [INFO] Using worker: sync
+[2019-07-01 20:36:34 +0530] [24022] [INFO] Booting worker with pid: 24022
+[2019-07-01 20:36:34 +0530] [24036] [INFO] Booting worker with pid: 24036
+[2019-07-01 20:36:34 +0530] [24041] [INFO] Booting worker with pid: 24041
+[2019-07-01 20:36:34 +0530] [24009] [DEBUG] 3 workers
+[2019-07-01 20:36:37 +0530] [24036] [DEBUG] GET /
+[2019-07-01 20:36:48 +0530] [24022] [DEBUG] GET /student/register
+[2019-07-01 20:36:48 +0530] [24036] [DEBUG] GET /captcha/image/dc3f8ad21d887aba7ec5afa67cb0fa7d734deaed/
+[2019-07-01 20:37:23 +0530] [24036] [DEBUG] POST /student/register
+[2019-07-01 20:37:24 +0530] [24022] [DEBUG] GET /captcha/image/97eed77e80f7a87737fc4a079fbbe38f5d468d5f/
+[2019-07-01 20:37:41 +0530] [24036] [DEBUG] POST /student/register
+[2019-07-01 20:37:45 +0530] [24036] [DEBUG] GET /
+[2019-07-01 20:38:39 +0530] [24036] [DEBUG] GET /admin/
+[2019-07-01 20:38:39 +0530] [24022] [DEBUG] GET /admin/login/
+[2019-07-01 20:38:40 +0530] [24041] [DEBUG] POST /admin/login/
+[2019-07-01 20:38:41 +0530] [24041] [DEBUG] GET /admin/
+[2019-07-01 20:38:46 +0530] [24022] [DEBUG] GET /admin/
+[2019-07-01 20:39:09 +0530] [24041] [INFO] Worker exiting (pid: 24041)
+[2019-07-01 20:39:09 +0530] [24022] [INFO] Worker exiting (pid: 24022)
+[2019-07-01 20:39:09 +0530] [24036] [INFO] Worker exiting (pid: 24036)
+[2019-07-01 20:39:09 +0530] [24009] [INFO] Handling signal: term
+[2019-07-01 20:39:09 +0530] [24009] [INFO] Shutting down: Master
+[2019-07-01 20:39:09 +0530] [24184] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fdfad5132f0>
+  on_reload: <function OnReload.on_reload at 0x7fdfad513400>
+  when_ready: <function WhenReady.when_ready at 0x7fdfad513510>
+  pre_fork: <function Prefork.pre_fork at 0x7fdfad513620>
+  post_fork: <function Postfork.post_fork at 0x7fdfad513730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fdfad513840>
+  worker_int: <function WorkerInt.worker_int at 0x7fdfad513950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fdfad513a60>
+  pre_exec: <function PreExec.pre_exec at 0x7fdfad513b70>
+  pre_request: <function PreRequest.pre_request at 0x7fdfad513c80>
+  post_request: <function PostRequest.post_request at 0x7fdfad513d08>
+  child_exit: <function ChildExit.child_exit at 0x7fdfad513e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fdfad513f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fdfad5300d0>
+  on_exit: <function OnExit.on_exit at 0x7fdfad5301e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 20:39:09 +0530] [24184] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 20:39:09 +0530] [24184] [DEBUG] Arbiter booted
+[2019-07-01 20:39:09 +0530] [24184] [INFO] Listening at: http://0.0.0.0:9000 (24184)
+[2019-07-01 20:39:09 +0530] [24184] [INFO] Using worker: sync
+[2019-07-01 20:39:09 +0530] [24200] [INFO] Booting worker with pid: 24200
+[2019-07-01 20:39:09 +0530] [24212] [INFO] Booting worker with pid: 24212
+[2019-07-01 20:39:09 +0530] [24216] [INFO] Booting worker with pid: 24216
+[2019-07-01 20:39:09 +0530] [24184] [DEBUG] 3 workers
+[2019-07-01 20:39:13 +0530] [24212] [DEBUG] GET /admin/
+[2019-07-01 20:42:33 +0530] [24216] [DEBUG] GET /
+[2019-07-01 20:42:40 +0530] [24212] [DEBUG] GET /logout/
+[2019-07-01 20:42:40 +0530] [24200] [DEBUG] GET /
+[2019-07-01 20:42:45 +0530] [24212] [DEBUG] GET /
+[2019-07-01 20:42:47 +0530] [24200] [DEBUG] GET /oauth/login/github/
+[2019-07-01 20:42:47 +0530] [24200] [DEBUG] GET /favicon.ico
+[2019-07-01 20:42:59 +0530] [24216] [DEBUG] GET /
+[2019-07-01 20:43:09 +0530] [24184] [INFO] Handling signal: term
+[2019-07-01 20:43:09 +0530] [24200] [INFO] Worker exiting (pid: 24200)
+[2019-07-01 20:43:09 +0530] [24216] [INFO] Worker exiting (pid: 24216)
+[2019-07-01 20:43:09 +0530] [24212] [INFO] Worker exiting (pid: 24212)
+[2019-07-01 20:43:09 +0530] [24184] [INFO] Shutting down: Master
+[2019-07-01 20:43:09 +0530] [24351] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fed208592f0>
+  on_reload: <function OnReload.on_reload at 0x7fed20859400>
+  when_ready: <function WhenReady.when_ready at 0x7fed20859510>
+  pre_fork: <function Prefork.pre_fork at 0x7fed20859620>
+  post_fork: <function Postfork.post_fork at 0x7fed20859730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fed20859840>
+  worker_int: <function WorkerInt.worker_int at 0x7fed20859950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fed20859a60>
+  pre_exec: <function PreExec.pre_exec at 0x7fed20859b70>
+  pre_request: <function PreRequest.pre_request at 0x7fed20859c80>
+  post_request: <function PostRequest.post_request at 0x7fed20859d08>
+  child_exit: <function ChildExit.child_exit at 0x7fed20859e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fed20859f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fed208760d0>
+  on_exit: <function OnExit.on_exit at 0x7fed208761e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 20:43:09 +0530] [24351] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 20:43:09 +0530] [24351] [DEBUG] Arbiter booted
+[2019-07-01 20:43:09 +0530] [24351] [INFO] Listening at: http://0.0.0.0:9000 (24351)
+[2019-07-01 20:43:09 +0530] [24351] [INFO] Using worker: sync
+[2019-07-01 20:43:09 +0530] [24365] [INFO] Booting worker with pid: 24365
+[2019-07-01 20:43:09 +0530] [24379] [INFO] Booting worker with pid: 24379
+[2019-07-01 20:43:09 +0530] [24384] [INFO] Booting worker with pid: 24384
+[2019-07-01 20:43:09 +0530] [24351] [DEBUG] 3 workers
+[2019-07-01 20:43:12 +0530] [24379] [DEBUG] GET /oauth/login/github/
+[2019-07-01 20:43:50 +0530] [24351] [INFO] Handling signal: term
+[2019-07-01 20:43:50 +0530] [24379] [INFO] Worker exiting (pid: 24379)
+[2019-07-01 20:43:50 +0530] [24365] [INFO] Worker exiting (pid: 24365)
+[2019-07-01 20:43:50 +0530] [24384] [INFO] Worker exiting (pid: 24384)
+[2019-07-01 20:43:50 +0530] [24351] [INFO] Shutting down: Master
+[2019-07-01 20:43:50 +0530] [24477] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f65eb1872f0>
+  on_reload: <function OnReload.on_reload at 0x7f65eb187400>
+  when_ready: <function WhenReady.when_ready at 0x7f65eb187510>
+  pre_fork: <function Prefork.pre_fork at 0x7f65eb187620>
+  post_fork: <function Postfork.post_fork at 0x7f65eb187730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f65eb187840>
+  worker_int: <function WorkerInt.worker_int at 0x7f65eb187950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f65eb187a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f65eb187b70>
+  pre_request: <function PreRequest.pre_request at 0x7f65eb187c80>
+  post_request: <function PostRequest.post_request at 0x7f65eb187d08>
+  child_exit: <function ChildExit.child_exit at 0x7f65eb187e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f65eb187f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f65eb1a40d0>
+  on_exit: <function OnExit.on_exit at 0x7f65eb1a41e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 20:43:50 +0530] [24477] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 20:43:50 +0530] [24477] [DEBUG] Arbiter booted
+[2019-07-01 20:43:50 +0530] [24477] [INFO] Listening at: http://0.0.0.0:9000 (24477)
+[2019-07-01 20:43:50 +0530] [24477] [INFO] Using worker: sync
+[2019-07-01 20:43:50 +0530] [24491] [INFO] Booting worker with pid: 24491
+[2019-07-01 20:43:50 +0530] [24500] [INFO] Booting worker with pid: 24500
+[2019-07-01 20:43:50 +0530] [24507] [INFO] Booting worker with pid: 24507
+[2019-07-01 20:43:50 +0530] [24477] [DEBUG] 3 workers
+[2019-07-01 20:44:00 +0530] [24477] [INFO] Handling signal: term
+[2019-07-01 20:44:00 +0530] [24491] [INFO] Worker exiting (pid: 24491)
+[2019-07-01 20:44:00 +0530] [24500] [INFO] Worker exiting (pid: 24500)
+[2019-07-01 20:44:00 +0530] [24507] [INFO] Worker exiting (pid: 24507)
+[2019-07-01 20:44:00 +0530] [24477] [INFO] Shutting down: Master
+[2019-07-01 20:44:00 +0530] [24605] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f1f780bf2f0>
+  on_reload: <function OnReload.on_reload at 0x7f1f780bf400>
+  when_ready: <function WhenReady.when_ready at 0x7f1f780bf510>
+  pre_fork: <function Prefork.pre_fork at 0x7f1f780bf620>
+  post_fork: <function Postfork.post_fork at 0x7f1f780bf730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f1f780bf840>
+  worker_int: <function WorkerInt.worker_int at 0x7f1f780bf950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f1f780bfa60>
+  pre_exec: <function PreExec.pre_exec at 0x7f1f780bfb70>
+  pre_request: <function PreRequest.pre_request at 0x7f1f780bfc80>
+  post_request: <function PostRequest.post_request at 0x7f1f780bfd08>
+  child_exit: <function ChildExit.child_exit at 0x7f1f780bfe18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f1f780bff28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f1f780dc0d0>
+  on_exit: <function OnExit.on_exit at 0x7f1f780dc1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 20:44:00 +0530] [24605] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 20:44:00 +0530] [24605] [DEBUG] Arbiter booted
+[2019-07-01 20:44:00 +0530] [24605] [INFO] Listening at: http://0.0.0.0:9000 (24605)
+[2019-07-01 20:44:00 +0530] [24605] [INFO] Using worker: sync
+[2019-07-01 20:44:00 +0530] [24619] [INFO] Booting worker with pid: 24619
+[2019-07-01 20:44:00 +0530] [24629] [INFO] Booting worker with pid: 24629
+[2019-07-01 20:44:00 +0530] [24637] [INFO] Booting worker with pid: 24637
+[2019-07-01 20:44:00 +0530] [24605] [DEBUG] 3 workers
+[2019-07-01 20:44:04 +0530] [24637] [DEBUG] GET /admin/
+[2019-07-01 20:44:04 +0530] [24619] [DEBUG] GET /admin/login/
+[2019-07-01 20:44:08 +0530] [24629] [DEBUG] POST /admin/login/
+[2019-07-01 20:44:09 +0530] [24619] [DEBUG] GET /admin/
+[2019-07-01 20:45:32 +0530] [24637] [DEBUG] GET /oauth/login/github/
+[2019-07-01 20:45:32 +0530] [24629] [DEBUG] GET /
+[2019-07-01 20:45:40 +0530] [24619] [DEBUG] GET /oauth/login/github/
+[2019-07-01 20:45:41 +0530] [24619] [DEBUG] GET /
+[2019-07-01 20:46:26 +0530] [24619] [DEBUG] GET /
+[2019-07-01 20:46:29 +0530] [24619] [DEBUG] GET /oauth/login/github/
+[2019-07-01 20:46:29 +0530] [24629] [DEBUG] GET /
+[2019-07-01 20:47:25 +0530] [24637] [DEBUG] GET /oauth/login/github/
+[2019-07-01 20:47:25 +0530] [24619] [DEBUG] GET /
+[2019-07-01 20:47:33 +0530] [24629] [DEBUG] GET /admin/
+[2019-07-01 20:47:41 +0530] [24637] [DEBUG] GET /admin
+[2019-07-01 20:47:41 +0530] [24637] [DEBUG] GET /admin/
+[2019-07-01 21:26:29 +0530] [24605] [INFO] Handling signal: term
+[2019-07-01 21:26:29 +0530] [24637] [INFO] Worker exiting (pid: 24637)
+[2019-07-01 21:26:29 +0530] [24629] [INFO] Worker exiting (pid: 24629)
+[2019-07-01 21:26:29 +0530] [24619] [INFO] Worker exiting (pid: 24619)
+[2019-07-01 21:26:30 +0530] [24605] [INFO] Shutting down: Master
+[2019-07-01 21:26:32 +0530] [27452] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f84b4d662f0>
+  on_reload: <function OnReload.on_reload at 0x7f84b4d66400>
+  when_ready: <function WhenReady.when_ready at 0x7f84b4d66510>
+  pre_fork: <function Prefork.pre_fork at 0x7f84b4d66620>
+  post_fork: <function Postfork.post_fork at 0x7f84b4d66730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f84b4d66840>
+  worker_int: <function WorkerInt.worker_int at 0x7f84b4d66950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f84b4d66a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f84b4d66b70>
+  pre_request: <function PreRequest.pre_request at 0x7f84b4d66c80>
+  post_request: <function PostRequest.post_request at 0x7f84b4d66d08>
+  child_exit: <function ChildExit.child_exit at 0x7f84b4d66e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f84b4d66f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f84b4d820d0>
+  on_exit: <function OnExit.on_exit at 0x7f84b4d821e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 21:26:32 +0530] [27452] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 21:26:32 +0530] [27452] [DEBUG] Arbiter booted
+[2019-07-01 21:26:32 +0530] [27452] [INFO] Listening at: http://0.0.0.0:9000 (27452)
+[2019-07-01 21:26:32 +0530] [27452] [INFO] Using worker: sync
+[2019-07-01 21:26:32 +0530] [27474] [INFO] Booting worker with pid: 27474
+[2019-07-01 21:26:32 +0530] [27538] [INFO] Booting worker with pid: 27538
+[2019-07-01 21:26:32 +0530] [27539] [INFO] Booting worker with pid: 27539
+[2019-07-01 21:26:32 +0530] [27452] [DEBUG] 3 workers
+[2019-07-01 21:28:17 +0530] [27452] [INFO] Handling signal: term
+[2019-07-01 21:28:17 +0530] [27539] [INFO] Worker exiting (pid: 27539)
+[2019-07-01 21:28:17 +0530] [27474] [INFO] Worker exiting (pid: 27474)
+[2019-07-01 21:28:17 +0530] [27538] [INFO] Worker exiting (pid: 27538)
+[2019-07-01 21:28:18 +0530] [27452] [INFO] Shutting down: Master
+[2019-07-01 21:30:57 +0530] [27883] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f3f21b832f0>
+  on_reload: <function OnReload.on_reload at 0x7f3f21b83400>
+  when_ready: <function WhenReady.when_ready at 0x7f3f21b83510>
+  pre_fork: <function Prefork.pre_fork at 0x7f3f21b83620>
+  post_fork: <function Postfork.post_fork at 0x7f3f21b83730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3f21b83840>
+  worker_int: <function WorkerInt.worker_int at 0x7f3f21b83950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3f21b83a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f3f21b83b70>
+  pre_request: <function PreRequest.pre_request at 0x7f3f21b83c80>
+  post_request: <function PostRequest.post_request at 0x7f3f21b83d08>
+  child_exit: <function ChildExit.child_exit at 0x7f3f21b83e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3f21b83f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3f21b9f0d0>
+  on_exit: <function OnExit.on_exit at 0x7f3f21b9f1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 21:30:57 +0530] [27883] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 21:30:57 +0530] [27883] [DEBUG] Arbiter booted
+[2019-07-01 21:30:57 +0530] [27883] [INFO] Listening at: http://0.0.0.0:9000 (27883)
+[2019-07-01 21:30:57 +0530] [27883] [INFO] Using worker: sync
+[2019-07-01 21:30:57 +0530] [27901] [INFO] Booting worker with pid: 27901
+[2019-07-01 21:30:57 +0530] [27903] [INFO] Booting worker with pid: 27903
+[2019-07-01 21:30:57 +0530] [27909] [INFO] Booting worker with pid: 27909
+[2019-07-01 21:30:57 +0530] [27883] [DEBUG] 3 workers
+[2019-07-01 21:31:57 +0530] [27883] [INFO] Handling signal: term
+[2019-07-01 21:31:57 +0530] [27909] [INFO] Worker exiting (pid: 27909)
+[2019-07-01 21:31:57 +0530] [27901] [INFO] Worker exiting (pid: 27901)
+[2019-07-01 21:31:57 +0530] [27903] [INFO] Worker exiting (pid: 27903)
+[2019-07-01 21:31:58 +0530] [28002] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f0350ca62f0>
+  on_reload: <function OnReload.on_reload at 0x7f0350ca6400>
+  when_ready: <function WhenReady.when_ready at 0x7f0350ca6510>
+  pre_fork: <function Prefork.pre_fork at 0x7f0350ca6620>
+  post_fork: <function Postfork.post_fork at 0x7f0350ca6730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f0350ca6840>
+  worker_int: <function WorkerInt.worker_int at 0x7f0350ca6950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f0350ca6a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f0350ca6b70>
+  pre_request: <function PreRequest.pre_request at 0x7f0350ca6c80>
+  post_request: <function PostRequest.post_request at 0x7f0350ca6d08>
+  child_exit: <function ChildExit.child_exit at 0x7f0350ca6e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f0350ca6f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f0350cc30d0>
+  on_exit: <function OnExit.on_exit at 0x7f0350cc31e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 21:31:58 +0530] [28002] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 21:31:58 +0530] [28002] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 21:31:58 +0530] [28002] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 21:31:58 +0530] [28002] [ERROR] Retrying in 1 second.
+[2019-07-01 21:31:58 +0530] [27883] [INFO] Shutting down: Master
+[2019-07-01 21:31:59 +0530] [28002] [DEBUG] Arbiter booted
+[2019-07-01 21:31:59 +0530] [28002] [INFO] Listening at: http://0.0.0.0:9000 (28002)
+[2019-07-01 21:31:59 +0530] [28002] [INFO] Using worker: sync
+[2019-07-01 21:31:59 +0530] [28032] [INFO] Booting worker with pid: 28032
+[2019-07-01 21:31:59 +0530] [28033] [INFO] Booting worker with pid: 28033
+[2019-07-01 21:31:59 +0530] [28034] [INFO] Booting worker with pid: 28034
+[2019-07-01 21:31:59 +0530] [28002] [DEBUG] 3 workers
+[2019-07-01 21:39:24 +0530] [28002] [INFO] Handling signal: term
+[2019-07-01 21:39:24 +0530] [28034] [INFO] Worker exiting (pid: 28034)
+[2019-07-01 21:39:24 +0530] [28032] [INFO] Worker exiting (pid: 28032)
+[2019-07-01 21:39:24 +0530] [28033] [INFO] Worker exiting (pid: 28033)
+[2019-07-01 21:39:25 +0530] [28002] [INFO] Shutting down: Master
+[2019-07-01 21:45:01 +0530] [28975] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7feb556e22f0>
+  on_reload: <function OnReload.on_reload at 0x7feb556e2400>
+  when_ready: <function WhenReady.when_ready at 0x7feb556e2510>
+  pre_fork: <function Prefork.pre_fork at 0x7feb556e2620>
+  post_fork: <function Postfork.post_fork at 0x7feb556e2730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7feb556e2840>
+  worker_int: <function WorkerInt.worker_int at 0x7feb556e2950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7feb556e2a60>
+  pre_exec: <function PreExec.pre_exec at 0x7feb556e2b70>
+  pre_request: <function PreRequest.pre_request at 0x7feb556e2c80>
+  post_request: <function PostRequest.post_request at 0x7feb556e2d08>
+  child_exit: <function ChildExit.child_exit at 0x7feb556e2e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7feb556e2f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7feb556ff0d0>
+  on_exit: <function OnExit.on_exit at 0x7feb556ff1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 21:45:01 +0530] [28975] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 21:45:01 +0530] [28975] [DEBUG] Arbiter booted
+[2019-07-01 21:45:01 +0530] [28975] [INFO] Listening at: http://0.0.0.0:9000 (28975)
+[2019-07-01 21:45:01 +0530] [28975] [INFO] Using worker: sync
+[2019-07-01 21:45:01 +0530] [28986] [INFO] Booting worker with pid: 28986
+[2019-07-01 21:45:01 +0530] [28998] [INFO] Booting worker with pid: 28998
+[2019-07-01 21:45:01 +0530] [29004] [INFO] Booting worker with pid: 29004
+[2019-07-01 21:45:01 +0530] [28975] [DEBUG] 3 workers
+[2019-07-01 21:45:06 +0530] [28986] [DEBUG] GET /
+[2019-07-01 21:45:15 +0530] [28986] [DEBUG] GET /admin/
+[2019-07-01 21:45:15 +0530] [28998] [DEBUG] GET /admin/login/
+[2019-07-01 21:46:21 +0530] [28998] [INFO] Worker exiting (pid: 28998)
+[2019-07-01 21:46:21 +0530] [29004] [INFO] Worker exiting (pid: 29004)
+[2019-07-01 21:46:21 +0530] [28986] [INFO] Worker exiting (pid: 28986)
+[2019-07-01 21:46:21 +0530] [28975] [INFO] Handling signal: term
+[2019-07-01 21:46:21 +0530] [28975] [INFO] Shutting down: Master
+[2019-07-01 21:46:21 +0530] [29110] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f80372552f0>
+  on_reload: <function OnReload.on_reload at 0x7f8037255400>
+  when_ready: <function WhenReady.when_ready at 0x7f8037255510>
+  pre_fork: <function Prefork.pre_fork at 0x7f8037255620>
+  post_fork: <function Postfork.post_fork at 0x7f8037255730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f8037255840>
+  worker_int: <function WorkerInt.worker_int at 0x7f8037255950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f8037255a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f8037255b70>
+  pre_request: <function PreRequest.pre_request at 0x7f8037255c80>
+  post_request: <function PostRequest.post_request at 0x7f8037255d08>
+  child_exit: <function ChildExit.child_exit at 0x7f8037255e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f8037255f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f80372720d0>
+  on_exit: <function OnExit.on_exit at 0x7f80372721e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 21:46:21 +0530] [29110] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 21:46:21 +0530] [29110] [DEBUG] Arbiter booted
+[2019-07-01 21:46:21 +0530] [29110] [INFO] Listening at: http://0.0.0.0:9000 (29110)
+[2019-07-01 21:46:21 +0530] [29110] [INFO] Using worker: sync
+[2019-07-01 21:46:21 +0530] [29123] [INFO] Booting worker with pid: 29123
+[2019-07-01 21:46:21 +0530] [29133] [INFO] Booting worker with pid: 29133
+[2019-07-01 21:46:21 +0530] [29138] [INFO] Booting worker with pid: 29138
+[2019-07-01 21:46:21 +0530] [29110] [DEBUG] 3 workers
+[2019-07-01 21:46:26 +0530] [29133] [DEBUG] POST /admin/login/
+[2019-07-01 21:46:26 +0530] [29133] [DEBUG] GET /admin/
+[2019-07-01 21:47:23 +0530] [29138] [DEBUG] GET /admin/
+[2019-07-01 21:47:44 +0530] [29138] [DEBUG] GET /admin/registration/user/
+[2019-07-01 21:47:44 +0530] [29138] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 21:47:46 +0530] [29138] [DEBUG] GET /admin/
+[2019-07-01 21:47:50 +0530] [29133] [DEBUG] GET /admin/main/loggedcommit/
+[2019-07-01 21:47:50 +0530] [29133] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 21:47:52 +0530] [29123] [DEBUG] GET /admin/
+[2019-07-01 21:47:54 +0530] [29133] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-01 21:47:54 +0530] [29138] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 21:47:57 +0530] [29133] [DEBUG] GET /admin/
+[2019-07-01 21:48:16 +0530] [29138] [DEBUG] GET /admin/login/
+[2019-07-01 21:48:16 +0530] [29138] [DEBUG] GET /admin/
+[2019-07-01 21:48:19 +0530] [29138] [DEBUG] GET /
+[2019-07-01 21:48:28 +0530] [29123] [DEBUG] GET /admin/
+[2019-07-01 21:48:48 +0530] [29123] [DEBUG] GET /mentor/register
+[2019-07-01 21:48:49 +0530] [29123] [DEBUG] GET /captcha/image/dfc45d83bd9d82bacbb3b797b1f162b4abd4cdd3/
+[2019-07-01 21:49:03 +0530] [29123] [DEBUG] POST /mentor/register
+[2019-07-01 21:49:08 +0530] [29123] [DEBUG] GET /
+[2019-07-01 21:49:13 +0530] [29138] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-01 21:49:13 +0530] [29138] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 21:49:15 +0530] [29138] [DEBUG] GET /admin/mentor/mentor/1/change/
+[2019-07-01 21:49:15 +0530] [29138] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 21:49:19 +0530] [29138] [DEBUG] POST /admin/mentor/mentor/1/change/
+[2019-07-01 21:50:15 +0530] [29138] [DEBUG] GET /admin/mentor/mentor/1/change/
+[2019-07-01 21:50:19 +0530] [29133] [DEBUG] POST /admin/mentor/mentor/1/change/
+[2019-07-01 21:50:24 +0530] [29123] [INFO] Worker exiting (pid: 29123)
+[2019-07-01 21:50:24 +0530] [29133] [INFO] Worker exiting (pid: 29133)
+[2019-07-01 21:50:24 +0530] [29138] [INFO] Worker exiting (pid: 29138)
+[2019-07-01 21:50:24 +0530] [29110] [INFO] Handling signal: term
+[2019-07-01 21:50:25 +0530] [29110] [INFO] Shutting down: Master
+[2019-07-01 21:50:25 +0530] [29343] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f05fb0832f0>
+  on_reload: <function OnReload.on_reload at 0x7f05fb083400>
+  when_ready: <function WhenReady.when_ready at 0x7f05fb083510>
+  pre_fork: <function Prefork.pre_fork at 0x7f05fb083620>
+  post_fork: <function Postfork.post_fork at 0x7f05fb083730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f05fb083840>
+  worker_int: <function WorkerInt.worker_int at 0x7f05fb083950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f05fb083a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f05fb083b70>
+  pre_request: <function PreRequest.pre_request at 0x7f05fb083c80>
+  post_request: <function PostRequest.post_request at 0x7f05fb083d08>
+  child_exit: <function ChildExit.child_exit at 0x7f05fb083e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f05fb083f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f05fb0a00d0>
+  on_exit: <function OnExit.on_exit at 0x7f05fb0a01e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 21:50:25 +0530] [29343] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 21:50:25 +0530] [29343] [DEBUG] Arbiter booted
+[2019-07-01 21:50:25 +0530] [29343] [INFO] Listening at: http://0.0.0.0:9000 (29343)
+[2019-07-01 21:50:25 +0530] [29343] [INFO] Using worker: sync
+[2019-07-01 21:50:25 +0530] [29356] [INFO] Booting worker with pid: 29356
+[2019-07-01 21:50:25 +0530] [29371] [INFO] Booting worker with pid: 29371
+[2019-07-01 21:50:25 +0530] [29372] [INFO] Booting worker with pid: 29372
+[2019-07-01 21:50:25 +0530] [29343] [DEBUG] 3 workers
+[2019-07-01 21:50:33 +0530] [29356] [DEBUG] GET /admin/mentor/mentor/1/change/
+[2019-07-01 21:50:37 +0530] [29356] [DEBUG] GET /admin/mentor/mentor/1/change/
+[2019-07-01 21:50:38 +0530] [29356] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 21:50:41 +0530] [29356] [DEBUG] POST /admin/mentor/mentor/1/change/
+[2019-07-01 21:50:45 +0530] [29356] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-01 21:50:45 +0530] [29356] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 21:50:52 +0530] [29371] [DEBUG] GET /oauth/login/github/
+[2019-07-01 21:50:53 +0530] [29356] [DEBUG] GET /
+[2019-07-01 21:51:02 +0530] [29371] [DEBUG] GET /admin/mentor/mentor/1/change/
+[2019-07-01 21:51:05 +0530] [29372] [DEBUG] GET /admin/
+[2019-07-01 22:42:59 +0530] [29343] [INFO] Handling signal: term
+[2019-07-01 22:42:59 +0530] [29372] [INFO] Worker exiting (pid: 29372)
+[2019-07-01 22:42:59 +0530] [29371] [INFO] Worker exiting (pid: 29371)
+[2019-07-01 22:42:59 +0530] [29356] [INFO] Worker exiting (pid: 29356)
+[2019-07-01 22:43:00 +0530] [31723] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f25b1dda2f0>
+  on_reload: <function OnReload.on_reload at 0x7f25b1dda400>
+  when_ready: <function WhenReady.when_ready at 0x7f25b1dda510>
+  pre_fork: <function Prefork.pre_fork at 0x7f25b1dda620>
+  post_fork: <function Postfork.post_fork at 0x7f25b1dda730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f25b1dda840>
+  worker_int: <function WorkerInt.worker_int at 0x7f25b1dda950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f25b1ddaa60>
+  pre_exec: <function PreExec.pre_exec at 0x7f25b1ddab70>
+  pre_request: <function PreRequest.pre_request at 0x7f25b1ddac80>
+  post_request: <function PostRequest.post_request at 0x7f25b1ddad08>
+  child_exit: <function ChildExit.child_exit at 0x7f25b1ddae18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f25b1ddaf28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f25b1df60d0>
+  on_exit: <function OnExit.on_exit at 0x7f25b1df61e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 22:43:00 +0530] [31723] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 22:43:00 +0530] [31723] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:43:00 +0530] [31723] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:43:00 +0530] [31723] [ERROR] Retrying in 1 second.
+[2019-07-01 22:43:01 +0530] [29343] [INFO] Shutting down: Master
+[2019-07-01 22:43:01 +0530] [31723] [DEBUG] Arbiter booted
+[2019-07-01 22:43:01 +0530] [31723] [INFO] Listening at: http://0.0.0.0:9000 (31723)
+[2019-07-01 22:43:01 +0530] [31723] [INFO] Using worker: sync
+[2019-07-01 22:43:01 +0530] [31753] [INFO] Booting worker with pid: 31753
+[2019-07-01 22:43:01 +0530] [31754] [INFO] Booting worker with pid: 31754
+[2019-07-01 22:43:01 +0530] [31768] [INFO] Booting worker with pid: 31768
+[2019-07-01 22:43:01 +0530] [31723] [DEBUG] 3 workers
+[2019-07-01 22:43:08 +0530] [31768] [DEBUG] GET /admin/
+[2019-07-01 22:43:25 +0530] [31753] [DEBUG] GET /admin/
+[2019-07-01 22:43:38 +0530] [31723] [CRITICAL] WORKER TIMEOUT (pid:31768)
+[2019-07-01 22:43:38 +0530] [31768] [INFO] Worker exiting (pid: 31768)
+[2019-07-01 22:43:38 +0530] [31723] [INFO] Handling signal: term
+[2019-07-01 22:43:38 +0530] [31754] [INFO] Worker exiting (pid: 31754)
+[2019-07-01 22:43:50 +0530] [31851] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f77553612f0>
+  on_reload: <function OnReload.on_reload at 0x7f7755361400>
+  when_ready: <function WhenReady.when_ready at 0x7f7755361510>
+  pre_fork: <function Prefork.pre_fork at 0x7f7755361620>
+  post_fork: <function Postfork.post_fork at 0x7f7755361730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7755361840>
+  worker_int: <function WorkerInt.worker_int at 0x7f7755361950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7755361a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f7755361b70>
+  pre_request: <function PreRequest.pre_request at 0x7f7755361c80>
+  post_request: <function PostRequest.post_request at 0x7f7755361d08>
+  child_exit: <function ChildExit.child_exit at 0x7f7755361e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7755361f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f775537e0d0>
+  on_exit: <function OnExit.on_exit at 0x7f775537e1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 22:43:50 +0530] [31851] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 22:43:50 +0530] [31851] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:43:50 +0530] [31851] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:43:50 +0530] [31851] [ERROR] Retrying in 1 second.
+[2019-07-01 22:43:51 +0530] [31851] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:43:51 +0530] [31851] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:43:51 +0530] [31851] [ERROR] Retrying in 1 second.
+[2019-07-01 22:43:52 +0530] [31851] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:43:52 +0530] [31851] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:43:52 +0530] [31851] [ERROR] Retrying in 1 second.
+[2019-07-01 22:43:53 +0530] [31851] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:43:53 +0530] [31851] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:43:53 +0530] [31851] [ERROR] Retrying in 1 second.
+[2019-07-01 22:43:54 +0530] [31851] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:43:54 +0530] [31851] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:43:54 +0530] [31851] [ERROR] Retrying in 1 second.
+[2019-07-01 22:43:55 +0530] [31851] [ERROR] Can't connect to ('0.0.0.0', 9000)
+[2019-07-01 22:44:08 +0530] [31723] [INFO] Shutting down: Master
+[2019-07-01 22:44:33 +0530] [32021] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fe5f2dc02f0>
+  on_reload: <function OnReload.on_reload at 0x7fe5f2dc0400>
+  when_ready: <function WhenReady.when_ready at 0x7fe5f2dc0510>
+  pre_fork: <function Prefork.pre_fork at 0x7fe5f2dc0620>
+  post_fork: <function Postfork.post_fork at 0x7fe5f2dc0730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fe5f2dc0840>
+  worker_int: <function WorkerInt.worker_int at 0x7fe5f2dc0950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fe5f2dc0a60>
+  pre_exec: <function PreExec.pre_exec at 0x7fe5f2dc0b70>
+  pre_request: <function PreRequest.pre_request at 0x7fe5f2dc0c80>
+  post_request: <function PostRequest.post_request at 0x7fe5f2dc0d08>
+  child_exit: <function ChildExit.child_exit at 0x7fe5f2dc0e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fe5f2dc0f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fe5f2ddd0d0>
+  on_exit: <function OnExit.on_exit at 0x7fe5f2ddd1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 22:44:33 +0530] [32021] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 22:44:33 +0530] [32021] [DEBUG] Arbiter booted
+[2019-07-01 22:44:33 +0530] [32021] [INFO] Listening at: http://0.0.0.0:9000 (32021)
+[2019-07-01 22:44:33 +0530] [32021] [INFO] Using worker: sync
+[2019-07-01 22:44:33 +0530] [32038] [INFO] Booting worker with pid: 32038
+[2019-07-01 22:44:34 +0530] [32045] [INFO] Booting worker with pid: 32045
+[2019-07-01 22:44:34 +0530] [32047] [INFO] Booting worker with pid: 32047
+[2019-07-01 22:44:34 +0530] [32021] [DEBUG] 3 workers
+[2019-07-01 22:44:40 +0530] [32047] [DEBUG] GET /admin/
+[2019-07-01 22:44:57 +0530] [32045] [DEBUG] GET /
+[2019-07-01 22:45:10 +0530] [32021] [CRITICAL] WORKER TIMEOUT (pid:32047)
+[2019-07-01 22:45:10 +0530] [32047] [INFO] Worker exiting (pid: 32047)
+[2019-07-01 22:45:10 +0530] [32118] [INFO] Booting worker with pid: 32118
+[2019-07-01 22:45:23 +0530] [32021] [INFO] Handling signal: term
+[2019-07-01 22:45:23 +0530] [32118] [INFO] Worker exiting (pid: 32118)
+[2019-07-01 22:45:23 +0530] [32038] [INFO] Worker exiting (pid: 32038)
+[2019-07-01 22:45:50 +0530] [32156] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f5404e2f2f0>
+  on_reload: <function OnReload.on_reload at 0x7f5404e2f400>
+  when_ready: <function WhenReady.when_ready at 0x7f5404e2f510>
+  pre_fork: <function Prefork.pre_fork at 0x7f5404e2f620>
+  post_fork: <function Postfork.post_fork at 0x7f5404e2f730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f5404e2f840>
+  worker_int: <function WorkerInt.worker_int at 0x7f5404e2f950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f5404e2fa60>
+  pre_exec: <function PreExec.pre_exec at 0x7f5404e2fb70>
+  pre_request: <function PreRequest.pre_request at 0x7f5404e2fc80>
+  post_request: <function PostRequest.post_request at 0x7f5404e2fd08>
+  child_exit: <function ChildExit.child_exit at 0x7f5404e2fe18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f5404e2ff28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f5404e4c0d0>
+  on_exit: <function OnExit.on_exit at 0x7f5404e4c1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 22:45:50 +0530] [32156] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 22:45:50 +0530] [32156] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:45:50 +0530] [32156] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:45:50 +0530] [32156] [ERROR] Retrying in 1 second.
+[2019-07-01 22:45:51 +0530] [32156] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:45:51 +0530] [32156] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:45:51 +0530] [32156] [ERROR] Retrying in 1 second.
+[2019-07-01 22:45:52 +0530] [32156] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:45:52 +0530] [32156] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:45:52 +0530] [32156] [ERROR] Retrying in 1 second.
+[2019-07-01 22:45:53 +0530] [32156] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:45:53 +0530] [32021] [INFO] Shutting down: Master
+[2019-07-01 22:45:53 +0530] [32156] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:45:53 +0530] [32156] [ERROR] Retrying in 1 second.
+[2019-07-01 22:45:54 +0530] [32156] [DEBUG] Arbiter booted
+[2019-07-01 22:45:54 +0530] [32156] [INFO] Listening at: http://0.0.0.0:9000 (32156)
+[2019-07-01 22:45:54 +0530] [32156] [INFO] Using worker: sync
+[2019-07-01 22:45:54 +0530] [32277] [INFO] Booting worker with pid: 32277
+[2019-07-01 22:45:55 +0530] [32278] [INFO] Booting worker with pid: 32278
+[2019-07-01 22:45:55 +0530] [32279] [INFO] Booting worker with pid: 32279
+[2019-07-01 22:45:55 +0530] [32156] [DEBUG] 3 workers
+[2019-07-01 22:45:59 +0530] [32278] [DEBUG] GET /admin/
+[2019-07-01 22:46:02 +0530] [32277] [DEBUG] GET /
+[2019-07-01 22:46:44 +0530] [32278] [INFO] Worker exiting (pid: 32278)
+[2019-07-01 22:46:44 +0530] [32277] [INFO] Worker exiting (pid: 32277)
+[2019-07-01 22:46:44 +0530] [32156] [INFO] Handling signal: term
+[2019-07-01 22:46:44 +0530] [32279] [INFO] Worker exiting (pid: 32279)
+[2019-07-01 22:46:44 +0530] [32317] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f38261992f0>
+  on_reload: <function OnReload.on_reload at 0x7f3826199400>
+  when_ready: <function WhenReady.when_ready at 0x7f3826199510>
+  pre_fork: <function Prefork.pre_fork at 0x7f3826199620>
+  post_fork: <function Postfork.post_fork at 0x7f3826199730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3826199840>
+  worker_int: <function WorkerInt.worker_int at 0x7f3826199950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3826199a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f3826199b70>
+  pre_request: <function PreRequest.pre_request at 0x7f3826199c80>
+  post_request: <function PostRequest.post_request at 0x7f3826199d08>
+  child_exit: <function ChildExit.child_exit at 0x7f3826199e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3826199f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f38261b60d0>
+  on_exit: <function OnExit.on_exit at 0x7f38261b61e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-01 22:46:44 +0530] [32317] [INFO] Starting gunicorn 19.9.0
+[2019-07-01 22:46:44 +0530] [32317] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-01 22:46:44 +0530] [32317] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-01 22:46:44 +0530] [32317] [ERROR] Retrying in 1 second.
+[2019-07-01 22:46:45 +0530] [32156] [INFO] Shutting down: Master
+[2019-07-01 22:46:45 +0530] [32317] [DEBUG] Arbiter booted
+[2019-07-01 22:46:45 +0530] [32317] [INFO] Listening at: http://0.0.0.0:9000 (32317)
+[2019-07-01 22:46:45 +0530] [32317] [INFO] Using worker: sync
+[2019-07-01 22:46:45 +0530] [32347] [INFO] Booting worker with pid: 32347
+[2019-07-01 22:46:46 +0530] [32349] [INFO] Booting worker with pid: 32349
+[2019-07-01 22:46:46 +0530] [32362] [INFO] Booting worker with pid: 32362
+[2019-07-01 22:46:46 +0530] [32317] [DEBUG] 3 workers
+[2019-07-01 22:46:49 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-01 22:47:10 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-01 22:47:10 +0530] [32362] [DEBUG] GET /favicon.ico
+[2019-07-01 22:47:12 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-01 22:47:12 +0530] [32347] [DEBUG] GET /favicon.ico
+[2019-07-01 22:47:14 +0530] [32347] [DEBUG] GET /admin/auth/group/
+[2019-07-01 22:47:15 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:47:16 +0530] [32349] [DEBUG] GET /admin/
+[2019-07-01 22:47:21 +0530] [32347] [DEBUG] GET /student/register
+[2019-07-01 22:47:22 +0530] [32347] [DEBUG] GET /captcha/image/5f1c75749fb3226e0140db1696b162432ea364af/
+[2019-07-01 22:47:50 +0530] [32349] [DEBUG] POST /student/register
+[2019-07-01 22:47:54 +0530] [32362] [DEBUG] GET /
+[2019-07-01 22:48:04 +0530] [32362] [DEBUG] GET /admin/registration/student/
+[2019-07-01 22:48:04 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:48:06 +0530] [32349] [DEBUG] GET /admin/registration/student/1/change/
+[2019-07-01 22:48:06 +0530] [32349] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:48:11 +0530] [32349] [DEBUG] POST /admin/registration/student/1/change/
+[2019-07-01 22:48:15 +0530] [32349] [DEBUG] GET /admin/registration/student/
+[2019-07-01 22:48:16 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:48:18 +0530] [32347] [DEBUG] GET /admin/
+[2019-07-01 22:49:56 +0530] [32362] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-01 22:49:57 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:49:58 +0530] [32349] [DEBUG] GET /admin/
+[2019-07-01 22:49:59 +0530] [32362] [DEBUG] GET /admin/registration/user/
+[2019-07-01 22:50:00 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:50:02 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-01 22:50:02 +0530] [32362] [DEBUG] GET /admin/registration/student/
+[2019-07-01 22:50:05 +0530] [32349] [DEBUG] GET /admin/registration/student/1/change/
+[2019-07-01 22:50:11 +0530] [32347] [DEBUG] GET /admin/
+[2019-07-01 22:50:13 +0530] [32347] [DEBUG] GET /admin/registration/user/
+[2019-07-01 22:50:13 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:50:20 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-01 22:50:24 +0530] [32349] [DEBUG] GET /oauth/login/github/
+[2019-07-01 22:50:24 +0530] [32349] [DEBUG] GET /
+[2019-07-01 22:50:27 +0530] [32347] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-01 22:50:27 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:50:29 +0530] [32349] [DEBUG] GET /admin/mentor/mentor/1/change/
+[2019-07-01 22:50:29 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:50:38 +0530] [32347] [DEBUG] GET /oauth/login/github/
+[2019-07-01 22:50:39 +0530] [32347] [DEBUG] GET /
+[2019-07-01 22:50:52 +0530] [32362] [DEBUG] GET /
+[2019-07-01 22:50:56 +0530] [32362] [DEBUG] GET /oauth/login/github/
+[2019-07-01 22:50:56 +0530] [32362] [DEBUG] GET /
+[2019-07-01 22:53:00 +0530] [32349] [DEBUG] GET /
+[2019-07-01 22:58:29 +0530] [32347] [DEBUG] GET /admin/
+[2019-07-01 22:58:36 +0530] [32349] [DEBUG] GET /admin/project/project/
+[2019-07-01 22:58:37 +0530] [32349] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:58:39 +0530] [32347] [DEBUG] GET /admin/project/project/bulkadd
+[2019-07-01 22:58:44 +0530] [32347] [DEBUG] POST /admin/project/project/bulkadd
+[2019-07-01 22:58:45 +0530] [32349] [DEBUG] GET /admin/project/project
+[2019-07-01 22:58:45 +0530] [32349] [DEBUG] GET /admin/project/project/
+[2019-07-01 22:58:45 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:58:59 +0530] [32349] [DEBUG] GET /admin/
+[2019-07-01 22:59:00 +0530] [32362] [DEBUG] GET /admin/auth/group/
+[2019-07-01 22:59:01 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:59:03 +0530] [32362] [DEBUG] GET /admin/auth/group/add/
+[2019-07-01 22:59:03 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:59:50 +0530] [32347] [DEBUG] POST /admin/auth/group/add/
+[2019-07-01 22:59:51 +0530] [32349] [DEBUG] GET /admin/auth/group/
+[2019-07-01 22:59:51 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 22:59:54 +0530] [32347] [DEBUG] GET /admin/auth/group/add/
+[2019-07-01 22:59:55 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 23:00:44 +0530] [32362] [DEBUG] POST /admin/auth/group/add/
+[2019-07-01 23:00:44 +0530] [32349] [DEBUG] GET /admin/auth/group/
+[2019-07-01 23:00:44 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 23:00:45 +0530] [32347] [DEBUG] GET /admin/auth/group/1/change/
+[2019-07-01 23:00:46 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 23:00:53 +0530] [32349] [DEBUG] POST /admin/auth/group/1/change/
+[2019-07-01 23:00:54 +0530] [32362] [DEBUG] GET /admin/auth/group/
+[2019-07-01 23:00:54 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 23:00:58 +0530] [32347] [DEBUG] GET /admin/auth/group/add/
+[2019-07-01 23:00:58 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 23:01:27 +0530] [32349] [DEBUG] POST /admin/auth/group/add/
+[2019-07-01 23:01:27 +0530] [32349] [DEBUG] GET /admin/auth/group/
+[2019-07-01 23:01:27 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 23:01:31 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-01 23:01:37 +0530] [32362] [DEBUG] GET /admin/registration/user/
+[2019-07-01 23:01:37 +0530] [32349] [DEBUG] GET /admin/jsi18n/
+[2019-07-01 23:01:39 +0530] [32347] [DEBUG] GET /admin/
+[2019-07-01 23:01:42 +0530] [32362] [DEBUG] GET /admin/auth/group/
+[2019-07-01 23:01:43 +0530] [32347] [DEBUG] GET /admin/auth/group/add/
+[2019-07-01 23:02:13 +0530] [32347] [DEBUG] GET /projects/list
+[2019-07-02 09:29:25 +0530] [32362] [DEBUG] GET /
+[2019-07-02 09:29:28 +0530] [32349] [DEBUG] GET /favicon.ico
+[2019-07-02 09:29:32 +0530] [32347] [DEBUG] GET /admin/
+[2019-07-02 09:29:32 +0530] [32349] [DEBUG] GET /admin/login/
+[2019-07-02 09:29:34 +0530] [32362] [DEBUG] POST /admin/login/
+[2019-07-02 09:29:34 +0530] [32349] [DEBUG] GET /admin/
+[2019-07-02 09:29:38 +0530] [32349] [DEBUG] GET /admin/project/project/
+[2019-07-02 09:29:38 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 09:29:40 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-02 09:29:42 +0530] [32347] [DEBUG] GET /admin/registration/user/
+[2019-07-02 09:29:43 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 09:29:44 +0530] [32347] [DEBUG] GET /admin/
+[2019-07-02 09:29:44 +0530] [32362] [DEBUG] GET /admin/login/
+[2019-07-02 09:29:44 +0530] [32349] [DEBUG] GET /admin/
+[2019-07-02 09:29:48 +0530] [32349] [DEBUG] GET /admin/registration/student/
+[2019-07-02 09:29:48 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 09:29:50 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-02 10:42:07 +0530] [32349] [DEBUG] GET /admin/main/loggedcommit/
+[2019-07-02 10:42:08 +0530] [32362] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 10:42:08 +0530] [32347] [DEBUG] GET /admin/
+[2019-07-02 13:41:07 +0530] [32349] [DEBUG] GET /admin/main/loggedcommit/
+[2019-07-02 13:41:08 +0530] [32347] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 13:58:51 +0530] [32362] [DEBUG] GET /admin/
+[2019-07-02 13:58:56 +0530] [32349] [DEBUG] GET /admin/registration/user/
+[2019-07-02 13:58:56 +0530] [32349] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 14:00:48 +0530] [32347] [DEBUG] GET /admin/logout/
+[2019-07-02 14:00:48 +0530] [32349] [DEBUG] GET /
+[2019-07-02 14:00:51 +0530] [32362] [DEBUG] GET /favicon.ico
+[2019-07-02 14:00:52 +0530] [32349] [DEBUG] GET /oauth/login/github/
+[2019-07-02 14:00:53 +0530] [32362] [DEBUG] GET /
+[2019-07-02 14:41:44 +0530] [32362] [INFO] Worker exiting (pid: 32362)
+[2019-07-02 14:41:44 +0530] [32349] [INFO] Worker exiting (pid: 32349)
+[2019-07-02 14:41:44 +0530] [32347] [INFO] Worker exiting (pid: 32347)
+[2019-07-02 14:41:45 +0530] [32317] [INFO] Handling signal: term
+[2019-07-02 14:41:46 +0530] [32317] [INFO] Shutting down: Master
+[2019-07-02 14:41:53 +0530] [2141] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f5950c222f0>
+  on_reload: <function OnReload.on_reload at 0x7f5950c22400>
+  when_ready: <function WhenReady.when_ready at 0x7f5950c22510>
+  pre_fork: <function Prefork.pre_fork at 0x7f5950c22620>
+  post_fork: <function Postfork.post_fork at 0x7f5950c22730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f5950c22840>
+  worker_int: <function WorkerInt.worker_int at 0x7f5950c22950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f5950c22a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f5950c22b70>
+  pre_request: <function PreRequest.pre_request at 0x7f5950c22c80>
+  post_request: <function PostRequest.post_request at 0x7f5950c22d08>
+  child_exit: <function ChildExit.child_exit at 0x7f5950c22e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f5950c22f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f5950c3e0d0>
+  on_exit: <function OnExit.on_exit at 0x7f5950c3e1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-02 14:41:53 +0530] [2141] [INFO] Starting gunicorn 19.9.0
+[2019-07-02 14:41:53 +0530] [2141] [DEBUG] Arbiter booted
+[2019-07-02 14:41:53 +0530] [2141] [INFO] Listening at: http://0.0.0.0:9000 (2141)
+[2019-07-02 14:41:53 +0530] [2141] [INFO] Using worker: sync
+[2019-07-02 14:41:53 +0530] [2148] [INFO] Booting worker with pid: 2148
+[2019-07-02 14:41:53 +0530] [2149] [INFO] Booting worker with pid: 2149
+[2019-07-02 14:41:53 +0530] [2150] [INFO] Booting worker with pid: 2150
+[2019-07-02 14:41:53 +0530] [2141] [DEBUG] 3 workers
+[2019-07-02 14:42:17 +0530] [2149] [DEBUG] GET /
+[2019-07-02 14:42:17 +0530] [2150] [DEBUG] GET /
+[2019-07-02 14:42:18 +0530] [2150] [DEBUG] Ignoring EPIPE
+[2019-07-02 14:42:19 +0530] [2149] [DEBUG] GET /favicon.ico
+[2019-07-02 14:50:27 +0530] [2150] [DEBUG] GET /
+[2019-07-02 14:50:57 +0530] [2148] [DEBUG] GET /favicon.ico
+[2019-07-02 14:51:01 +0530] [2149] [DEBUG] GET /
+[2019-07-02 15:04:44 +0530] [2149] [INFO] Worker exiting (pid: 2149)
+[2019-07-02 15:04:44 +0530] [2150] [INFO] Worker exiting (pid: 2150)
+[2019-07-02 15:04:44 +0530] [2148] [INFO] Worker exiting (pid: 2148)
+[2019-07-02 15:04:44 +0530] [2141] [INFO] Handling signal: term
+[2019-07-02 15:04:44 +0530] [2141] [INFO] Shutting down: Master
+[2019-07-02 15:04:44 +0530] [2349] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f4aee8162f0>
+  on_reload: <function OnReload.on_reload at 0x7f4aee816400>
+  when_ready: <function WhenReady.when_ready at 0x7f4aee816510>
+  pre_fork: <function Prefork.pre_fork at 0x7f4aee816620>
+  post_fork: <function Postfork.post_fork at 0x7f4aee816730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f4aee816840>
+  worker_int: <function WorkerInt.worker_int at 0x7f4aee816950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f4aee816a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f4aee816b70>
+  pre_request: <function PreRequest.pre_request at 0x7f4aee816c80>
+  post_request: <function PostRequest.post_request at 0x7f4aee816d08>
+  child_exit: <function ChildExit.child_exit at 0x7f4aee816e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f4aee816f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f4aee8320d0>
+  on_exit: <function OnExit.on_exit at 0x7f4aee8321e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-02 15:04:44 +0530] [2349] [INFO] Starting gunicorn 19.9.0
+[2019-07-02 15:04:44 +0530] [2349] [DEBUG] Arbiter booted
+[2019-07-02 15:04:44 +0530] [2349] [INFO] Listening at: http://0.0.0.0:9000 (2349)
+[2019-07-02 15:04:44 +0530] [2349] [INFO] Using worker: sync
+[2019-07-02 15:04:44 +0530] [2363] [INFO] Booting worker with pid: 2363
+[2019-07-02 15:04:44 +0530] [2372] [INFO] Booting worker with pid: 2372
+[2019-07-02 15:04:45 +0530] [2382] [INFO] Booting worker with pid: 2382
+[2019-07-02 15:04:45 +0530] [2349] [DEBUG] 3 workers
+[2019-07-02 15:05:11 +0530] [2372] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:05:41 +0530] [2349] [CRITICAL] WORKER TIMEOUT (pid:2372)
+[2019-07-02 15:05:41 +0530] [2372] [INFO] Worker exiting (pid: 2372)
+[2019-07-02 15:05:41 +0530] [2466] [INFO] Booting worker with pid: 2466
+[2019-07-02 15:12:45 +0530] [2382] [DEBUG] GET /
+[2019-07-02 15:12:48 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:13:29 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:14:00 +0530] [2466] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:14:01 +0530] [2466] [DEBUG] GET /
+[2019-07-02 15:14:45 +0530] [2466] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:15:12 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:15:29 +0530] [2466] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:16:12 +0530] [2363] [DEBUG] GET /admin/
+[2019-07-02 15:16:12 +0530] [2466] [DEBUG] GET /admin/login/
+[2019-07-02 15:16:13 +0530] [2466] [DEBUG] GET /favicon.ico
+[2019-07-02 15:16:14 +0530] [2382] [DEBUG] POST /admin/login/
+[2019-07-02 15:16:15 +0530] [2382] [DEBUG] GET /admin/
+[2019-07-02 15:16:18 +0530] [2466] [DEBUG] GET /admin/registration/user/
+[2019-07-02 15:16:18 +0530] [2363] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 15:16:20 +0530] [2466] [DEBUG] GET /admin/
+[2019-07-02 15:16:26 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:17:16 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:17:41 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:19:35 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:21:58 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:22:10 +0530] [2466] [DEBUG] GET /
+[2019-07-02 15:22:11 +0530] [2382] [DEBUG] GET /static/SRIP.png
+[2019-07-02 15:22:11 +0530] [2466] [DEBUG] GET /static/SRIP.png
+[2019-07-02 15:22:11 +0530] [2466] [DEBUG] GET /favicon.ico
+[2019-07-02 15:22:31 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:22:31 +0530] [2382] [DEBUG] GET /
+[2019-07-02 15:23:00 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:23:01 +0530] [2363] [DEBUG] GET /
+[2019-07-02 15:23:04 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:23:05 +0530] [2382] [DEBUG] GET /
+[2019-07-02 15:23:20 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:23:33 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:24:35 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:24:52 +0530] [2466] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:25:04 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:25:35 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:25:35 +0530] [2363] [DEBUG] GET /complete/github/
+[2019-07-02 15:26:27 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:27:46 +0530] [2382] [DEBUG] GET /admin/registration/user/
+[2019-07-02 15:27:46 +0530] [2382] [DEBUG] GET /admin/jsi18n/
+[2019-07-02 15:30:06 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:30:47 +0530] [2382] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:30:48 +0530] [2363] [DEBUG] GET /
+[2019-07-02 15:30:49 +0530] [2466] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:30:49 +0530] [2363] [DEBUG] GET /
+[2019-07-02 15:31:08 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:31:13 +0530] [2363] [DEBUG] GET /favicon.ico
+[2019-07-02 15:33:54 +0530] [2363] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:36:28 +0530] [2466] [INFO] Worker exiting (pid: 2466)
+[2019-07-02 15:36:28 +0530] [2363] [INFO] Worker exiting (pid: 2363)
+[2019-07-02 15:36:28 +0530] [2382] [INFO] Worker exiting (pid: 2382)
+[2019-07-02 15:36:28 +0530] [2349] [INFO] Handling signal: term
+[2019-07-02 15:36:28 +0530] [2349] [INFO] Shutting down: Master
+[2019-07-02 15:36:28 +0530] [2748] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f468b77c2f0>
+  on_reload: <function OnReload.on_reload at 0x7f468b77c400>
+  when_ready: <function WhenReady.when_ready at 0x7f468b77c510>
+  pre_fork: <function Prefork.pre_fork at 0x7f468b77c620>
+  post_fork: <function Postfork.post_fork at 0x7f468b77c730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f468b77c840>
+  worker_int: <function WorkerInt.worker_int at 0x7f468b77c950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f468b77ca60>
+  pre_exec: <function PreExec.pre_exec at 0x7f468b77cb70>
+  pre_request: <function PreRequest.pre_request at 0x7f468b77cc80>
+  post_request: <function PostRequest.post_request at 0x7f468b77cd08>
+  child_exit: <function ChildExit.child_exit at 0x7f468b77ce18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f468b77cf28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f468b7990d0>
+  on_exit: <function OnExit.on_exit at 0x7f468b7991e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-02 15:36:28 +0530] [2748] [INFO] Starting gunicorn 19.9.0
+[2019-07-02 15:36:28 +0530] [2748] [DEBUG] Arbiter booted
+[2019-07-02 15:36:28 +0530] [2748] [INFO] Listening at: http://0.0.0.0:9000 (2748)
+[2019-07-02 15:36:28 +0530] [2748] [INFO] Using worker: sync
+[2019-07-02 15:36:28 +0530] [2754] [INFO] Booting worker with pid: 2754
+[2019-07-02 15:36:28 +0530] [2771] [INFO] Booting worker with pid: 2771
+[2019-07-02 15:36:28 +0530] [2777] [INFO] Booting worker with pid: 2777
+[2019-07-02 15:36:28 +0530] [2748] [DEBUG] 3 workers
+[2019-07-02 15:36:33 +0530] [2754] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:37:00 +0530] [2771] [DEBUG] GET /
+[2019-07-02 15:37:00 +0530] [2771] [DEBUG] GET /favicon.ico
+[2019-07-02 15:37:01 +0530] [2754] [DEBUG] GET /
+[2019-07-02 15:37:02 +0530] [2771] [DEBUG] GET /favicon.ico
+[2019-07-02 15:37:03 +0530] [2777] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:37:47 +0530] [2771] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:37:47 +0530] [2777] [DEBUG] GET /
+[2019-07-02 15:39:45 +0530] [2777] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:39:46 +0530] [2754] [DEBUG] GET /
+[2019-07-02 15:39:50 +0530] [2771] [DEBUG] GET /
+[2019-07-02 15:39:51 +0530] [2771] [DEBUG] GET /favicon.ico
+[2019-07-02 15:39:52 +0530] [2771] [DEBUG] GET /oauth/login/github/
+[2019-07-02 15:39:55 +0530] [2754] [DEBUG] GET /
+[2019-07-02 15:43:09 +0530] [2771] [INFO] Worker exiting (pid: 2771)
+[2019-07-02 15:43:09 +0530] [2777] [INFO] Worker exiting (pid: 2777)
+[2019-07-02 15:43:09 +0530] [2754] [INFO] Worker exiting (pid: 2754)
+[2019-07-02 15:43:09 +0530] [2748] [INFO] Handling signal: term
+[2019-07-02 15:43:09 +0530] [2748] [INFO] Shutting down: Master
+[2019-07-04 14:37:42 +0530] [7183] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f0f111bb2f0>
+  on_reload: <function OnReload.on_reload at 0x7f0f111bb400>
+  when_ready: <function WhenReady.when_ready at 0x7f0f111bb510>
+  pre_fork: <function Prefork.pre_fork at 0x7f0f111bb620>
+  post_fork: <function Postfork.post_fork at 0x7f0f111bb730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f0f111bb840>
+  worker_int: <function WorkerInt.worker_int at 0x7f0f111bb950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f0f111bba60>
+  pre_exec: <function PreExec.pre_exec at 0x7f0f111bbb70>
+  pre_request: <function PreRequest.pre_request at 0x7f0f111bbc80>
+  post_request: <function PostRequest.post_request at 0x7f0f111bbd08>
+  child_exit: <function ChildExit.child_exit at 0x7f0f111bbe18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f0f111bbf28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f0f111d70d0>
+  on_exit: <function OnExit.on_exit at 0x7f0f111d71e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-04 14:37:42 +0530] [7183] [INFO] Starting gunicorn 19.9.0
+[2019-07-04 14:37:42 +0530] [7183] [DEBUG] Arbiter booted
+[2019-07-04 14:37:42 +0530] [7183] [INFO] Listening at: http://0.0.0.0:9000 (7183)
+[2019-07-04 14:37:42 +0530] [7183] [INFO] Using worker: sync
+[2019-07-04 14:37:42 +0530] [7193] [INFO] Booting worker with pid: 7193
+[2019-07-04 14:37:42 +0530] [7194] [INFO] Booting worker with pid: 7194
+[2019-07-04 14:37:43 +0530] [7195] [INFO] Booting worker with pid: 7195
+[2019-07-04 14:37:43 +0530] [7183] [DEBUG] 3 workers
+[2019-07-04 14:38:12 +0530] [7183] [CRITICAL] WORKER TIMEOUT (pid:7193)
+[2019-07-04 14:38:12 +0530] [7183] [CRITICAL] WORKER TIMEOUT (pid:7194)
+[2019-07-04 14:38:13 +0530] [7183] [CRITICAL] WORKER TIMEOUT (pid:7195)
+[2019-07-04 14:38:13 +0530] [7282] [INFO] Booting worker with pid: 7282
+[2019-07-04 14:38:13 +0530] [7283] [INFO] Booting worker with pid: 7283
+[2019-07-04 14:38:13 +0530] [7183] [DEBUG] 2 workers
+[2019-07-04 14:38:13 +0530] [7284] [INFO] Booting worker with pid: 7284
+[2019-07-04 14:38:13 +0530] [7183] [DEBUG] 3 workers
+[2019-07-04 14:38:36 +0530] [7283] [DEBUG] GET /
+[2019-07-04 14:38:36 +0530] [7282] [DEBUG] GET /
+[2019-07-04 14:38:39 +0530] [7283] [DEBUG] GET /favicon.ico
+[2019-07-04 14:38:44 +0530] [7284] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:38:59 +0530] [7284] [DEBUG] GET /admin/
+[2019-07-04 14:38:59 +0530] [7283] [DEBUG] GET /admin/login/
+[2019-07-04 14:39:01 +0530] [7282] [DEBUG] GET /favicon.ico
+[2019-07-04 14:39:03 +0530] [7284] [DEBUG] POST /admin/login/
+[2019-07-04 14:39:04 +0530] [7284] [DEBUG] GET /admin/
+[2019-07-04 14:39:59 +0530] [7283] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:42:39 +0530] [7282] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:43:40 +0530] [7282] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:44:02 +0530] [7282] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:45:01 +0530] [7282] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:45:25 +0530] [7284] [DEBUG] GET /
+[2019-07-04 14:45:27 +0530] [7282] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:45:29 +0530] [7282] [DEBUG] GET /
+[2019-07-04 14:52:04 +0530] [7284] [DEBUG] GET /
+[2019-07-04 14:52:11 +0530] [7283] [DEBUG] GET /
+[2019-07-04 14:52:59 +0530] [7282] [INFO] Worker exiting (pid: 7282)
+[2019-07-04 14:52:59 +0530] [7283] [INFO] Worker exiting (pid: 7283)
+[2019-07-04 14:52:59 +0530] [7284] [INFO] Worker exiting (pid: 7284)
+[2019-07-04 14:52:59 +0530] [7183] [INFO] Handling signal: term
+[2019-07-04 14:52:59 +0530] [7183] [INFO] Shutting down: Master
+[2019-07-04 14:53:00 +0530] [7404] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f84395d72f0>
+  on_reload: <function OnReload.on_reload at 0x7f84395d7400>
+  when_ready: <function WhenReady.when_ready at 0x7f84395d7510>
+  pre_fork: <function Prefork.pre_fork at 0x7f84395d7620>
+  post_fork: <function Postfork.post_fork at 0x7f84395d7730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f84395d7840>
+  worker_int: <function WorkerInt.worker_int at 0x7f84395d7950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f84395d7a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f84395d7b70>
+  pre_request: <function PreRequest.pre_request at 0x7f84395d7c80>
+  post_request: <function PostRequest.post_request at 0x7f84395d7d08>
+  child_exit: <function ChildExit.child_exit at 0x7f84395d7e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f84395d7f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f84395f30d0>
+  on_exit: <function OnExit.on_exit at 0x7f84395f31e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-04 14:53:00 +0530] [7404] [INFO] Starting gunicorn 19.9.0
+[2019-07-04 14:53:00 +0530] [7404] [DEBUG] Arbiter booted
+[2019-07-04 14:53:00 +0530] [7404] [INFO] Listening at: http://0.0.0.0:9000 (7404)
+[2019-07-04 14:53:00 +0530] [7404] [INFO] Using worker: sync
+[2019-07-04 14:53:00 +0530] [7417] [INFO] Booting worker with pid: 7417
+[2019-07-04 14:53:00 +0530] [7420] [INFO] Booting worker with pid: 7420
+[2019-07-04 14:53:00 +0530] [7429] [INFO] Booting worker with pid: 7429
+[2019-07-04 14:53:00 +0530] [7404] [DEBUG] 3 workers
+[2019-07-04 14:53:08 +0530] [7429] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:53:46 +0530] [7417] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:56:26 +0530] [7420] [DEBUG] GET /oauth/login/github/
+[2019-07-04 14:56:30 +0530] [7420] [DEBUG] GET /
+[2019-07-04 14:56:31 +0530] [7420] [DEBUG] GET /favicon.ico
+[2019-07-04 14:56:32 +0530] [7429] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:01:00 +0530] [7429] [DEBUG] GET /
+[2019-07-04 15:01:01 +0530] [7429] [DEBUG] GET /favicon.ico
+[2019-07-04 15:01:02 +0530] [7417] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:01:27 +0530] [7417] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:01:46 +0530] [7429] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:01:47 +0530] [7420] [DEBUG] GET /oauth/complete/github/
+[2019-07-04 15:03:31 +0530] [7420] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:03:32 +0530] [7417] [DEBUG] GET /oauth/complete/github/
+[2019-07-04 15:08:28 +0530] [7420] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:15:02 +0530] [7420] [INFO] Worker exiting (pid: 7420)
+[2019-07-04 15:15:02 +0530] [7417] [INFO] Worker exiting (pid: 7417)
+[2019-07-04 15:15:02 +0530] [7429] [INFO] Worker exiting (pid: 7429)
+[2019-07-04 15:15:02 +0530] [7404] [INFO] Handling signal: term
+[2019-07-04 15:15:02 +0530] [7404] [INFO] Shutting down: Master
+[2019-07-04 15:15:03 +0530] [7612] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fce0350e2f0>
+  on_reload: <function OnReload.on_reload at 0x7fce0350e400>
+  when_ready: <function WhenReady.when_ready at 0x7fce0350e510>
+  pre_fork: <function Prefork.pre_fork at 0x7fce0350e620>
+  post_fork: <function Postfork.post_fork at 0x7fce0350e730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fce0350e840>
+  worker_int: <function WorkerInt.worker_int at 0x7fce0350e950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fce0350ea60>
+  pre_exec: <function PreExec.pre_exec at 0x7fce0350eb70>
+  pre_request: <function PreRequest.pre_request at 0x7fce0350ec80>
+  post_request: <function PostRequest.post_request at 0x7fce0350ed08>
+  child_exit: <function ChildExit.child_exit at 0x7fce0350ee18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fce0350ef28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fce0352a0d0>
+  on_exit: <function OnExit.on_exit at 0x7fce0352a1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-04 15:15:03 +0530] [7612] [INFO] Starting gunicorn 19.9.0
+[2019-07-04 15:15:03 +0530] [7612] [DEBUG] Arbiter booted
+[2019-07-04 15:15:03 +0530] [7612] [INFO] Listening at: http://0.0.0.0:9000 (7612)
+[2019-07-04 15:15:03 +0530] [7612] [INFO] Using worker: sync
+[2019-07-04 15:15:03 +0530] [7630] [INFO] Booting worker with pid: 7630
+[2019-07-04 15:15:03 +0530] [7640] [INFO] Booting worker with pid: 7640
+[2019-07-04 15:15:03 +0530] [7645] [INFO] Booting worker with pid: 7645
+[2019-07-04 15:15:03 +0530] [7612] [DEBUG] 3 workers
+[2019-07-04 15:15:18 +0530] [7630] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:15:19 +0530] [7645] [DEBUG] GET /oauth/complete/github/
+[2019-07-04 15:16:35 +0530] [7612] [INFO] Handling signal: term
+[2019-07-04 15:16:35 +0530] [7645] [INFO] Worker exiting (pid: 7645)
+[2019-07-04 15:16:35 +0530] [7630] [INFO] Worker exiting (pid: 7630)
+[2019-07-04 15:16:35 +0530] [7640] [INFO] Worker exiting (pid: 7640)
+[2019-07-04 15:16:35 +0530] [7612] [INFO] Shutting down: Master
+[2019-07-04 15:16:35 +0530] [7741] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fd7a19df2f0>
+  on_reload: <function OnReload.on_reload at 0x7fd7a19df400>
+  when_ready: <function WhenReady.when_ready at 0x7fd7a19df510>
+  pre_fork: <function Prefork.pre_fork at 0x7fd7a19df620>
+  post_fork: <function Postfork.post_fork at 0x7fd7a19df730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fd7a19df840>
+  worker_int: <function WorkerInt.worker_int at 0x7fd7a19df950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fd7a19dfa60>
+  pre_exec: <function PreExec.pre_exec at 0x7fd7a19dfb70>
+  pre_request: <function PreRequest.pre_request at 0x7fd7a19dfc80>
+  post_request: <function PostRequest.post_request at 0x7fd7a19dfd08>
+  child_exit: <function ChildExit.child_exit at 0x7fd7a19dfe18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fd7a19dff28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fd7a19fb0d0>
+  on_exit: <function OnExit.on_exit at 0x7fd7a19fb1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-04 15:16:35 +0530] [7741] [INFO] Starting gunicorn 19.9.0
+[2019-07-04 15:16:35 +0530] [7741] [DEBUG] Arbiter booted
+[2019-07-04 15:16:35 +0530] [7741] [INFO] Listening at: http://0.0.0.0:9000 (7741)
+[2019-07-04 15:16:35 +0530] [7741] [INFO] Using worker: sync
+[2019-07-04 15:16:35 +0530] [7755] [INFO] Booting worker with pid: 7755
+[2019-07-04 15:16:35 +0530] [7760] [INFO] Booting worker with pid: 7760
+[2019-07-04 15:16:35 +0530] [7771] [INFO] Booting worker with pid: 7771
+[2019-07-04 15:16:35 +0530] [7741] [DEBUG] 3 workers
+[2019-07-04 15:16:41 +0530] [7755] [DEBUG] GET /
+[2019-07-04 15:16:46 +0530] [7771] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:16:49 +0530] [7760] [DEBUG] GET /oauth/complete/github/
+[2019-07-04 15:21:52 +0530] [7741] [INFO] Handling signal: term
+[2019-07-04 15:21:52 +0530] [7771] [INFO] Worker exiting (pid: 7771)
+[2019-07-04 15:21:52 +0530] [7760] [INFO] Worker exiting (pid: 7760)
+[2019-07-04 15:21:52 +0530] [7755] [INFO] Worker exiting (pid: 7755)
+[2019-07-04 15:21:53 +0530] [7741] [INFO] Shutting down: Master
+[2019-07-04 15:21:53 +0530] [7898] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f89696dd2f0>
+  on_reload: <function OnReload.on_reload at 0x7f89696dd400>
+  when_ready: <function WhenReady.when_ready at 0x7f89696dd510>
+  pre_fork: <function Prefork.pre_fork at 0x7f89696dd620>
+  post_fork: <function Postfork.post_fork at 0x7f89696dd730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f89696dd840>
+  worker_int: <function WorkerInt.worker_int at 0x7f89696dd950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f89696dda60>
+  pre_exec: <function PreExec.pre_exec at 0x7f89696ddb70>
+  pre_request: <function PreRequest.pre_request at 0x7f89696ddc80>
+  post_request: <function PostRequest.post_request at 0x7f89696ddd08>
+  child_exit: <function ChildExit.child_exit at 0x7f89696dde18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f89696ddf28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f89696f90d0>
+  on_exit: <function OnExit.on_exit at 0x7f89696f91e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-04 15:21:53 +0530] [7898] [INFO] Starting gunicorn 19.9.0
+[2019-07-04 15:21:53 +0530] [7898] [DEBUG] Arbiter booted
+[2019-07-04 15:21:53 +0530] [7898] [INFO] Listening at: http://0.0.0.0:9000 (7898)
+[2019-07-04 15:21:53 +0530] [7898] [INFO] Using worker: sync
+[2019-07-04 15:21:53 +0530] [7908] [INFO] Booting worker with pid: 7908
+[2019-07-04 15:21:53 +0530] [7917] [INFO] Booting worker with pid: 7917
+[2019-07-04 15:21:53 +0530] [7927] [INFO] Booting worker with pid: 7927
+[2019-07-04 15:21:53 +0530] [7898] [DEBUG] 3 workers
+[2019-07-04 15:21:59 +0530] [7908] [DEBUG] GET /
+[2019-07-04 15:22:11 +0530] [7908] [DEBUG] GET /favicon.ico
+[2019-07-04 15:22:15 +0530] [7927] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:22:27 +0530] [7927] [DEBUG] GET /oauth/complete/github/
+[2019-07-04 15:23:04 +0530] [7908] [DEBUG] GET /oauth/login/github/
+[2019-07-04 15:23:08 +0530] [7908] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:14:16 +0530] [7917] [DEBUG] GET /
+[2019-07-05 13:14:24 +0530] [7927] [DEBUG] GET /favicon.ico
+[2019-07-05 13:21:55 +0530] [7917] [DEBUG] GET /
+[2019-07-05 13:22:15 +0530] [7908] [DEBUG] GET /
+[2019-07-05 13:22:25 +0530] [7898] [CRITICAL] WORKER TIMEOUT (pid:7917)
+[2019-07-05 13:22:25 +0530] [7917] [INFO] Worker exiting (pid: 7917)
+[2019-07-05 13:22:27 +0530] [10096] [INFO] Booting worker with pid: 10096
+[2019-07-05 13:22:35 +0530] [7927] [DEBUG] GET /
+[2019-07-05 13:22:44 +0530] [7898] [CRITICAL] WORKER TIMEOUT (pid:7908)
+[2019-07-05 13:22:44 +0530] [7908] [INFO] Worker exiting (pid: 7908)
+[2019-07-05 13:22:45 +0530] [10101] [INFO] Booting worker with pid: 10101
+[2019-07-05 13:23:05 +0530] [7898] [CRITICAL] WORKER TIMEOUT (pid:7927)
+[2019-07-05 13:23:05 +0530] [7927] [INFO] Worker exiting (pid: 7927)
+[2019-07-05 13:23:05 +0530] [10096] [DEBUG] GET /favicon.ico
+[2019-07-05 13:23:06 +0530] [10106] [INFO] Booting worker with pid: 10106
+[2019-07-05 13:23:16 +0530] [7898] [INFO] Handling signal: term
+[2019-07-05 13:23:16 +0530] [10106] [INFO] Worker exiting (pid: 10106)
+[2019-07-05 13:23:16 +0530] [10101] [INFO] Worker exiting (pid: 10101)
+[2019-07-05 13:23:16 +0530] [10096] [INFO] Worker exiting (pid: 10096)
+[2019-07-05 13:23:17 +0530] [7898] [INFO] Shutting down: Master
+[2019-07-05 13:23:18 +0530] [10122] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f3d2a0b82f0>
+  on_reload: <function OnReload.on_reload at 0x7f3d2a0b8400>
+  when_ready: <function WhenReady.when_ready at 0x7f3d2a0b8510>
+  pre_fork: <function Prefork.pre_fork at 0x7f3d2a0b8620>
+  post_fork: <function Postfork.post_fork at 0x7f3d2a0b8730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3d2a0b8840>
+  worker_int: <function WorkerInt.worker_int at 0x7f3d2a0b8950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3d2a0b8a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f3d2a0b8b70>
+  pre_request: <function PreRequest.pre_request at 0x7f3d2a0b8c80>
+  post_request: <function PostRequest.post_request at 0x7f3d2a0b8d08>
+  child_exit: <function ChildExit.child_exit at 0x7f3d2a0b8e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3d2a0b8f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3d2a0d40d0>
+  on_exit: <function OnExit.on_exit at 0x7f3d2a0d41e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 13:23:18 +0530] [10122] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 13:23:18 +0530] [10122] [DEBUG] Arbiter booted
+[2019-07-05 13:23:18 +0530] [10122] [INFO] Listening at: http://0.0.0.0:9000 (10122)
+[2019-07-05 13:23:18 +0530] [10122] [INFO] Using worker: sync
+[2019-07-05 13:23:18 +0530] [10135] [INFO] Booting worker with pid: 10135
+[2019-07-05 13:23:18 +0530] [10138] [INFO] Booting worker with pid: 10138
+[2019-07-05 13:23:18 +0530] [10142] [INFO] Booting worker with pid: 10142
+[2019-07-05 13:23:18 +0530] [10122] [DEBUG] 3 workers
+[2019-07-05 13:23:22 +0530] [10142] [DEBUG] GET /
+[2019-07-05 13:23:28 +0530] [10142] [DEBUG] GET /
+[2019-07-05 13:23:28 +0530] [10142] [DEBUG] GET /favicon.ico
+[2019-07-05 13:23:33 +0530] [10135] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:34:41 +0530] [10142] [INFO] Worker exiting (pid: 10142)
+[2019-07-05 13:34:41 +0530] [10135] [INFO] Worker exiting (pid: 10135)
+[2019-07-05 13:34:41 +0530] [10122] [INFO] Handling signal: term
+[2019-07-05 13:34:41 +0530] [10138] [INFO] Worker exiting (pid: 10138)
+[2019-07-05 13:34:42 +0530] [10122] [INFO] Shutting down: Master
+[2019-07-05 13:48:50 +0530] [10894] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f1d9dc3b2f0>
+  on_reload: <function OnReload.on_reload at 0x7f1d9dc3b400>
+  when_ready: <function WhenReady.when_ready at 0x7f1d9dc3b510>
+  pre_fork: <function Prefork.pre_fork at 0x7f1d9dc3b620>
+  post_fork: <function Postfork.post_fork at 0x7f1d9dc3b730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f1d9dc3b840>
+  worker_int: <function WorkerInt.worker_int at 0x7f1d9dc3b950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f1d9dc3ba60>
+  pre_exec: <function PreExec.pre_exec at 0x7f1d9dc3bb70>
+  pre_request: <function PreRequest.pre_request at 0x7f1d9dc3bc80>
+  post_request: <function PostRequest.post_request at 0x7f1d9dc3bd08>
+  child_exit: <function ChildExit.child_exit at 0x7f1d9dc3be18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f1d9dc3bf28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f1d9dc570d0>
+  on_exit: <function OnExit.on_exit at 0x7f1d9dc571e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 13:48:50 +0530] [10894] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 13:48:50 +0530] [10894] [DEBUG] Arbiter booted
+[2019-07-05 13:48:50 +0530] [10894] [INFO] Listening at: http://0.0.0.0:9000 (10894)
+[2019-07-05 13:48:50 +0530] [10894] [INFO] Using worker: sync
+[2019-07-05 13:48:50 +0530] [10907] [INFO] Booting worker with pid: 10907
+[2019-07-05 13:48:50 +0530] [10910] [INFO] Booting worker with pid: 10910
+[2019-07-05 13:48:50 +0530] [10919] [INFO] Booting worker with pid: 10919
+[2019-07-05 13:48:50 +0530] [10894] [DEBUG] 3 workers
+[2019-07-05 13:48:54 +0530] [10907] [DEBUG] GET /
+[2019-07-05 13:48:54 +0530] [10919] [DEBUG] GET /favicon.ico
+[2019-07-05 13:48:59 +0530] [10919] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:49:10 +0530] [10907] [DEBUG] GET /
+[2019-07-05 13:49:12 +0530] [10910] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:53:59 +0530] [10910] [INFO] Worker exiting (pid: 10910)
+[2019-07-05 13:53:59 +0530] [10919] [INFO] Worker exiting (pid: 10919)
+[2019-07-05 13:53:59 +0530] [10907] [INFO] Worker exiting (pid: 10907)
+[2019-07-05 13:53:59 +0530] [10894] [INFO] Handling signal: term
+[2019-07-05 13:53:59 +0530] [10894] [INFO] Shutting down: Master
+[2019-07-05 13:53:59 +0530] [11033] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f2e1e5862f0>
+  on_reload: <function OnReload.on_reload at 0x7f2e1e586400>
+  when_ready: <function WhenReady.when_ready at 0x7f2e1e586510>
+  pre_fork: <function Prefork.pre_fork at 0x7f2e1e586620>
+  post_fork: <function Postfork.post_fork at 0x7f2e1e586730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f2e1e586840>
+  worker_int: <function WorkerInt.worker_int at 0x7f2e1e586950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f2e1e586a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f2e1e586b70>
+  pre_request: <function PreRequest.pre_request at 0x7f2e1e586c80>
+  post_request: <function PostRequest.post_request at 0x7f2e1e586d08>
+  child_exit: <function ChildExit.child_exit at 0x7f2e1e586e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f2e1e586f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f2e1e5a20d0>
+  on_exit: <function OnExit.on_exit at 0x7f2e1e5a21e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 13:53:59 +0530] [11033] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 13:53:59 +0530] [11033] [DEBUG] Arbiter booted
+[2019-07-05 13:53:59 +0530] [11033] [INFO] Listening at: http://0.0.0.0:9000 (11033)
+[2019-07-05 13:53:59 +0530] [11033] [INFO] Using worker: sync
+[2019-07-05 13:53:59 +0530] [11051] [INFO] Booting worker with pid: 11051
+[2019-07-05 13:53:59 +0530] [11056] [INFO] Booting worker with pid: 11056
+[2019-07-05 13:53:59 +0530] [11057] [INFO] Booting worker with pid: 11057
+[2019-07-05 13:53:59 +0530] [11033] [DEBUG] 3 workers
+[2019-07-05 13:54:08 +0530] [11056] [DEBUG] GET /
+[2019-07-05 13:54:09 +0530] [11056] [DEBUG] GET /favicon.ico
+[2019-07-05 13:54:10 +0530] [11056] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:54:27 +0530] [11056] [DEBUG] GET /
+[2019-07-05 13:54:29 +0530] [11051] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:54:29 +0530] [11051] [DEBUG] GET /oauth/complete/github/
+[2019-07-05 13:54:31 +0530] [11051] [DEBUG] GET /accounts/profile/
+[2019-07-05 13:55:02 +0530] [11033] [INFO] Handling signal: term
+[2019-07-05 13:55:02 +0530] [11056] [INFO] Worker exiting (pid: 11056)
+[2019-07-05 13:55:02 +0530] [11057] [INFO] Worker exiting (pid: 11057)
+[2019-07-05 13:55:02 +0530] [11051] [INFO] Worker exiting (pid: 11051)
+[2019-07-05 13:55:03 +0530] [11033] [INFO] Shutting down: Master
+[2019-07-05 13:55:03 +0530] [11174] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f10389352f0>
+  on_reload: <function OnReload.on_reload at 0x7f1038935400>
+  when_ready: <function WhenReady.when_ready at 0x7f1038935510>
+  pre_fork: <function Prefork.pre_fork at 0x7f1038935620>
+  post_fork: <function Postfork.post_fork at 0x7f1038935730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f1038935840>
+  worker_int: <function WorkerInt.worker_int at 0x7f1038935950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f1038935a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f1038935b70>
+  pre_request: <function PreRequest.pre_request at 0x7f1038935c80>
+  post_request: <function PostRequest.post_request at 0x7f1038935d08>
+  child_exit: <function ChildExit.child_exit at 0x7f1038935e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f1038935f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f10389510d0>
+  on_exit: <function OnExit.on_exit at 0x7f10389511e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 13:55:03 +0530] [11174] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 13:55:03 +0530] [11174] [DEBUG] Arbiter booted
+[2019-07-05 13:55:03 +0530] [11174] [INFO] Listening at: http://0.0.0.0:9000 (11174)
+[2019-07-05 13:55:03 +0530] [11174] [INFO] Using worker: sync
+[2019-07-05 13:55:03 +0530] [11191] [INFO] Booting worker with pid: 11191
+[2019-07-05 13:55:03 +0530] [11201] [INFO] Booting worker with pid: 11201
+[2019-07-05 13:55:03 +0530] [11206] [INFO] Booting worker with pid: 11206
+[2019-07-05 13:55:03 +0530] [11174] [DEBUG] 3 workers
+[2019-07-05 13:55:04 +0530] [11191] [DEBUG] GET /
+[2019-07-05 13:55:05 +0530] [11206] [DEBUG] GET /favicon.ico
+[2019-07-05 13:55:08 +0530] [11206] [DEBUG] GET /admin/
+[2019-07-05 13:55:08 +0530] [11206] [DEBUG] GET /admin/login/
+[2019-07-05 13:55:08 +0530] [11206] [DEBUG] GET /favicon.ico
+[2019-07-05 13:55:10 +0530] [11201] [DEBUG] POST /admin/login/
+[2019-07-05 13:55:10 +0530] [11201] [DEBUG] GET /admin/
+[2019-07-05 13:55:13 +0530] [11206] [DEBUG] GET /admin/registration/user/
+[2019-07-05 13:55:13 +0530] [11206] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 13:55:18 +0530] [11201] [DEBUG] GET /logout/
+[2019-07-05 13:55:18 +0530] [11191] [DEBUG] GET /
+[2019-07-05 13:55:18 +0530] [11206] [DEBUG] GET /favicon.ico
+[2019-07-05 13:55:19 +0530] [11206] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:55:20 +0530] [11206] [DEBUG] GET /oauth/complete/github/
+[2019-07-05 13:55:21 +0530] [11201] [DEBUG] GET /
+[2019-07-05 13:56:33 +0530] [11201] [DEBUG] GET /
+[2019-07-05 13:56:34 +0530] [11206] [DEBUG] GET /favicon.ico
+[2019-07-05 13:56:38 +0530] [11201] [DEBUG] GET /student/register
+[2019-07-05 13:56:38 +0530] [11206] [DEBUG] GET /captcha/image/16951d5fa2b359dec21dad32a5ff84a68a9990fa/
+[2019-07-05 13:57:16 +0530] [11191] [DEBUG] GET /admin/
+[2019-07-05 13:57:18 +0530] [11206] [DEBUG] GET /admin/registration/student/
+[2019-07-05 13:57:18 +0530] [11191] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 13:57:20 +0530] [11206] [DEBUG] GET /admin/registration/student/
+[2019-07-05 13:57:21 +0530] [11206] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 13:57:22 +0530] [11191] [DEBUG] GET /admin/registration/student/
+[2019-07-05 13:57:22 +0530] [11206] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 13:57:22 +0530] [11201] [DEBUG] POST /student/register
+[2019-07-05 13:57:27 +0530] [11191] [DEBUG] GET /
+[2019-07-05 13:57:29 +0530] [11206] [DEBUG] GET /admin/registration/student/
+[2019-07-05 13:57:29 +0530] [11201] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 13:57:30 +0530] [11206] [DEBUG] GET /admin/registration/student/2/change/
+[2019-07-05 13:57:30 +0530] [11206] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 13:57:35 +0530] [11201] [DEBUG] POST /admin/registration/student/2/change/
+[2019-07-05 13:57:39 +0530] [11201] [DEBUG] GET /admin/registration/student/
+[2019-07-05 13:57:39 +0530] [11191] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 13:57:42 +0530] [11206] [DEBUG] GET /oauth/login/github/
+[2019-07-05 13:57:47 +0530] [11191] [DEBUG] GET /oauth/complete/github/
+[2019-07-05 13:57:49 +0530] [11191] [DEBUG] GET /
+[2019-07-05 14:02:01 +0530] [11201] [DEBUG] GET /admin/registration/student/
+[2019-07-05 14:02:04 +0530] [11191] [DEBUG] GET /admin/registration/student/2/change/
+[2019-07-05 14:02:09 +0530] [11201] [INFO] Worker exiting (pid: 11201)
+[2019-07-05 14:02:09 +0530] [11191] [INFO] Worker exiting (pid: 11191)
+[2019-07-05 14:02:09 +0530] [11174] [INFO] Handling signal: term
+[2019-07-05 14:02:09 +0530] [11206] [INFO] Worker exiting (pid: 11206)
+[2019-07-05 14:02:10 +0530] [11476] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f1c45de72f0>
+  on_reload: <function OnReload.on_reload at 0x7f1c45de7400>
+  when_ready: <function WhenReady.when_ready at 0x7f1c45de7510>
+  pre_fork: <function Prefork.pre_fork at 0x7f1c45de7620>
+  post_fork: <function Postfork.post_fork at 0x7f1c45de7730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f1c45de7840>
+  worker_int: <function WorkerInt.worker_int at 0x7f1c45de7950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f1c45de7a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f1c45de7b70>
+  pre_request: <function PreRequest.pre_request at 0x7f1c45de7c80>
+  post_request: <function PostRequest.post_request at 0x7f1c45de7d08>
+  child_exit: <function ChildExit.child_exit at 0x7f1c45de7e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f1c45de7f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f1c45e040d0>
+  on_exit: <function OnExit.on_exit at 0x7f1c45e041e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 14:02:10 +0530] [11476] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 14:02:10 +0530] [11476] [DEBUG] Arbiter booted
+[2019-07-05 14:02:10 +0530] [11476] [INFO] Listening at: http://0.0.0.0:9000 (11476)
+[2019-07-05 14:02:10 +0530] [11476] [INFO] Using worker: sync
+[2019-07-05 14:02:10 +0530] [11490] [INFO] Booting worker with pid: 11490
+[2019-07-05 14:02:10 +0530] [11500] [INFO] Booting worker with pid: 11500
+[2019-07-05 14:02:10 +0530] [11174] [INFO] Shutting down: Master
+[2019-07-05 14:02:10 +0530] [11509] [INFO] Booting worker with pid: 11509
+[2019-07-05 14:02:10 +0530] [11476] [DEBUG] 3 workers
+[2019-07-05 14:02:15 +0530] [11509] [DEBUG] GET /admin/registration/student/2/change/
+[2019-07-05 14:02:15 +0530] [11509] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:02:16 +0530] [11500] [DEBUG] GET /favicon.ico
+[2019-07-05 14:02:18 +0530] [11500] [DEBUG] GET /admin/
+[2019-07-05 14:02:19 +0530] [11500] [DEBUG] GET /admin/auth/group/
+[2019-07-05 14:02:19 +0530] [11509] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:02:22 +0530] [11490] [DEBUG] GET /admin/auth/group/1/change/
+[2019-07-05 14:02:22 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:02:24 +0530] [11490] [DEBUG] GET /admin/auth/group/
+[2019-07-05 14:02:25 +0530] [11500] [DEBUG] GET /admin/
+[2019-07-05 14:02:27 +0530] [11500] [DEBUG] GET /admin/main/loggedcommit/
+[2019-07-05 14:02:27 +0530] [11500] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:02:28 +0530] [11500] [DEBUG] GET /admin/
+[2019-07-05 14:02:30 +0530] [11509] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-05 14:02:30 +0530] [11509] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:02:31 +0530] [11490] [DEBUG] GET /admin/
+[2019-07-05 14:02:32 +0530] [11500] [DEBUG] GET /admin/project/project/
+[2019-07-05 14:02:33 +0530] [11509] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:02:34 +0530] [11500] [DEBUG] GET /admin/
+[2019-07-05 14:06:45 +0530] [11500] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-05 14:06:45 +0530] [11500] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:06:46 +0530] [11509] [DEBUG] GET /admin/
+[2019-07-05 14:06:47 +0530] [11500] [DEBUG] GET /admin/registration/user/
+[2019-07-05 14:06:47 +0530] [11500] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:06:50 +0530] [11490] [DEBUG] GET /admin/registration/user/3/change/
+[2019-07-05 14:06:51 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:07:01 +0530] [11490] [DEBUG] POST /admin/registration/user/3/change/
+[2019-07-05 14:07:01 +0530] [11490] [DEBUG] GET /admin/registration/user/
+[2019-07-05 14:07:01 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:07:09 +0530] [11500] [DEBUG] GET /admin/
+[2019-07-05 14:07:10 +0530] [11490] [DEBUG] GET /favicon.ico
+[2019-07-05 14:07:15 +0530] [11509] [DEBUG] GET /admin/project/project/
+[2019-07-05 14:07:16 +0530] [11509] [DEBUG] GET /admin/
+[2019-07-05 14:07:21 +0530] [11490] [DEBUG] GET /admin/
+[2019-07-05 14:07:22 +0530] [11490] [DEBUG] GET /admin/project/project/
+[2019-07-05 14:07:22 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:07:24 +0530] [11500] [DEBUG] GET /admin/project/project/30/change/
+[2019-07-05 14:07:25 +0530] [11500] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:07:39 +0530] [11490] [DEBUG] POST /admin/project/project/30/change/
+[2019-07-05 14:07:39 +0530] [11490] [DEBUG] GET /admin/project/project/
+[2019-07-05 14:07:39 +0530] [11500] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:07:42 +0530] [11509] [DEBUG] GET /admin/
+[2019-07-05 14:07:47 +0530] [11509] [DEBUG] GET /admin/mentor/mentor/
+[2019-07-05 14:07:48 +0530] [11490] [DEBUG] GET /admin/
+[2019-07-05 14:07:51 +0530] [11509] [DEBUG] GET /admin/project/project/
+[2019-07-05 14:07:53 +0530] [11490] [DEBUG] GET /admin/project/project/30/change/
+[2019-07-05 14:07:53 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 14:07:54 +0530] [11500] [DEBUG] GET /admin/project/project/
+[2019-07-05 14:12:20 +0530] [11500] [DEBUG] GET /
+[2019-07-05 14:12:20 +0530] [11509] [DEBUG] GET /mentor
+[2019-07-05 14:12:20 +0530] [11490] [DEBUG] GET /mentor/
+[2019-07-05 14:12:20 +0530] [11509] [DEBUG] GET /favicon.ico
+[2019-07-05 14:12:22 +0530] [11509] [DEBUG] GET /projects/list
+[2019-07-05 14:12:22 +0530] [11509] [DEBUG] GET /favicon.ico
+[2019-07-05 14:12:43 +0530] [11500] [DEBUG] GET /mentor/evaluate
+[2019-07-05 14:12:43 +0530] [11500] [DEBUG] GET /favicon.ico
+[2019-07-05 14:13:02 +0530] [11509] [DEBUG] GET /mentor/evaluate
+[2019-07-05 14:13:02 +0530] [11509] [DEBUG] GET /favicon.ico
+[2019-07-05 15:26:06 +0530] [11500] [DEBUG] GET /
+[2019-07-05 15:26:06 +0530] [11490] [DEBUG] GET /mentor/
+[2019-07-05 16:41:54 +0530] [11509] [DEBUG] GET /mentor/
+[2019-07-05 16:41:55 +0530] [11490] [DEBUG] GET /favicon.ico
+[2019-07-05 16:41:58 +0530] [11509] [DEBUG] GET /admin/
+[2019-07-05 16:41:59 +0530] [11509] [DEBUG] GET /favicon.ico
+[2019-07-05 16:42:01 +0530] [11490] [DEBUG] GET /admin/registration/user/
+[2019-07-05 16:42:01 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:42:04 +0530] [11490] [DEBUG] GET /admin/registration/user/3/change/
+[2019-07-05 16:42:04 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:42:10 +0530] [11509] [DEBUG] GET /admin/
+[2019-07-05 16:42:16 +0530] [11490] [DEBUG] GET /admin/main/loggedcommit/
+[2019-07-05 16:42:16 +0530] [11490] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:42:18 +0530] [11509] [DEBUG] GET /admin/
+[2019-07-05 16:49:25 +0530] [11509] [INFO] Worker exiting (pid: 11509)
+[2019-07-05 16:49:25 +0530] [11490] [INFO] Worker exiting (pid: 11490)
+[2019-07-05 16:49:25 +0530] [11500] [INFO] Worker exiting (pid: 11500)
+[2019-07-05 16:49:25 +0530] [11476] [INFO] Handling signal: term
+[2019-07-05 16:49:25 +0530] [11476] [INFO] Shutting down: Master
+[2019-07-05 16:49:25 +0530] [18991] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f9241b0f2f0>
+  on_reload: <function OnReload.on_reload at 0x7f9241b0f400>
+  when_ready: <function WhenReady.when_ready at 0x7f9241b0f510>
+  pre_fork: <function Prefork.pre_fork at 0x7f9241b0f620>
+  post_fork: <function Postfork.post_fork at 0x7f9241b0f730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f9241b0f840>
+  worker_int: <function WorkerInt.worker_int at 0x7f9241b0f950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f9241b0fa60>
+  pre_exec: <function PreExec.pre_exec at 0x7f9241b0fb70>
+  pre_request: <function PreRequest.pre_request at 0x7f9241b0fc80>
+  post_request: <function PostRequest.post_request at 0x7f9241b0fd08>
+  child_exit: <function ChildExit.child_exit at 0x7f9241b0fe18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f9241b0ff28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f9241b2c0d0>
+  on_exit: <function OnExit.on_exit at 0x7f9241b2c1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 16:49:25 +0530] [18991] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 16:49:25 +0530] [18991] [DEBUG] Arbiter booted
+[2019-07-05 16:49:25 +0530] [18991] [INFO] Listening at: http://0.0.0.0:9000 (18991)
+[2019-07-05 16:49:25 +0530] [18991] [INFO] Using worker: sync
+[2019-07-05 16:49:25 +0530] [19014] [INFO] Booting worker with pid: 19014
+[2019-07-05 16:49:26 +0530] [19015] [INFO] Booting worker with pid: 19015
+[2019-07-05 16:49:26 +0530] [19016] [INFO] Booting worker with pid: 19016
+[2019-07-05 16:49:26 +0530] [18991] [DEBUG] 3 workers
+[2019-07-05 16:49:36 +0530] [19016] [DEBUG] GET /admin/registration/student/
+[2019-07-05 16:50:05 +0530] [19014] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:50:45 +0530] [19015] [DEBUG] POST /admin/registration/student/
+[2019-07-05 16:50:47 +0530] [19015] [DEBUG] POST /admin/registration/student/
+[2019-07-05 16:50:47 +0530] [19016] [DEBUG] GET /admin/registration/student/
+[2019-07-05 16:50:47 +0530] [19015] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:50:52 +0530] [19016] [DEBUG] GET /logout/
+[2019-07-05 16:50:52 +0530] [19015] [DEBUG] GET /
+[2019-07-05 16:50:53 +0530] [19014] [DEBUG] GET /favicon.ico
+[2019-07-05 16:50:56 +0530] [19016] [DEBUG] GET /student/register
+[2019-07-05 16:50:56 +0530] [19015] [DEBUG] GET /captcha/image/f2bc790133f0bae711bebd28384db93161968fb0/
+[2019-07-05 16:51:35 +0530] [19015] [DEBUG] POST /student/register
+[2019-07-05 16:51:35 +0530] [19016] [DEBUG] GET /captcha/image/b00c8d586ea21db6112665d8d8b48c9dfe492afe/
+[2019-07-05 16:51:46 +0530] [19016] [DEBUG] POST /student/register
+[2019-07-05 16:51:51 +0530] [19014] [DEBUG] GET /
+[2019-07-05 16:52:34 +0530] [19015] [DEBUG] GET /admin/
+[2019-07-05 16:52:37 +0530] [19016] [DEBUG] GET /admin/registration/student/
+[2019-07-05 16:52:37 +0530] [19016] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:52:38 +0530] [19014] [DEBUG] GET /admin/registration/student/3/change/
+[2019-07-05 16:52:39 +0530] [19016] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:52:49 +0530] [19014] [DEBUG] POST /admin/registration/student/3/change/
+[2019-07-05 16:52:52 +0530] [19014] [DEBUG] GET /admin/registration/student/
+[2019-07-05 16:52:52 +0530] [19014] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 16:54:48 +0530] [19416] [INFO] Booting worker with pid: 19416
+[2019-07-05 16:54:48 +0530] [19418] [INFO] Booting worker with pid: 19418
+[2019-07-05 16:55:30 +0530] [19014] [DEBUG] POST /admin/registration/student/
+[2019-07-05 16:56:00 +0530] [18991] [CRITICAL] WORKER TIMEOUT (pid:19014)
+[2019-07-05 16:56:00 +0530] [19014] [INFO] Worker exiting (pid: 19014)
+[2019-07-05 16:56:01 +0530] [19510] [INFO] Booting worker with pid: 19510
+[2019-07-05 17:07:44 +0530] [18991] [INFO] Handling signal: term
+[2019-07-05 17:07:44 +0530] [19418] [INFO] Worker exiting (pid: 19418)
+[2019-07-05 17:07:44 +0530] [19416] [INFO] Worker exiting (pid: 19416)
+[2019-07-05 17:07:44 +0530] [19510] [INFO] Worker exiting (pid: 19510)
+[2019-07-05 17:07:45 +0530] [18991] [INFO] Shutting down: Master
+[2019-07-05 17:15:14 +0530] [20912] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f977183a2f0>
+  on_reload: <function OnReload.on_reload at 0x7f977183a400>
+  when_ready: <function WhenReady.when_ready at 0x7f977183a510>
+  pre_fork: <function Prefork.pre_fork at 0x7f977183a620>
+  post_fork: <function Postfork.post_fork at 0x7f977183a730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f977183a840>
+  worker_int: <function WorkerInt.worker_int at 0x7f977183a950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f977183aa60>
+  pre_exec: <function PreExec.pre_exec at 0x7f977183ab70>
+  pre_request: <function PreRequest.pre_request at 0x7f977183ac80>
+  post_request: <function PostRequest.post_request at 0x7f977183ad08>
+  child_exit: <function ChildExit.child_exit at 0x7f977183ae18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f977183af28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f97718570d0>
+  on_exit: <function OnExit.on_exit at 0x7f97718571e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 17:15:14 +0530] [20912] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 17:15:14 +0530] [20912] [DEBUG] Arbiter booted
+[2019-07-05 17:15:14 +0530] [20912] [INFO] Listening at: http://0.0.0.0:9000 (20912)
+[2019-07-05 17:15:14 +0530] [20912] [INFO] Using worker: sync
+[2019-07-05 17:15:14 +0530] [20918] [INFO] Booting worker with pid: 20918
+[2019-07-05 17:15:14 +0530] [20923] [INFO] Booting worker with pid: 20923
+[2019-07-05 17:15:14 +0530] [20931] [INFO] Booting worker with pid: 20931
+[2019-07-05 17:15:14 +0530] [20912] [DEBUG] 3 workers
+[2019-07-05 17:15:25 +0530] [20923] [DEBUG] GET /admin/registration/student/
+[2019-07-05 17:15:26 +0530] [20931] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 17:16:30 +0530] [20918] [DEBUG] POST /admin/registration/student/
+[2019-07-05 17:17:00 +0530] [20912] [CRITICAL] WORKER TIMEOUT (pid:20918)
+[2019-07-05 17:17:00 +0530] [20918] [INFO] Worker exiting (pid: 20918)
+[2019-07-05 17:17:00 +0530] [21303] [INFO] Booting worker with pid: 21303
+[2019-07-05 17:17:59 +0530] [20912] [INFO] Handling signal: term
+[2019-07-05 17:17:59 +0530] [21303] [INFO] Worker exiting (pid: 21303)
+[2019-07-05 17:17:59 +0530] [20931] [INFO] Worker exiting (pid: 20931)
+[2019-07-05 17:17:59 +0530] [20923] [INFO] Worker exiting (pid: 20923)
+[2019-07-05 17:18:00 +0530] [20912] [INFO] Shutting down: Master
+[2019-07-05 17:18:00 +0530] [21336] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fa6160932f0>
+  on_reload: <function OnReload.on_reload at 0x7fa616093400>
+  when_ready: <function WhenReady.when_ready at 0x7fa616093510>
+  pre_fork: <function Prefork.pre_fork at 0x7fa616093620>
+  post_fork: <function Postfork.post_fork at 0x7fa616093730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fa616093840>
+  worker_int: <function WorkerInt.worker_int at 0x7fa616093950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fa616093a60>
+  pre_exec: <function PreExec.pre_exec at 0x7fa616093b70>
+  pre_request: <function PreRequest.pre_request at 0x7fa616093c80>
+  post_request: <function PostRequest.post_request at 0x7fa616093d08>
+  child_exit: <function ChildExit.child_exit at 0x7fa616093e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fa616093f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fa6160b00d0>
+  on_exit: <function OnExit.on_exit at 0x7fa6160b01e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 17:18:00 +0530] [21336] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 17:18:00 +0530] [21336] [DEBUG] Arbiter booted
+[2019-07-05 17:18:00 +0530] [21336] [INFO] Listening at: http://0.0.0.0:9000 (21336)
+[2019-07-05 17:18:00 +0530] [21336] [INFO] Using worker: sync
+[2019-07-05 17:18:00 +0530] [21343] [INFO] Booting worker with pid: 21343
+[2019-07-05 17:18:00 +0530] [21361] [INFO] Booting worker with pid: 21361
+[2019-07-05 17:18:00 +0530] [21370] [INFO] Booting worker with pid: 21370
+[2019-07-05 17:18:00 +0530] [21336] [DEBUG] 3 workers
+[2019-07-05 17:18:04 +0530] [21370] [DEBUG] GET /admin/registration/student/
+[2019-07-05 17:18:34 +0530] [21336] [CRITICAL] WORKER TIMEOUT (pid:21370)
+[2019-07-05 17:18:34 +0530] [21370] [INFO] Worker exiting (pid: 21370)
+[2019-07-05 17:18:34 +0530] [21510] [INFO] Booting worker with pid: 21510
+[2019-07-05 17:23:22 +0530] [21336] [INFO] Handling signal: term
+[2019-07-05 17:23:22 +0530] [21336] [INFO] Shutting down: Master
+[2019-07-05 17:30:11 +0530] [607] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f934975e2f0>
+  on_reload: <function OnReload.on_reload at 0x7f934975e400>
+  when_ready: <function WhenReady.when_ready at 0x7f934975e510>
+  pre_fork: <function Prefork.pre_fork at 0x7f934975e620>
+  post_fork: <function Postfork.post_fork at 0x7f934975e730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f934975e840>
+  worker_int: <function WorkerInt.worker_int at 0x7f934975e950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f934975ea60>
+  pre_exec: <function PreExec.pre_exec at 0x7f934975eb70>
+  pre_request: <function PreRequest.pre_request at 0x7f934975ec80>
+  post_request: <function PostRequest.post_request at 0x7f934975ed08>
+  child_exit: <function ChildExit.child_exit at 0x7f934975ee18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f934975ef28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f93497790d0>
+  on_exit: <function OnExit.on_exit at 0x7f93497791e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 17:30:11 +0530] [607] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 17:30:11 +0530] [607] [DEBUG] Arbiter booted
+[2019-07-05 17:30:11 +0530] [607] [INFO] Listening at: http://0.0.0.0:9000 (607)
+[2019-07-05 17:30:11 +0530] [607] [INFO] Using worker: sync
+[2019-07-05 17:30:11 +0530] [630] [INFO] Booting worker with pid: 630
+[2019-07-05 17:30:11 +0530] [631] [INFO] Booting worker with pid: 631
+[2019-07-05 17:30:11 +0530] [636] [INFO] Booting worker with pid: 636
+[2019-07-05 17:30:11 +0530] [607] [DEBUG] 3 workers
+[2019-07-05 17:30:21 +0530] [631] [DEBUG] GET /
+[2019-07-05 17:30:22 +0530] [631] [DEBUG] GET /
+[2019-07-05 17:30:23 +0530] [630] [DEBUG] GET /favicon.ico
+[2019-07-05 17:30:28 +0530] [630] [DEBUG] GET /admin/registration/student/
+[2019-07-05 17:30:28 +0530] [630] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 17:30:34 +0530] [630] [DEBUG] POST /admin/registration/student/
+[2019-07-05 17:30:36 +0530] [630] [DEBUG] POST /admin/registration/student/
+[2019-07-05 17:30:36 +0530] [630] [DEBUG] GET /admin/registration/student/
+[2019-07-05 17:30:36 +0530] [631] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 17:30:40 +0530] [630] [DEBUG] GET /student/register
+[2019-07-05 17:30:40 +0530] [630] [DEBUG] GET /captcha/image/0192be74859f97e18ec7f42a7137104cfb631c3b/
+[2019-07-05 17:31:14 +0530] [631] [DEBUG] POST /student/register
+[2019-07-05 17:31:33 +0530] [630] [DEBUG] GET /student/register
+[2019-07-05 17:31:33 +0530] [631] [DEBUG] GET /captcha/image/e45a0dd432ca6e939eababd9b42166e70642f4d5/
+[2019-07-05 17:31:40 +0530] [636] [DEBUG] POST /student/register
+[2019-07-05 17:32:18 +0530] [630] [INFO] Worker exiting (pid: 630)
+[2019-07-05 17:32:18 +0530] [631] [INFO] Worker exiting (pid: 631)
+[2019-07-05 17:32:18 +0530] [636] [INFO] Worker exiting (pid: 636)
+[2019-07-05 17:32:18 +0530] [607] [INFO] Handling signal: term
+[2019-07-05 17:32:18 +0530] [607] [INFO] Shutting down: Master
+[2019-07-05 17:32:18 +0530] [782] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f155c08f2f0>
+  on_reload: <function OnReload.on_reload at 0x7f155c08f400>
+  when_ready: <function WhenReady.when_ready at 0x7f155c08f510>
+  pre_fork: <function Prefork.pre_fork at 0x7f155c08f620>
+  post_fork: <function Postfork.post_fork at 0x7f155c08f730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f155c08f840>
+  worker_int: <function WorkerInt.worker_int at 0x7f155c08f950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f155c08fa60>
+  pre_exec: <function PreExec.pre_exec at 0x7f155c08fb70>
+  pre_request: <function PreRequest.pre_request at 0x7f155c08fc80>
+  post_request: <function PostRequest.post_request at 0x7f155c08fd08>
+  child_exit: <function ChildExit.child_exit at 0x7f155c08fe18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f155c08ff28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f155c0aa0d0>
+  on_exit: <function OnExit.on_exit at 0x7f155c0aa1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 17:32:18 +0530] [782] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 17:32:18 +0530] [782] [DEBUG] Arbiter booted
+[2019-07-05 17:32:18 +0530] [782] [INFO] Listening at: http://0.0.0.0:9000 (782)
+[2019-07-05 17:32:18 +0530] [782] [INFO] Using worker: sync
+[2019-07-05 17:32:18 +0530] [796] [INFO] Booting worker with pid: 796
+[2019-07-05 17:32:18 +0530] [810] [INFO] Booting worker with pid: 810
+[2019-07-05 17:32:18 +0530] [815] [INFO] Booting worker with pid: 815
+[2019-07-05 17:32:18 +0530] [782] [DEBUG] 3 workers
+[2019-07-05 17:32:27 +0530] [782] [INFO] Handling signal: term
+[2019-07-05 17:32:27 +0530] [796] [INFO] Worker exiting (pid: 796)
+[2019-07-05 17:32:27 +0530] [810] [INFO] Worker exiting (pid: 810)
+[2019-07-05 17:32:27 +0530] [815] [INFO] Worker exiting (pid: 815)
+[2019-07-05 17:32:27 +0530] [782] [INFO] Shutting down: Master
+[2019-07-05 17:32:27 +0530] [904] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fa9d86642f0>
+  on_reload: <function OnReload.on_reload at 0x7fa9d8664400>
+  when_ready: <function WhenReady.when_ready at 0x7fa9d8664510>
+  pre_fork: <function Prefork.pre_fork at 0x7fa9d8664620>
+  post_fork: <function Postfork.post_fork at 0x7fa9d8664730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fa9d8664840>
+  worker_int: <function WorkerInt.worker_int at 0x7fa9d8664950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fa9d8664a60>
+  pre_exec: <function PreExec.pre_exec at 0x7fa9d8664b70>
+  pre_request: <function PreRequest.pre_request at 0x7fa9d8664c80>
+  post_request: <function PostRequest.post_request at 0x7fa9d8664d08>
+  child_exit: <function ChildExit.child_exit at 0x7fa9d8664e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fa9d8664f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fa9d867f0d0>
+  on_exit: <function OnExit.on_exit at 0x7fa9d867f1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 17:32:27 +0530] [904] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 17:32:27 +0530] [904] [DEBUG] Arbiter booted
+[2019-07-05 17:32:27 +0530] [904] [INFO] Listening at: http://0.0.0.0:9000 (904)
+[2019-07-05 17:32:27 +0530] [904] [INFO] Using worker: sync
+[2019-07-05 17:32:27 +0530] [922] [INFO] Booting worker with pid: 922
+[2019-07-05 17:32:28 +0530] [935] [INFO] Booting worker with pid: 935
+[2019-07-05 17:32:28 +0530] [936] [INFO] Booting worker with pid: 936
+[2019-07-05 17:32:28 +0530] [904] [DEBUG] 3 workers
+[2019-07-05 17:32:32 +0530] [935] [DEBUG] GET /student/register
+[2019-07-05 17:32:32 +0530] [936] [DEBUG] GET /captcha/image/7c904fb7dab4e5a3be8c19f300ee1e179adb37f0/
+[2019-07-05 17:32:33 +0530] [936] [DEBUG] GET /favicon.ico
+[2019-07-05 17:32:40 +0530] [936] [DEBUG] POST /student/register
+[2019-07-05 17:33:23 +0530] [936] [INFO] Worker exiting (pid: 936)
+[2019-07-05 17:33:23 +0530] [935] [INFO] Worker exiting (pid: 935)
+[2019-07-05 17:33:23 +0530] [922] [INFO] Worker exiting (pid: 922)
+[2019-07-05 17:33:23 +0530] [904] [INFO] Handling signal: term
+[2019-07-05 17:33:23 +0530] [904] [INFO] Shutting down: Master
+[2019-07-05 17:33:23 +0530] [1037] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7ff40ef752f0>
+  on_reload: <function OnReload.on_reload at 0x7ff40ef75400>
+  when_ready: <function WhenReady.when_ready at 0x7ff40ef75510>
+  pre_fork: <function Prefork.pre_fork at 0x7ff40ef75620>
+  post_fork: <function Postfork.post_fork at 0x7ff40ef75730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ff40ef75840>
+  worker_int: <function WorkerInt.worker_int at 0x7ff40ef75950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ff40ef75a60>
+  pre_exec: <function PreExec.pre_exec at 0x7ff40ef75b70>
+  pre_request: <function PreRequest.pre_request at 0x7ff40ef75c80>
+  post_request: <function PostRequest.post_request at 0x7ff40ef75d08>
+  child_exit: <function ChildExit.child_exit at 0x7ff40ef75e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ff40ef75f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ff40ef900d0>
+  on_exit: <function OnExit.on_exit at 0x7ff40ef901e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-05 17:33:23 +0530] [1037] [INFO] Starting gunicorn 19.9.0
+[2019-07-05 17:33:23 +0530] [1037] [DEBUG] Arbiter booted
+[2019-07-05 17:33:23 +0530] [1037] [INFO] Listening at: http://0.0.0.0:9000 (1037)
+[2019-07-05 17:33:23 +0530] [1037] [INFO] Using worker: sync
+[2019-07-05 17:33:23 +0530] [1055] [INFO] Booting worker with pid: 1055
+[2019-07-05 17:33:23 +0530] [1058] [INFO] Booting worker with pid: 1058
+[2019-07-05 17:33:23 +0530] [1067] [INFO] Booting worker with pid: 1067
+[2019-07-05 17:33:24 +0530] [1037] [DEBUG] 3 workers
+[2019-07-05 17:33:28 +0530] [1055] [DEBUG] GET /student/register
+[2019-07-05 17:33:28 +0530] [1067] [DEBUG] GET /captcha/image/11b2bf7858dcb4e3c6242e6bb3a6301df35a3fe6/
+[2019-07-05 17:33:33 +0530] [1058] [DEBUG] POST /student/register
+[2019-07-05 17:33:37 +0530] [1067] [DEBUG] GET /
+[2019-07-05 17:33:40 +0530] [1055] [DEBUG] GET /admin/registration/student/
+[2019-07-05 17:33:41 +0530] [1055] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 17:33:43 +0530] [1058] [DEBUG] GET /admin/registration/student/4/change/
+[2019-07-05 17:33:43 +0530] [1055] [DEBUG] GET /admin/jsi18n/
+[2019-07-05 17:34:10 +0530] [1067] [DEBUG] GET /admin/registration/student/
+[2019-07-06 10:56:53 +0530] [1058] [DEBUG] GET /admin/registration/student/
+[2019-07-06 10:57:22 +0530] [1037] [CRITICAL] WORKER TIMEOUT (pid:1058)
+[2019-07-06 10:57:22 +0530] [1058] [INFO] Worker exiting (pid: 1058)
+[2019-07-06 10:57:24 +0530] [2930] [INFO] Booting worker with pid: 2930
+[2019-07-08 18:09:26 +0530] [1055] [DEBUG] GET /
+[2019-07-08 18:09:55 +0530] [1037] [CRITICAL] WORKER TIMEOUT (pid:1055)
+[2019-07-08 18:09:55 +0530] [1055] [INFO] Worker exiting (pid: 1055)
+[2019-07-08 18:09:57 +0530] [7870] [INFO] Booting worker with pid: 7870
+[2019-07-08 18:09:57 +0530] [2930] [DEBUG] GET /favicon.ico
+[2019-07-09 14:30:00 +0530] [1037] [INFO] Handling signal: term
+[2019-07-09 14:30:00 +0530] [2930] [INFO] Worker exiting (pid: 2930)
+[2019-07-09 14:30:10 +0530] [9831] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f7ab34072f0>
+  on_reload: <function OnReload.on_reload at 0x7f7ab3407400>
+  when_ready: <function WhenReady.when_ready at 0x7f7ab3407510>
+  pre_fork: <function Prefork.pre_fork at 0x7f7ab3407620>
+  post_fork: <function Postfork.post_fork at 0x7f7ab3407730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7ab3407840>
+  worker_int: <function WorkerInt.worker_int at 0x7f7ab3407950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7ab3407a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f7ab3407b70>
+  pre_request: <function PreRequest.pre_request at 0x7f7ab3407c80>
+  post_request: <function PostRequest.post_request at 0x7f7ab3407d08>
+  child_exit: <function ChildExit.child_exit at 0x7f7ab3407e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7ab3407f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7ab34230d0>
+  on_exit: <function OnExit.on_exit at 0x7f7ab34231e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-09 14:30:10 +0530] [9831] [INFO] Starting gunicorn 19.9.0
+[2019-07-09 14:30:10 +0530] [9831] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-09 14:30:10 +0530] [9831] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-09 14:30:10 +0530] [9831] [ERROR] Retrying in 1 second.
+[2019-07-09 14:30:00 +0530] [7870] [INFO] Worker exiting (pid: 7870)
+[2019-07-09 14:30:11 +0530] [9831] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-09 14:30:11 +0530] [9831] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-09 14:30:11 +0530] [9831] [ERROR] Retrying in 1 second.
+[2019-07-09 14:30:12 +0530] [9831] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-09 14:30:12 +0530] [9831] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-09 14:30:12 +0530] [9831] [ERROR] Retrying in 1 second.
+[2019-07-09 14:30:00 +0530] [1067] [INFO] Worker exiting (pid: 1067)
+[2019-07-09 14:30:13 +0530] [9831] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-09 14:30:13 +0530] [9831] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-09 14:30:13 +0530] [9831] [ERROR] Retrying in 1 second.
+[2019-07-09 14:30:14 +0530] [9831] [ERROR] Connection in use: ('0.0.0.0', 9000)
+[2019-07-09 14:30:14 +0530] [9831] [DEBUG] connection to ('0.0.0.0', 9000) failed: [Errno 98] Address already in use
+[2019-07-09 14:30:14 +0530] [9831] [ERROR] Retrying in 1 second.
+[2019-07-09 14:30:15 +0530] [9831] [ERROR] Can't connect to ('0.0.0.0', 9000)
+[2019-07-09 14:30:33 +0530] [1037] [INFO] Shutting down: Master
+[2019-07-09 14:32:03 +0530] [10152] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:9000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /root/srip-portal
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 0
+  group: 27
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /root/srip-portal/logs/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: SRIP-portal
+  default_proc_name: portal.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f4599c532f0>
+  on_reload: <function OnReload.on_reload at 0x7f4599c53400>
+  when_ready: <function WhenReady.when_ready at 0x7f4599c53510>
+  pre_fork: <function Prefork.pre_fork at 0x7f4599c53620>
+  post_fork: <function Postfork.post_fork at 0x7f4599c53730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f4599c53840>
+  worker_int: <function WorkerInt.worker_int at 0x7f4599c53950>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f4599c53a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f4599c53b70>
+  pre_request: <function PreRequest.pre_request at 0x7f4599c53c80>
+  post_request: <function PostRequest.post_request at 0x7f4599c53d08>
+  child_exit: <function ChildExit.child_exit at 0x7f4599c53e18>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f4599c53f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f4599c6f0d0>
+  on_exit: <function OnExit.on_exit at 0x7f4599c6f1e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-07-09 14:32:03 +0530] [10152] [INFO] Starting gunicorn 19.9.0
+[2019-07-09 14:32:03 +0530] [10152] [DEBUG] Arbiter booted
+[2019-07-09 14:32:03 +0530] [10152] [INFO] Listening at: http://0.0.0.0:9000 (10152)
+[2019-07-09 14:32:03 +0530] [10152] [INFO] Using worker: sync
+[2019-07-09 14:32:03 +0530] [10170] [INFO] Booting worker with pid: 10170
+[2019-07-09 14:32:03 +0530] [10179] [INFO] Booting worker with pid: 10179
+[2019-07-09 14:32:03 +0530] [10183] [INFO] Booting worker with pid: 10183
+[2019-07-09 14:32:04 +0530] [10152] [DEBUG] 3 workers
+[2019-07-09 14:32:33 +0530] [10152] [CRITICAL] WORKER TIMEOUT (pid:10170)
+[2019-07-09 14:32:33 +0530] [10152] [CRITICAL] WORKER TIMEOUT (pid:10179)
+[2019-07-09 14:32:33 +0530] [10152] [CRITICAL] WORKER TIMEOUT (pid:10183)
+[2019-07-09 14:32:33 +0530] [10183] [INFO] Worker exiting (pid: 10183)
+[2019-07-09 14:32:33 +0530] [10179] [INFO] Worker exiting (pid: 10179)
+[2019-07-09 14:32:33 +0530] [10170] [INFO] Worker exiting (pid: 10170)
+[2019-07-09 14:32:33 +0530] [10265] [INFO] Booting worker with pid: 10265
+[2019-07-09 14:32:33 +0530] [10266] [INFO] Booting worker with pid: 10266
+[2019-07-09 14:32:33 +0530] [10152] [DEBUG] 2 workers
+[2019-07-09 14:32:33 +0530] [10267] [INFO] Booting worker with pid: 10267
+[2019-07-09 14:32:33 +0530] [10152] [DEBUG] 3 workers
+[2019-07-10 16:54:53 +0530] [10152] [INFO] Handling signal: term
+[2019-07-10 16:55:04 +0530] [10152] [INFO] Shutting down: Master

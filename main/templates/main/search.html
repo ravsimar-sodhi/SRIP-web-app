@@ -1,0 +1,54 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="bg-light">
+    <div id="results" class="container shadow rounded">
+            <h1>Search Results</h1>
+        {% for item in data.items %}
+    {% if forloop.counter0|divisibleby:2 %}
+    <div class="row">
+        {% endif %}
+        <div class="col-6 card-group">
+            <div class="card bg-light shadow">
+                <div class="card-header bg-danger">
+                    <div class="row">
+
+                        <a class="col-9 text-dark" target='_blank' href={{item.html_url}}>
+                                {{item.full_name}}
+                            </a>
+                        <!-- <div class="col-2 text-light">Forks:{{item.forks}}</div> -->
+                        <div class="col-3 text-dark text-right">Issues: {{item.open_issues_count}}</div>
+                    </div>
+                    </div>
+                    <div class="card-body bg-dark">
+                            <a target='_blank' href={{item.html_url}}>
+                                <div class='title text-light'>
+                                    <h3> {{item.name}} </h3>
+                                </div>
+                            </a>
+                            <div class="text-light">
+                        {% if item.description == "None" %}
+                        "Description not provided."
+                        {% else %}
+                        {{item.description}}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-dark">
+                    <div class="row">
+                        <div class="col-6 text-light"><strong> Language: </strong>
+                            {{item.language}} </div>
+                            <div class="col-6 text-light"><strong>Updated: </strong>
+                                {{item.updated_at}}
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if not forloop.counter0|divisibleby:2 %}
+    </div>
+    <br>
+    {% endif %}
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

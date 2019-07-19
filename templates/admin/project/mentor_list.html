@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/changelists.css" %}>
+{% endblock %}
+{% block content %}
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+    <th>Name</th>
+    <th>Handle</th>
+    <th>Email</th>
+    <th>Status</th>
+</tr>
+</thead>
+<tbody>
+{% for mentor in mentors %}
+<tr>
+    <td> {{mentor.name}}</td>
+    <td> {{mentor.handle}}</td>
+    <td> {{mentor.email}}</td>
+    <td> {{mentor.status}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endblock %}

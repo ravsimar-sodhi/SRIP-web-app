@@ -1,0 +1,76 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<br>
+<div class='container-fluid shadow-lg rounded bg-light' style="padding:20px; width:95%;">
+  <h1>About SRIP</h1>
+  <p>SRIP stands for Student Remote Internship Program.</p>
+  {% if regstatus %}
+  <p> Your registration status is {{ regstatus }}</p>
+  {% endif %}
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class='container-fluid'>
+  <h2> Recommended Repositories </h2>
+  <form class="form input-group input-group-lg mb-3 p-4" action="{% url 'main:search' %}" method="get" >
+    <input type="text" class="form-control" placeholder="Search Projects" aria-label="Search" name="searchword">
+    <div class="input-group-append">
+      <button class="btn btn-outline-info" type="submit" >Search</button>
+    </div>
+  </form>
+  <div id='recomm' class ="shadow rounded bg-light container-fluid" style="padding: 20px;">
+    {% for item in data.items %}
+    {% if forloop.counter == 1 %}
+      <div class="row">
+    {% endif %}
+    {% if forloop.counter == 4 %}
+      <div class="row">
+    {% endif %}
+      <div class="col-4 card-group">
+        <div class="card bg-light shadow">
+        <div class="card-header bg-info">
+          <div class="row">
+            <a class="col-9 text-light" target='_blank' href={{item.url}}>
+              {{item.name}}
+            </a>
+            <!-- <div class="col-2 text-dark">Forks:{{item.forks}}</div> -->
+            <div class="col-3 text-light text-right">Issues: {{item.issues}}</div>
+          </div>
+        </div>
+        <div class="card-body bg-light">
+          <a target='_blank' href={{item.url}}>
+            <div class='title text-dark'>
+              <h3> {{item.name}} </h3>
+            </div>
+          </a>
+          <div class="text-dark">
+            {% if item.description == "None" %}
+            "Description not provided."
+            {% else %}
+            {{item.description}}
+          </div>
+          {% endif %}
+        </div>
+        <div class="card-footer bg-light">
+          <div class="row">
+            <div class="col-6 text-dark"><strong> Language: </strong>
+              {{item.language}} </div>
+              <div class="col-6 text-dark text-right"><strong>Updated: </strong>
+                {{item.updated_at}}
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        {% if forloop.counter == 3 %}
+      </div>
+      <br>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
